@@ -31,7 +31,8 @@ Update your `package.json`
 "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "watch": "npm run dev -- --watch",
-    "prod": "cross-env NODE_ENV=production webpack --progress --mode production"
+    "prod": "cross-env NODE_ENV=production webpack --progress --mode production",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --hot --progress"
   },
 ```
 Update your blade template
@@ -52,8 +53,7 @@ Update your `.gitignore`
 ```
 
 ### TODO
-* HMR support
-* Docs
+* Documentation
 
 ### Not in plan
 These feature are not in the plan but can be enabled on demand

@@ -7,6 +7,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
+const isHmr = process.argv.includes('--hot');
+const isWatch = process.argv.includes('--watch');
+const shouldVersion = !isHmr && !isWatch;
 
 module.exports = {
   context: process.cwd(),
@@ -20,8 +23,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'public'),
     publicPath: '/',
-    filename: 'js/[name]-[hash].js',
-    chunkFilename: 'js/[name]-[chunkhash].js',
+    filename: shouldVersion ? 'js/[name]-[hash].js' : 'js/[name].js',
+    chunkFilename: shouldVersion ? 'js/[name]-[chunkhash].js' : 'js/[name].js',
     globalObject: 'this',
   },
   module: {
@@ -54,8 +57,10 @@ module.exports = {
         test: /\.s?[ac]ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {},
+            loader: isHmr ? 'style-loader' : MiniCssExtractPlugin.loader,
+            options: {
+              sourceMap: !isProduction
+            },
           },
           {
             loader: 'css-loader',
@@ -129,7 +134,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name]-[contenthash].css",
+      filename: shouldVersion ? "css/[name]-[contenthash].css" : "css/[name].css",
     }),
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),

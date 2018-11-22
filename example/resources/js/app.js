@@ -1,7 +1,7 @@
 import '../scss/index.scss';
 import '../css/index.css';
 
-import ExampleVue from './example.vue';
+//import ExampleVue from './example.vue';
 
 // Import module from node_modules to extract a vendor.js
 import qs from 'qs';

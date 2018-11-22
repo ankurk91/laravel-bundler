@@ -25,7 +25,9 @@
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
     "example:dev": "cd example && cross-env NODE_ENV=development webpack --mode development",
-    "example:prod": "cd example && cross-env NODE_ENV=production webpack --mode production"
+    "example:watch": "yarn run example:dev --watch",
+    "example:prod": "cd example && cross-env NODE_ENV=production webpack --mode production",
+    "example:hot": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --progress"
   },
   "dependencies": {
     "@babel/core": "^7.1.6",
@@ -49,6 +51,7 @@
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
     "webpack-laravel-mix-manifest": "^2.0.0",
     "webpack-merge": "^4.1.4"
   },
