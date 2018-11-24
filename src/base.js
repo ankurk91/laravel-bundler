@@ -57,7 +57,7 @@ module.exports = {
         test: /\.s?[ac]ss$/,
         use: [
           {
-            loader: isHmr ? 'style-loader' : MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader,
             options: {
               sourceMap: !isProduction
             },
