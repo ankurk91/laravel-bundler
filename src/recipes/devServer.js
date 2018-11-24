@@ -1,8 +1,10 @@
 // https://webpack.js.org/configuration/dev-server/
 const path = require('path');
 const HMRDetectPlugin = require('../plugins/HMRDetectPlugin');
+const isHmr = process.argv.includes('--hot');
 
 module.exports = {
+  output: {},
   devServer: {
     before: (app, server) => {
       app.get('/', (req, res) => {
@@ -22,7 +24,7 @@ module.exports = {
     contentBase: path.resolve(process.cwd(), 'public'),
     host: 'localhost',
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: false,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
@@ -34,8 +36,13 @@ module.exports = {
     port: 8080,
     publicPath: '//localhost:8080/',
     stats: 'errors-only',
+    logTime: true,
   },
   plugins: [
     new HMRDetectPlugin()
   ]
 };
+
+if (isHmr) {
+  module.exports.output.publicPath = '//localhost:8080/';
+}
