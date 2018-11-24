@@ -62,7 +62,7 @@ These feature are not in the plan but can be enabled on demand
 * BrowserSync 
 * Copy files and folder
 * CSS Preprocessors other than `sass|scss`
-* Non webpack methods like `minify|combine|babel|standaloneSass`
+* Non webpack methods like `minify|combine|babel|standaloneSass` etc
 * Babel plugins
 
 ## License
