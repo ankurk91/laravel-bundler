@@ -1,6 +1,7 @@
 import '../scss/index.scss';
 import '../css/index.css';
 
+// vue needs to be installed first
 //import ExampleVue from './example.vue';
 
 // Import module from node_modules to extract a vendor.js

@@ -6,7 +6,7 @@ module.exports = require('../src/index')({
   },
   resolve: {
     modules: [
-      // this configuration is not required when using in laravel
+      // this configuration is not required when using in Laravel
       path.resolve(process.cwd(), './../node_modules'),
     ],
   },
