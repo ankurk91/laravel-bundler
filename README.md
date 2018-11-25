@@ -64,13 +64,14 @@ Update your `.gitignore`
 * Clean output directory before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that prefixed with `MIX_`
+* SourceMap support in development
 
 ### TODO
 * Better Documentation
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
-* [OS Notification](https://github.com/Turbo87/webpack-notifier) with notification recipe
+* [OS Notification](https://github.com/Turbo87/webpack-notifier) 
 * [Image compression](https://github.com/vanwagonet/img-loader)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
@@ -78,7 +79,6 @@ These features are not in the plan but can be enabled on demand
 * Non webpack methods like `minify|combine|babel|standaloneSass` etc
 * Babel plugins
 * [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin)
-* SourceMap support in development
 
 ## License
 [MIT](LICENSE.txt) License
