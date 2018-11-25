@@ -6,10 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const isProduction = process.env.NODE_ENV === 'production';
-const isHmr = process.argv.includes('--hot');
-const isWatch = process.argv.includes('--watch');
-const shouldVersion = !isHmr && !isWatch;
+const Helpers = require('./helpers');
 
 module.exports = {
   context: process.cwd(),
@@ -24,8 +21,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'public'),
     publicPath: '/',
-    filename: shouldVersion ? 'js/[name]-[hash].js' : 'js/[name].js',
-    chunkFilename: shouldVersion ? 'js/[name]-[chunkhash].js' : 'js/[name].js',
+    filename: Helpers.shouldVersion() ? 'js/[name]-[hash].js' : 'js/[name].js',
+    chunkFilename: Helpers.shouldVersion() ? 'js/[name]-[chunkhash].js' : 'js/[name].js',
     globalObject: 'this',
   },
   module: {
@@ -62,15 +59,15 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: !isProduction,
+              sourceMap: Helpers.isDev(),
               importLoaders: 1,
             }
           },
-          isProduction ?
+          Helpers.isProduction() ?
             {
               loader: 'postcss-loader',
               options: {
-                sourceMap: !isProduction,
+                sourceMap: false,
                 plugins: () => [
                   require('autoprefixer')(),
                   require('cssnano')()
@@ -80,8 +77,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: !isProduction,
-              minimize: isProduction
+              sourceMap: Helpers.isDev(),
+              minimize: Helpers.isProduction()
             }
           },
         ].filter(Boolean),
@@ -110,8 +107,8 @@ module.exports = {
   },
 
   optimization: {
-    noEmitOnErrors: isProduction,
-    minimizer: [].concat(isProduction ? [
+    noEmitOnErrors: Helpers.isProduction(),
+    minimizer: [].concat(Helpers.isProduction() ? [
       new TerserPlugin({
         sourceMap: false,
         terserOptions: {
@@ -132,16 +129,16 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: shouldVersion ? 'css/[name]-[contenthash].css' : 'css/[name].css',
+      filename: Helpers.shouldVersion() ? 'css/[name]-[contenthash].css' : 'css/[name].css',
     }),
     // https://webpack.js.org/plugins/source-map-dev-tool-plugin/
     new webpack.SourceMapDevToolPlugin(),
-  ].concat(isProduction ? [
+  ].concat(Helpers.isProduction() ? [
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),
   ] : []),
 
-  devtool: isProduction ? false : '#cheap-module-eval-source-map',
+  devtool: Helpers.isProduction() ? false : '#cheap-module-eval-source-map',
   performance: {
     hints: false,
   },

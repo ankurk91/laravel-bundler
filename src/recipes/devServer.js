@@ -1,7 +1,7 @@
 // https://webpack.js.org/configuration/dev-server/
 const path = require('path');
 const HMRDetectPlugin = require('../plugins/HMRDetectPlugin');
-const isHmr = process.argv.includes('--hot');
+const Helpers = require('../helpers');
 
 module.exports = {
   output: {},
@@ -43,6 +43,6 @@ module.exports = {
   ]
 };
 
-if (isHmr) {
+if (Helpers.isHmr()) {
   module.exports.output.publicPath = '//localhost:8080/';
 }

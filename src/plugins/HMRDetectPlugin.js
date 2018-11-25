@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
+const Helpers = require('../helpers');
 
 let hotFilePath = null;
 
@@ -40,14 +41,13 @@ class HMRDetectPlugin {
 
   apply(compiler) {
     let config = compiler.options;
-    const isHmr = process.argv.includes('--hot');
     hotFilePath = path.join(config.output.path, 'hot');
 
     compiler.hooks.entryOption.tap('HMRPlugin', () => {
       // Always delete the `hot` on startup
       deleteHotFile();
 
-      if (!isHmr) {
+      if (!Helpers.isHmr()) {
         return;
       }
 
