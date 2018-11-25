@@ -2,7 +2,7 @@ const merge = require('webpack-merge');
 
 const isHmr = process.argv.includes('--hot');
 
-module.exports = userConfig => (env, argv) =>
+module.exports = (...userConfig) => (env, argv) =>
   merge.smart(
     require('./base'),
     !isHmr ? require('./recipes/manifest') : {},
@@ -11,5 +11,5 @@ module.exports = userConfig => (env, argv) =>
     require('./recipes/devServer'),
     require('./recipes/extractVendor'),
     require('./recipes/dotEnvPlugin'),
-    userConfig
+    ...userConfig
   );
