@@ -68,9 +68,16 @@ module.exports = {
               loader: 'postcss-loader',
               options: {
                 sourceMap: false,
+                ident: 'postcss',
                 plugins: () => [
                   require('autoprefixer')(),
-                  require('cssnano')()
+                  require('cssnano')({
+                    preset: ['default', {
+                      discardComments: {
+                        removeAll: true,
+                      },
+                    }]
+                  })
                 ]
               }
             } : false,
