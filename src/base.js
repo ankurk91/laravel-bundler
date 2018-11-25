@@ -2,7 +2,7 @@
 
 const webpack = require('webpack');
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -43,7 +43,7 @@ module.exports = {
                 targets: {
                   browsers: [
                     //Support browsers that have more than x% market share
-                    "> 2%",
+                    '> 2%',
                   ]
                 }
               }
@@ -109,6 +109,7 @@ module.exports = {
   },
 
   optimization: {
+    noEmitOnErrors: isProduction,
     minimizer: [].concat(isProduction ? [
       new TerserPlugin({
         sourceMap: false,
@@ -130,7 +131,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: shouldVersion ? "css/[name]-[contenthash].css" : "css/[name].css",
+      filename: shouldVersion ? 'css/[name]-[contenthash].css' : 'css/[name].css',
     }),
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),

@@ -4,16 +4,16 @@
 [![npm-version](https://img.shields.io/npm/v/laravel-bundler.svg)](https://www.npmjs.com/package/laravel-bundler)
 [![github-tag](https://img.shields.io/github/tag/ankurk91/laravel-bundler.svg?maxAge=1800)](https://github.com/ankurk91/laravel-bundler/)
 [![license](https://img.shields.io/github/license/ankurk91/laravel-bundler.svg?maxAge=1800)](https://yarnpkg.com/en/package/laravel-bundler)
-[![BuildStatus](https://travis-ci.com/ankurk91/laravel-bundler.svg?branch=master)](https://travis-ci.com/ankurk91/laravel-bundler)
+[![build-status](https://travis-ci.com/ankurk91/laravel-bundler.svg?branch=master)](https://travis-ci.com/ankurk91/laravel-bundler)
 
 Modern asset building tool for Laravel framework.
 
 ## Installation
 ```bash
 # npm
-npm install laravel-bundler --save
+npm install laravel-bundler 
 
-# Yarn
+# yarn
 yarn add laravel-bundler
 ```
 
@@ -22,7 +22,7 @@ Create a `webpack.config.js` file on your project root
 ```js
 module.exports = require('laravel-bundler')({
   entry: {
-    'app': './resources/js/app.js',
+    app: './resources/js/app.js',
   },
 });
 ```
@@ -53,9 +53,9 @@ Update your `.gitignore`
 ```
 
 ### Native Features
-* Webpack 4, Babel 7 (@babel/preset-env)
+* Webpack 4, Babel 7 with `@babel/preset-env`
 * Vue.js support
-* CSS|SASS|SCSS support
+* `CSS|SASS|SCSS` support
 * Font files and images handling
 * HMR support, even for CSS
 * Extract all css to a separate file based on entry name
@@ -66,12 +66,12 @@ Update your `.gitignore`
 * Load environment variables from `.env` file that prefixed with `MIX_`
 
 ### TODO
-* Documentation
+* Better Documentation
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
 * [OS Notification](https://github.com/Turbo87/webpack-notifier)
-* Image compression
+* [Image compression](https://github.com/vanwagonet/img-loader)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * CSS Preprocessors other than `sass|scss`

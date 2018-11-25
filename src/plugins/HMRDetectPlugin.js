@@ -7,19 +7,19 @@ let hotFilePath = null;
 // Make sure to delete the `hot` file when user press CTRL+C
 // https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js
 if (process.platform === "win32") {
-  require("readline")
+  require('readline')
     .createInterface({
       input: process.stdin,
       output: process.stdout
     })
-    .on("SIGINT", function () {
-      process.emit("SIGINT");
+    .on('SIGINT', function () {
+      process.emit('SIGINT');
     });
 }
 
 process.on('SIGINT', () => {
   deleteHotFile();
-  console.log(chalk.blue("Terminating..."));
+  console.log(chalk.blue('Terminating...'));
   process.exit(0);
 });
 
@@ -58,7 +58,7 @@ class HMRDetectPlugin {
       fs.writeFile(hotFilePath, fileContents.toString(),
         (error) => {
           if (error) {
-            console.log(chalk.bold.red("Unable to create hot file:"));
+            console.log(chalk.bold.red('Unable to create hot file:'));
             console.log(chalk.red(error))
           }
         }

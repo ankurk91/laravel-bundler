@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = require('../src/index')({
   entry: {
-    'app': './resources/js/app.js',
+    app: './resources/js/app.js',
   },
   resolve: {
     modules: [
