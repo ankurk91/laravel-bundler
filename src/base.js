@@ -18,6 +18,7 @@ module.exports = {
     modules: [
       path.resolve(process.cwd(), 'node_modules'),
     ],
+    extensions: ['.wasm', '.mjs', '.js', '.json']
   },
   entry: {},
   output: {
