@@ -133,11 +133,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: shouldVersion ? 'css/[name]-[contenthash].css' : 'css/[name].css',
     }),
-    // https://webpack.js.org/guides/caching/
-    new webpack.HashedModuleIdsPlugin(),
     // https://webpack.js.org/plugins/source-map-dev-tool-plugin/
     new webpack.SourceMapDevToolPlugin(),
-  ],
+  ].concat(isProduction ? [
+    // https://webpack.js.org/guides/caching/
+    new webpack.HashedModuleIdsPlugin(),
+  ] : []),
 
   devtool: isProduction ? false : '#cheap-module-eval-source-map',
   performance: {
