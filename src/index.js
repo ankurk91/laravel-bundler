@@ -1,12 +1,11 @@
 const merge = require('webpack-merge');
-
-const isHmr = process.argv.includes('--hot');
+const Helpers = require('./helpers');
 
 module.exports = (...userConfig) => (env, argv) =>
   merge.smart(
     require('./base'),
-    !isHmr ? require('./recipes/manifest') : {},
-    !isHmr ? require('./recipes/cleanOutputDir') : {},
+    !Helpers.isHmr() ? require('./recipes/manifest') : {},
+    !Helpers.isHmr() ? require('./recipes/cleanOutputDir') : {},
     require('./recipes/vue'),
     require('./recipes/devServer'),
     require('./recipes/extractVendor'),
