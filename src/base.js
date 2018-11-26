@@ -114,7 +114,6 @@ module.exports = {
   },
 
   optimization: {
-    noEmitOnErrors: Helpers.isProduction(),
     minimizer: [].concat(Helpers.isProduction() ? [
       new TerserPlugin({
         sourceMap: false,
