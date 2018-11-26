@@ -44,5 +44,5 @@ module.exports = {
 };
 
 if (Helpers.isHmr()) {
-  module.exports.output.publicPath = '//localhost:8080/';
+  module.exports.output.publicPath = module.exports.devServer.publicPath;
 }

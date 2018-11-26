@@ -31,7 +31,17 @@ function deleteHotFile() {
   });
 }
 
-class HMRDetectPlugin {
+function getFileContents(configs) {
+  let protocol = (process.argv.includes('--https') || configs.https) ? 'https' : 'http';
+  return protocol +
+    '://' +
+    configs.host +
+    ':' +
+    configs.port +
+    '/';
+}
+
+module.exports = class HMRDetectPlugin {
 
   apply(compiler) {
     let config = compiler.options;
@@ -48,9 +58,7 @@ class HMRDetectPlugin {
 
       console.log(chalk.blue(`HMR: Creating file "${hotFilePath}"`));
 
-      let fileContents = +new Date();
-      // todo write configurable url to file
-      fs.writeFile(hotFilePath, fileContents.toString(),
+      fs.writeFile(hotFilePath, getFileContents(config.devServer),
         (error) => {
           if (error) {
             console.log(chalk.bold.red('Error: Unable to create hot file:'));
@@ -61,6 +69,4 @@ class HMRDetectPlugin {
       );
     });
   }
-}
-
-module.exports = HMRDetectPlugin;
+};
