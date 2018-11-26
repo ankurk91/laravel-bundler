@@ -10,12 +10,12 @@ module.exports = {
       app.get('/', (req, res) => {
         res.set('Content-Type', 'text/html');
         res.send(`
-<html>
+<html lang="en">
 <head>
 <title>Webpack dev server</title>
 </head>
 <body>
-<h1>Your assets will se served from this address.</h1>
+<h1>Your Laravel assets will se served from this address.</h1>
 <h2>You should visit your application as normal.</h2>
 </body>
 </html>`.trim());
