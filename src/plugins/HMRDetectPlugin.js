@@ -17,9 +17,14 @@ function deleteHotFile() {
   if (!hotFilePath) {
     return
   }
-  console.log(chalk.blue("\n" + `HMR: Deleting file "${hotFilePath}" if exists`));
 
-  fs.unlink(hotFilePath, (error) => {
+  if (!fs.existsSync(hotFilePath)) {
+    return;
+  }
+
+  console.log(chalk.blue("\n" + `HMR: Deleting file "${hotFilePath}"`));
+
+  fs.unlinkSync(hotFilePath, (error) => {
     if (error) {
       // silent
     }
@@ -32,6 +37,7 @@ class HMRDetectPlugin {
     let config = compiler.options;
     hotFilePath = path.join(config.output.path, 'hot');
 
+    // Make sure this hook runs at very beginning but once
     compiler.hooks.entryOption.tap('HMRPlugin', () => {
       // Always delete the `hot` on startup
       deleteHotFile();
@@ -47,8 +53,9 @@ class HMRDetectPlugin {
       fs.writeFile(hotFilePath, fileContents.toString(),
         (error) => {
           if (error) {
-            console.log(chalk.bold.red('Unable to create hot file:'));
-            console.log(chalk.red(error))
+            console.log(chalk.bold.red('Error: Unable to create hot file:'));
+            console.log(chalk.red(error));
+            process.exit(1);
           }
         }
       );
