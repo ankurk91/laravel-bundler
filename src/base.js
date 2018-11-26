@@ -28,7 +28,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
@@ -37,7 +37,7 @@ module.exports = {
               '@babel/env',
               {
                 modules: false,
-                forceAllTransforms: true,
+                forceAllTransforms: Helpers.isProduction(),
                 targets: {
                   browsers: [
                     //Support browsers that have more than x% market share
