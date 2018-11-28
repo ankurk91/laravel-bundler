@@ -1,6 +1,6 @@
 <template>
   <div class="hello-vue">
-    Hello from Vue.
+    <h1 class="heading">Hello from Vue.</h1>
   </div>
 </template>
 
@@ -23,7 +23,7 @@
 </style>
 
 <style scoped>
-  .hello-vue {
+  .heading {
     color: green;
   }
 </style>
