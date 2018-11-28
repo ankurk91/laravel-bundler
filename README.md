@@ -9,6 +9,7 @@
 Modern asset building tool for Laravel framework.
 
 ## Installation
+:warning: This package does not work with `laravel-mix`; you should remove `laravel-mix` before using this one
 ```bash
 # npm
 npm install laravel-bundler 
