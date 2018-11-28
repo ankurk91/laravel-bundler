@@ -62,9 +62,9 @@ Update your `.gitignore`
 * Extract all css to a separate file based on entry name
 * Extract all vendor js to a file
 * PostCSS loader with `autoprefixer` and `cssnano`
-* Clean output directory before build
+* Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
-* Load environment variables from `.env` file that prefixed with `MIX_`
+* Load environment variables from `.env` file that prefixed are with `MIX_`
 * SourceMap support in development
 
 ### TODO
@@ -73,13 +73,13 @@ Update your `.gitignore`
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
 * [OS Notification](https://github.com/Turbo87/webpack-notifier) 
-* [Image compression](https://github.com/vanwagonet/img-loader)
+* [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
+* [Image compression](https://github.com/vanwagonet/img-loader)
 * CSS Preprocessors other than `sass|scss`
 * Non webpack methods like `minify|combine|babel|standaloneSass` etc
 * Babel plugins
-* [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin)
 
 ## License
 [MIT](LICENSE.txt) License
