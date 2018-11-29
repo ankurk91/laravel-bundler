@@ -30,7 +30,7 @@ module.exports = require('laravel-bundler')({
 Update your `package.json`
 ```json
 "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "dev": "cross-env NODE_ENV=development webpack --progress --mode development",
     "watch": "npm run dev -- --watch",
     "prod": "cross-env NODE_ENV=production webpack --progress --mode production",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --hot --progress"
@@ -53,7 +53,7 @@ Update your `.gitignore`
 /public/mix-manifest.json
 ```
 
-### Native Features
+### Baked Features
 * Webpack 4, Babel 7 with `@babel/preset-env`
 * Vue.js support
 * `CSS|SASS|SCSS` support

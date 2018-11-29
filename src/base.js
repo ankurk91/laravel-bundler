@@ -10,6 +10,7 @@ const Helpers = require('./helpers');
 const BaseLoaders = require('./loaders');
 
 module.exports = {
+  name: 'laravel-app',
   context: process.cwd(),
   mode: 'development',
   resolve: {
@@ -22,8 +23,8 @@ module.exports = {
   output: {
     path: path.resolve(process.cwd(), 'public'),
     publicPath: '/',
-    filename: Helpers.shouldVersion() ? 'js/[name]-[hash].js' : 'js/[name].js',
-    chunkFilename: Helpers.shouldVersion() ? 'js/[name]-[chunkhash].js' : 'js/[name].js',
+    filename: `js/[name]${Helpers.hash()}.js`,
+    chunkFilename: `js/[name]${Helpers.hash('chunkhash')}.js`,
     globalObject: 'this',
   },
 
@@ -32,7 +33,7 @@ module.exports = {
   },
 
   optimization: {
-    minimizer: [].concat(Helpers.isProduction() ? [
+    minimizer: Helpers.isProduction() ? [
       new TerserPlugin({
         parallel: true,
         sourceMap: false,
@@ -52,12 +53,12 @@ module.exports = {
       }),
       // https://github.com/NMFR/optimize-css-assets-webpack-plugin
       new OptimizeCssAssetsPlugin(),
-    ] : []),
+    ] : [],
   },
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: Helpers.shouldVersion() ? 'css/[name]-[contenthash].css' : 'css/[name].css',
+      filename: `css/[name]${Helpers.hash('contenthash')}.css`
     }),
   ].concat(Helpers.isProduction() ? [
     // https://webpack.js.org/guides/caching/

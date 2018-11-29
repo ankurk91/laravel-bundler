@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = [
   {
-    test: /\.(js|jsx)$/,
+    test: /\.jsx?$/,
     loader: 'babel-loader',
     exclude: /node_modules/,
     options: {
@@ -35,7 +35,7 @@ module.exports = [
         loader: 'css-loader',
         options: {
           sourceMap: Helpers.isDev(),
-          importLoaders: 1,
+          importLoaders: Helpers.isProduction() ? 2 : 1,
         }
       },
       Helpers.isProduction() ?
@@ -70,7 +70,7 @@ module.exports = [
     test: /(\.(webp|png|jpe?g|gif|ico)$|^((?!font).)*\.svg$)/,
     loader: 'file-loader',
     options: {
-      name: '[folder]/[name]-[hash].[ext]',
+      name: `[folder]/[name]${Helpers.hash('hash:8')}.[ext]`,
       outputPath: 'images/',
       publicPath: '../images'
     }
@@ -80,7 +80,7 @@ module.exports = [
     test: /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/,
     loader: 'file-loader',
     options: {
-      name: '[folder]/[name]-[hash].[ext]',
+      name: `[folder]/[name]${Helpers.hash('hash:8')}.[ext]`,
       outputPath: 'fonts/',
       publicPath: '../fonts'
     }
