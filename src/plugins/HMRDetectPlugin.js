@@ -32,7 +32,8 @@ function deleteHotFile() {
 }
 
 function getFileContents(configs) {
-  let protocol = (process.argv.includes('--https') || configs.https) ? 'https' : 'http';
+  let protocol = configs.https ? 'https' : 'http';
+
   return protocol +
     '://' +
     configs.host +

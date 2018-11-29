@@ -25,9 +25,9 @@ module.exports = [
       plugins: [],
     }
   },
-  // surprisingly this is also handling css
+  // Handle css and scss both
   {
-    test: /\.s?[ac]ss$/,
+    test: /\.s[ac]ss|\.css/,
     use: [
       'css-hot-loader',
       MiniCssExtractPlugin.loader,
@@ -67,7 +67,7 @@ module.exports = [
   },
   {
     // only include svg that doesn't have font in the path or file name by using negative lookahead
-    test: /(\.(webp|png|jpe?g|gif)$|^((?!font).)*\.svg$)/,
+    test: /(\.(webp|png|jpe?g|gif|ico)$|^((?!font).)*\.svg$)/,
     loader: 'file-loader',
     options: {
       name: '[folder]/[name]-[hash].[ext]',

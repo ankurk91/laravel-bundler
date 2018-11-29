@@ -1,6 +1,8 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
 
+// You should install `vue` in your app in order to use this recipe
+
 module.exports = {
   module: {
     rules: [
@@ -8,6 +10,11 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         exclude: /node_modules/,
+        options: {
+          compilerOptions: {
+            preserveWhitespace: false
+          }
+        }
       },
     ]
   },

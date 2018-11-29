@@ -34,15 +34,19 @@ module.exports = {
   optimization: {
     minimizer: [].concat(Helpers.isProduction() ? [
       new TerserPlugin({
+        parallel: true,
         sourceMap: false,
         terserOptions: {
           output: {
             beautify: false,
-            safari10: true,
+          },
+          mangle: {
+            safari10: true
           },
           compress: {
             drop_debugger: true,
-            drop_console: true
+            drop_console: true,
+            dead_code: true,
           }
         }
       }),

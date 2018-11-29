@@ -1,7 +1,8 @@
 // copied from https://github.com/FullHuman/purgecss-webpack-plugin
+const Helpers = require('../helpers');
 
-const globAll = require('glob-all');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
+const globAll = Helpers.ensureModule('glob-all');
+const PurgecssPlugin = Helpers.ensureModule('purgecss-webpack-plugin');
 const path = require('path');
 
 function flatMap(array, callback) {

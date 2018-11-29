@@ -11,7 +11,8 @@ module.exports = {
         './public/mix-manifest.json',
       ],
       {
-        root: process.cwd()
+        root: process.cwd(),
+        verbose: true,
       }
     ),
   ]
