@@ -38,8 +38,7 @@ function getFileContents(configs) {
     '://' +
     configs.host +
     ':' +
-    configs.port +
-    '/';
+    configs.port;
 }
 
 module.exports = class HMRDetectPlugin {
