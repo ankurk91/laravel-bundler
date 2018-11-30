@@ -1,8 +1,7 @@
 // copied from https://github.com/FullHuman/purgecss-webpack-plugin
-const Helpers = require('../helpers');
+const Helpers = require('../../helpers');
 
 const globAll = Helpers.ensureModule('glob-all');
-const PurgecssPlugin = Helpers.ensureModule('purgecss-webpack-plugin');
 const path = require('path');
 
 function flatMap(array, callback) {
@@ -39,7 +38,7 @@ const globs = globAll
   .filter(f => !/\/$/.test(f));
 
 // https://www.purgecss.com/configuration
-const pluginOptions = {
+module.exports = {
   paths: () => globs,
   extractors: [
     {
@@ -54,10 +53,4 @@ const pluginOptions = {
   ],
   fontFace: true,
   keyframes: true
-};
-
-module.exports = {
-  plugins: [
-    new PurgecssPlugin(pluginOptions)
-  ]
 };
