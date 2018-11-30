@@ -59,10 +59,10 @@ module.exports = class HMRDetectPlugin {
       console.log(chalk.blue(`HMR: Creating file "${hotFilePath}"`));
 
       fs.writeFile(hotFilePath, getFileContents(config.devServer),
-        (error) => {
+        error => {
           if (error) {
             console.log(chalk.bold.red('Error: Unable to create hot file:'));
-            console.log(chalk.red(error));
+            console.log(error);
             process.exit(1);
           }
         }

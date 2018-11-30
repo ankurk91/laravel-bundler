@@ -26,6 +26,7 @@ module.exports = {
     hot: true,
     historyApiFallback: false,
     headers: {
+      // allows cross domain access to fonts
       'Access-Control-Allow-Origin': '*',
     },
     open: false,
@@ -44,5 +45,7 @@ module.exports = {
 };
 
 if (Helpers.isHmr()) {
+  // This is required to make HMR work,
+  // specially when main application is running on a different domain than dev server
   module.exports.output.publicPath = module.exports.devServer.publicPath;
 }

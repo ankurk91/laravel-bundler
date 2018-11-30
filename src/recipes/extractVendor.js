@@ -9,6 +9,7 @@ module.exports = {
     splitChunks: {
       automaticNameDelimiter: '-',
       cacheGroups: {
+        default: false,
         vendorScripts: {
           test: /node_modules\/(.*)\.js/,
           name: 'vendor',

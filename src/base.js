@@ -41,9 +41,6 @@ module.exports = {
           output: {
             beautify: false,
           },
-          mangle: {
-            safari10: true
-          },
           compress: {
             drop_debugger: true,
             drop_console: true,
