@@ -1,5 +1,6 @@
 const Helpers = require('../helpers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Fiber = require('fibers');
 
 module.exports = {
   // Handle css and scss both
@@ -38,7 +39,9 @@ module.exports = {
       loader: 'sass-loader',
       options: {
         sourceMap: Helpers.isDev(),
-        minimize: Helpers.isProduction()
+        minimize: Helpers.isProduction(),
+        implementation: require('sass'),
+        fiber: Fiber,
       }
     },
   ].filter(Boolean),
