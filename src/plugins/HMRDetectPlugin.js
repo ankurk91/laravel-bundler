@@ -1,7 +1,7 @@
+const Helpers = require('../helpers');
 const path = require('path');
 const fs = require('fs');
-const chalk = require('chalk');
-const Helpers = require('../helpers');
+const chalk = Helpers.ensureModule('chalk');
 
 let hotFilePath = null;
 

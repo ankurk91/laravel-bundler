@@ -41,7 +41,7 @@ module.exports = {
         sourceMap: Helpers.isDev(),
         minimize: Helpers.isProduction(),
         implementation: require('sass'),
-        fiber: Fiber,
+        fiber: Fiber, // speed up dart-sass
       }
     },
   ].filter(Boolean),

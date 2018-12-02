@@ -20,7 +20,8 @@ function buildPlugin() {
   );
 }
 
-// Copied from laravel-mix
+// Copied from
+// https://github.com/JeffreyWay/laravel-mix/blob/master/src/webpackPlugins/MixDefinitionsPlugin.js
 function getDefinitions(mergeWith) {
   let regex = /^MIX_/i;
 
