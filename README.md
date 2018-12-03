@@ -33,7 +33,7 @@ Update your `package.json`
     "dev": "cross-env NODE_ENV=development webpack --progress --mode development",
     "watch": "npm run dev -- --watch",
     "prod": "cross-env NODE_ENV=production webpack --progress --mode production",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --hot --progress"
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
   },
 ```
 Update your blade template
