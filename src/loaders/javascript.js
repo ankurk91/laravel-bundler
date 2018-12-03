@@ -18,10 +18,6 @@ module.exports = {
         }
       ]
     ],
-    plugins: [
-      ["@babel/plugin-transform-runtime", {
-        "useESModules": true
-      }]
-    ],
+    plugins: [],
   }
 };
