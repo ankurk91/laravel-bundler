@@ -48,7 +48,7 @@ module.exports = class HMRDetectPlugin {
     hotFilePath = path.join(config.output.path, 'hot');
 
     // Make sure this hook runs at very beginning but once
-    compiler.hooks.entryOption.tap('HMRPlugin', () => {
+    compiler.hooks.entryOption.tap('HMRDetectPlugin', () => {
       // Always delete the `hot` on startup
       deleteHotFile();
 

@@ -6,11 +6,11 @@ function getDefaultBabelConfig() {
   return {
     presets: [
       [
-        '@babel/env',
+        '@babel/preset-env',
         {
           debug: false,
           modules: false,
-          forceAllTransforms: Helpers.isProduction(),
+          forceAllTransforms: false,
           targets: {
             browsers: ['> 2%']
           }
