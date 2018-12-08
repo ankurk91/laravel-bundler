@@ -26,7 +26,6 @@ module.exports = {
     hot: true,
     historyApiFallback: false,
     headers: {
-      // allows cross domain access to fonts
       'Access-Control-Allow-Origin': '*',
     },
     open: false,
