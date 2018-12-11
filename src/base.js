@@ -49,7 +49,12 @@ module.exports = {
         }
       }),
       // https://github.com/NMFR/optimize-css-assets-webpack-plugin
-      new OptimizeCssAssetsPlugin(),
+      new OptimizeCssAssetsPlugin({
+        cssProcessorPluginOptions: {
+          // same as css-nano options
+          preset: ['default', {discardComments: {removeAll: true}}],
+        }
+      }),
     ] : [],
   },
 
