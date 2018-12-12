@@ -13,6 +13,12 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
+// Detect IDE close
+process.on('SIGHUP', (code) => {
+  deleteHotFile();
+  process.exit(0);
+});
+
 function deleteHotFile() {
   if (!hotFilePath) {
     return
