@@ -67,8 +67,8 @@ Update your `.gitignore`
 * Load environment variables from `.env` file that prefixed are with `MIX_`
 * SourceMap support in development
 
-### TODO
-* Better Documentation
+### InProgress
+* [Documentation](https://github.com/ankurk91/laravel-bundler/wiki)
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
