@@ -1,7 +1,7 @@
 {
   "name": "laravel-bundler",
-  "version": "0.6.0",
-  "description": "Modern asset building tool for Laravel framework.",
+  "version": "0.6.1",
+  "description": "Modern asset building tool for Laravel framework with better default settings.",
   "main": "src/index.js",
   "files": [
     "src"
