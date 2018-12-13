@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/github/license/ankurk91/laravel-bundler.svg?maxAge=1800)](https://yarnpkg.com/en/package/laravel-bundler)
 [![build-status](https://travis-ci.com/ankurk91/laravel-bundler.svg?branch=master)](https://travis-ci.com/ankurk91/laravel-bundler)
 
-Modern asset building tool for Laravel framework.
+Modern asset building tool for Laravel framework with better default settings.
 
 ## Installation
 :warning: This package does not work with `laravel-mix`; you should remove `laravel-mix` before using this one
@@ -58,7 +58,7 @@ Update your `.gitignore`
 * Vue.js support
 * `CSS|SASS|SCSS` support
 * Font files and images handling
-* HMR support, even for CSS
+* HMR support, even for CSS :fire:
 * Extract all css to a separate file based on entry name
 * Extract all vendor js to a file
 * PostCSS loader with `autoprefixer` and `cssnano`
