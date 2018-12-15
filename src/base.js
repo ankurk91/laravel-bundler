@@ -53,7 +53,9 @@ module.exports = {
       new OptimizeCssAssetsPlugin({
         cssProcessorPluginOptions: {
           // same as css-nano options
-          preset: ['default', {discardComments: {removeAll: true}}],
+          preset: ['default', {
+            discardComments: {removeAll: true}
+          }],
         }
       }),
     ] : [],

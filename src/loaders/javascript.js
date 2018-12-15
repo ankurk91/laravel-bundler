@@ -10,7 +10,7 @@ function getDefaultBabelConfig() {
         {
           debug: false,
           modules: false,
-          forceAllTransforms: false,
+          forceAllTransforms: Helpers.isProduction(),
           targets: {
             browsers: ['> 2%']
           }

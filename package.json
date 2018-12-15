@@ -1,7 +1,7 @@
 {
   "name": "laravel-bundler",
   "version": "0.6.1",
-  "description": "Modern asset building tool for Laravel framework with better default settings.",
+  "description": "Modern asset building tool for Laravel framework with better defaults.",
   "main": "src/index.js",
   "files": [
     "src"
@@ -34,6 +34,7 @@
     "@babel/preset-env": "^7.2.0",
     "autoprefixer": "^9.4.2",
     "babel-loader": "^8.0.4",
+    "chalk": "^2.4.1",
     "clean-webpack-plugin": "^1.0.0",
     "cross-env": "^5.2.0",
     "css-hot-loader": "^1.4.3",

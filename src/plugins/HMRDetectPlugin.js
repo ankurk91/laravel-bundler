@@ -1,7 +1,7 @@
 const Helpers = require('../helpers');
 const path = require('path');
 const fs = require('fs');
-const chalk = Helpers.ensureModule('chalk');
+const chalk = require('chalk');
 
 let hotFilePath = null;
 
@@ -13,7 +13,7 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
-// Detect IDE close
+// Detect IDE window close
 process.on('SIGHUP', (code) => {
   deleteHotFile();
   process.exit(0);

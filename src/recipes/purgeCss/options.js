@@ -1,4 +1,4 @@
-// copied from https://github.com/FullHuman/purgecss-webpack-plugin
+// copied from https://github.com/spatie/laravel-mix-purgecss
 const Helpers = require('../../helpers');
 
 const globAll = Helpers.ensureModule('glob-all');

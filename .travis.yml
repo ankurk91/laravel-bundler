@@ -16,6 +16,7 @@ install:
 script:
   - yarn run example:dev
   - yarn run example:prod
+  - yarn audit
 
 # Monitor only these branches
 branches:
