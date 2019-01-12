@@ -2,29 +2,29 @@ const Helpers = require('../helpers');
 const fs = require('fs');
 const path = require('path');
 
-function getDefaultBabelConfig() {
-  return {
-    presets: [
-      [
-        '@babel/preset-env',
-        {
-          debug: false,
-          modules: false,
-          forceAllTransforms: Helpers.isProduction(),
-          targets: {
-            browsers: ['> 2%']
-          }
-        }
-      ]
-    ],
-    plugins: [],
-  };
-}
+const loaderOptions = {
+  cacheDirectory: Helpers.isProduction()
+};
 
-const fileNames = ['.babelrc', '.babelrc.js', 'babel.config.js'];
+const babelConfigs = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        debug: false,
+        modules: false,
+        forceAllTransforms: Helpers.isProduction(),
+        targets: {
+          browsers: ['> 2%']
+        }
+      }
+    ]
+  ],
+  plugins: [],
+};
 
 function userConfigExists() {
-  return fileNames.some((file) => {
+  return ['.babelrc', '.babelrc.js', 'babel.config.js'].some((file) => {
     return fs.existsSync(path.resolve(process.cwd(), file));
   })
 }
@@ -34,5 +34,5 @@ module.exports = {
   test: /\.jsx?$/,
   loader: 'babel-loader',
   exclude: /node_modules/,
-  options: userConfigExists() ? {} : getDefaultBabelConfig()
+  options: Object.assign({}, loaderOptions, userConfigExists() ? {} : babelConfigs)
 };
