@@ -36,10 +36,12 @@ module.exports = {
   optimization: {
     minimizer: Helpers.isProduction() ? [
       new TerserPlugin({
+        cache: true,
         parallel: true,
         sourceMap: false,
         terserOptions: {
           output: {
+            comments: false,
             beautify: false,
           },
           compress: {
