@@ -1,6 +1,6 @@
 {
   "name": "laravel-bundler",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Modern asset building tool for Laravel framework with better defaults.",
   "main": "src/index.js",
   "files": [
@@ -14,7 +14,8 @@
     "laravel",
     "laravel-mix",
     "webpack",
-    "bundle"
+    "bundle",
+    "asset"
   ],
   "author": "ankurk91",
   "license": "MIT",
