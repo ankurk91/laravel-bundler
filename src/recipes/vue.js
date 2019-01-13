@@ -1,7 +1,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
 
-// You should install `vue` in your app in order to use this recipe
+// You should install `vue` and `vue-template-compiler` your project in order to use this recipe
 
 module.exports = {
   module: {
