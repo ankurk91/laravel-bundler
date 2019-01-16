@@ -1,15 +1,14 @@
 const Helpers = require('../helpers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
-  // Handle css and scss both
-  test: /\.s[ac]ss|\.css/,
-  use: [
+function defaultLoaderStack(enableModules = false) {
+  return [
     'css-hot-loader', // will auto disable itself in modes other than hmr
     MiniCssExtractPlugin.loader,
     {
       loader: 'css-loader',
       options: {
+        modules: !!enableModules,
         sourceMap: Helpers.isDev(),
         importLoaders: Helpers.isProduction() ? 2 : 1,
       }
@@ -43,5 +42,21 @@ module.exports = {
         fiber: require('fibers'), // speed up dart-sass
       }
     },
-  ].filter(Boolean),
+  ].filter(Boolean)
+}
+
+module.exports = {
+  // Handle css and scss both
+  test: /\.s[ac]ss|\.css/,
+  oneOf: [
+    {
+      // support css modules
+      // https://vue-loader.vuejs.org/guide/css-modules.html#opt-in-usage
+      resourceQuery: /module/,
+      use: defaultLoaderStack(true)
+    },
+    {
+      use: defaultLoaderStack()
+    }
+  ]
 };
