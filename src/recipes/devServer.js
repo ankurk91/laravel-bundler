@@ -22,6 +22,7 @@ module.exports = {
       });
     },
     contentBase: path.resolve(process.cwd(), 'public'),
+    disableHostCheck: true,
     host: 'localhost',
     hot: true,
     historyApiFallback: false,

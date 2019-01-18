@@ -55,7 +55,7 @@ module.exports = class HMRDetectPlugin {
 
     // Make sure this hook runs at very beginning but once
     compiler.hooks.entryOption.tap('HMRDetectPlugin', () => {
-      // Always delete the `hot` on startup
+      // Always delete the `hot` file on startup
       deleteHotFile();
 
       if (!Helpers.isHmr()) {
