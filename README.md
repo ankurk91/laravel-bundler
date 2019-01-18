@@ -58,12 +58,12 @@ Update your `.gitignore`
 
 ### Baked Features
 * Webpack 4, Babel 7 with `@babel/preset-env`
-* Vue.js support
-* `CSS|SASS|SCSS` support
+* Vue.js support - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Vue.js-Recipe)
+* `CSS|SASS|SCSS` and CSS modules support
 * Font and image files handling
 * HMR support, even for CSS :fire:
 * Extract all css to a separate file based on entry name
-* Extract all vendor js to a file
+* Extract all vendor js to a separate file based on entry name
 * PostCSS loader with `autoprefixer` and `cssnano`
 * Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
@@ -75,8 +75,8 @@ Update your `.gitignore`
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
-* [OS Notification](https://github.com/Turbo87/webpack-notifier) 
-* [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin)
+* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/OS-Notification-Recipe)
+* [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Purge-CSS-Recipe)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * [Image compression](https://github.com/vanwagonet/img-loader)

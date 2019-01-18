@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.2](https://github.com/ankurk91/laravel-bundler/compare/0.7.1...0.7.2)
+* Add [CSS modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage) support
+* Fix `Invalid Host/Origin Header` error in `hot` mode
+
 ## [0.7.1](https://github.com/ankurk91/laravel-bundler/compare/0.7.0...0.7.1)
 * Enable `terser` webpack plugin cache 
 * Enable `babel-loader` cache

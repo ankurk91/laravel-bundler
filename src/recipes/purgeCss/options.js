@@ -33,13 +33,9 @@ options.globs.push(
   })
 );
 
-const globs = globAll
-  .sync(options.globs, {mark: true})
-  .filter(f => !/\/$/.test(f));
-
 // https://www.purgecss.com/configuration
 module.exports = {
-  paths: () => globs,
+  paths: () => globAll.sync(options.globs, {mark: true}).filter(f => !/\/$/.test(f)),
   extractors: [
     {
       extractor: extractAllSelectorLikeStrings,

@@ -6,6 +6,9 @@ const Helpers = require('../helpers');
 module.exports = {
   output: {},
   devServer: {
+    allowedHosts: [
+      'localhost'
+    ],
     before: (app, server) => {
       app.get('/', (req, res) => {
         res.set('Content-Type', 'text/html');
