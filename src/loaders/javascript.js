@@ -1,12 +1,11 @@
 const Helpers = require('../helpers');
-const fs = require('fs');
-const path = require('path');
+const cosmiconfig = Helpers.ensureModule('cosmiconfig');
 
 const loaderOptions = {
   cacheDirectory: Helpers.isProduction()
 };
 
-const babelConfigs = {
+const defaultBabelConfigs = {
   presets: [
     [
       '@babel/preset-env',
@@ -25,16 +24,21 @@ const babelConfigs = {
   plugins: [],
 };
 
-function userConfigExists() {
-  return ['.babelrc', '.babelrc.js', 'babel.config.js'].some((file) => {
-    return fs.existsSync(path.resolve(process.cwd(), file));
-  })
-}
+const userConfigExists = () => {
+  return !!cosmiconfig('babel', {
+    searchPlaces: [
+      'package.json',
+      '.babelrc',
+      '.babelrc.js',
+      'babel.config.js'
+    ]
+  }).searchSync()
+};
 
 module.exports = {
   // Handle js and jsx both
   test: /\.jsx?$/,
   loader: 'babel-loader',
   exclude: /node_modules/,
-  options: Object.assign({}, loaderOptions, userConfigExists() ? {} : babelConfigs)
+  options: Object.assign({}, loaderOptions, userConfigExists() ? {} : defaultBabelConfigs)
 };
