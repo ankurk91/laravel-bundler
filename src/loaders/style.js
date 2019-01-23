@@ -1,8 +1,27 @@
 const Helpers = require('../helpers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const cosmiconfig = Helpers.ensureModule('cosmiconfig');
+
+const defaultPostCssConfig = {
+  plugins: [
+    require('autoprefixer')({
+      browsers: ['> 1%', 'not IE 11']
+    }),
+    require('cssnano')({
+      preset: [
+        'default', {
+          discardComments: {
+            removeAll: true,
+          },
+        }]
+    })
+  ]
+};
+
+const userConfigExists = !!cosmiconfig('postcss').searchSync();
 
 function defaultLoaderStack(enableModules = false) {
-  return [
+  const loaders = [
     'css-hot-loader', // will auto disable itself in modes other than hmr
     MiniCssExtractPlugin.loader,
     {
@@ -19,18 +38,6 @@ function defaultLoaderStack(enableModules = false) {
         options: {
           sourceMap: false,
           ident: 'postcss',
-          plugins: () => [
-            require('autoprefixer')({
-              browsers: ['> 2%']
-            }),
-            require('cssnano')({
-              preset: ['default', {
-                discardComments: {
-                  removeAll: true,
-                },
-              }]
-            })
-          ]
         }
       } : false,
     {
@@ -42,7 +49,16 @@ function defaultLoaderStack(enableModules = false) {
         fiber: require('fibers'), // speed up dart-sass
       }
     },
-  ].filter(Boolean)
+  ].filter(Boolean);
+
+  // Allow overriding postCss configs
+  !userConfigExists && loaders.forEach(loader => {
+    if (loader.loader === 'postcss-loader') {
+      Object.assign(loader.options, defaultPostCssConfig)
+    }
+  });
+
+  return loaders;
 }
 
 module.exports = {
