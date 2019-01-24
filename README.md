@@ -59,7 +59,7 @@ Update your `.gitignore`
 ### Baked Features
 * Webpack 4, Babel 7 with `@babel/preset-env`
 * Vue.js support - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Vue.js-Recipe)
-* `CSS|SASS|SCSS` and CSS modules support
+* `CSS|SASS|SCSS` with PostCSS and CSS modules support
 * Font and image files handling
 * HMR support, even for CSS :fire:
 * Extract all css to a separate file based on entry name
