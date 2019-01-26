@@ -9,3 +9,15 @@
 .pagination {
   margin: 10px;
 }
+
+select {
+  appearance: none;
+}
+
+.duplicate-selector {
+  color: yellow;
+}
+
+.duplicate-selector {
+  background: yellow;
+}

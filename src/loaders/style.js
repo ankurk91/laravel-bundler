@@ -7,21 +7,21 @@ const defaultPostCssConfig = {
     require('autoprefixer')({
       browsers: ['> 1%', 'not IE 11']
     }),
-    require('cssnano')({
+    Helpers.isProduction() ? require('cssnano')({
       preset: [
         'default', {
           discardComments: {
             removeAll: true,
           },
         }]
-    })
-  ]
+    }) : false
+  ].filter(Boolean)
 };
 
 const userConfigExists = !!cosmiconfig('postcss').searchSync();
 
 function defaultLoaderStack(enableModules = false) {
-  const loaders = [
+  return [
     'css-hot-loader', // will auto disable itself in modes other than hmr
     MiniCssExtractPlugin.loader,
     {
@@ -29,17 +29,16 @@ function defaultLoaderStack(enableModules = false) {
       options: {
         modules: !!enableModules,
         sourceMap: Helpers.isDev(),
-        importLoaders: Helpers.isProduction() ? 2 : 1,
+        importLoaders: 2,
       }
     },
-    Helpers.isProduction() ?
-      {
-        loader: 'postcss-loader',
-        options: {
-          sourceMap: false,
-          ident: 'postcss',
-        }
-      } : false,
+    {
+      loader: 'postcss-loader',
+      options: Object.assign({}, {
+        sourceMap: Helpers.isDev(),
+        ident: 'postcss',
+      }, userConfigExists ? {} : defaultPostCssConfig)
+    },
     {
       loader: 'sass-loader',
       options: {
@@ -50,15 +49,6 @@ function defaultLoaderStack(enableModules = false) {
       }
     },
   ].filter(Boolean);
-
-  // Allow overriding postCss configs
-  !userConfigExists && loaders.forEach(loader => {
-    if (loader.loader === 'postcss-loader') {
-      Object.assign(loader.options, defaultPostCssConfig)
-    }
-  });
-
-  return loaders;
 }
 
 module.exports = {
