@@ -1,9 +1,12 @@
 # Changelog
 
+## [0.7.4](https://github.com/ankurk91/laravel-bundler/compare/0.7.3...0.7.4)
+* Allow using `autoprefixer` in development
+
 ## [0.7.3](https://github.com/ankurk91/laravel-bundler/compare/0.7.2...0.7.3)
 * Allow overriding postcss configs
 * Better detection of babel configs
-* Update Default browsers list to [`'> 1%', 'not IE 11']`
+* Update Default browsers list to `['> 1%', 'not IE 11']`
 
 ## [0.7.2](https://github.com/ankurk91/laravel-bundler/compare/0.7.1...0.7.2)
 * Add [CSS modules](https://vue-loader.vuejs.org/guide/css-modules.html#usage) support

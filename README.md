@@ -59,12 +59,12 @@ Update your `.gitignore`
 ### Baked Features
 * Webpack 4, Babel 7 with `@babel/preset-env`
 * Vue.js support - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Vue.js-Recipe)
-* `CSS|SASS|SCSS` with PostCSS and CSS modules support
+* `CSS|SASS|SCSS` with CSS modules support
+* PostCSS loader with `autoprefixer` and `cssnano`
 * Font and image files handling
 * HMR support, even for CSS :fire:
 * Extract all css to a separate file based on entry name
 * Extract all vendor js to a separate file based on entry name
-* PostCSS loader with `autoprefixer` and `cssnano`
 * Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_`
