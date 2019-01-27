@@ -75,7 +75,7 @@ module.exports = {
     new webpack.SourceMapDevToolPlugin(),
   ]),
 
-  devtool: Helpers.isProduction() ? false : '#cheap-module-eval-source-map',
+  devtool: Helpers.isProduction() ? false : '#eval-source-map',
   performance: {
     hints: false,
   },
