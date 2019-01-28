@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.5](https://github.com/ankurk91/laravel-bundler/compare/0.7.4...0.7.5)
+* Change development source map to `eval-source-map`
+* Clean build files just before emitting new
+
 ## [0.7.4](https://github.com/ankurk91/laravel-bundler/compare/0.7.3...0.7.4)
 * Allow using `autoprefixer` in development
 
