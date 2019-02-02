@@ -64,7 +64,7 @@ Update your `.gitignore`
 * Font and image files handling
 * HMR support, even for CSS :fire:
 * Extract all css to a separate file based on entry name
-* Extract all vendor js to a separate file based on entry name
+* Extract all vendor js to a separate file 
 * Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_`
