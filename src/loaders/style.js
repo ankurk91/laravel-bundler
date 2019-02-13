@@ -4,9 +4,7 @@ const cosmiconfig = Helpers.ensureModule('cosmiconfig');
 
 const defaultPostCssConfig = {
   plugins: [
-    require('autoprefixer')({
-      browsers: ['> 1%', 'not IE 11']
-    }),
+    require('autoprefixer')(),
     Helpers.isProduction() ? require('cssnano')({
       preset: [
         'default', {

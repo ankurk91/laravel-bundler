@@ -34,7 +34,11 @@ Update your `package.json`
     "watch": "npm run dev -- --watch",
     "prod": "cross-env NODE_ENV=production webpack --progress --mode production",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
-  },
+},
+"browserslist": [
+    "> 1%",
+    "not IE 11"
+]  
 ```
 Update your blade template
 ```blade

@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.8.0](https://github.com/ankurk91/laravel-bundler/compare/0.7.5...0.8.0)
+* `@` alias now points to `resources` rather than `resources/js`
+* Remove default browsers target from `autoprefixer` and `babel-preset-env`; in favour of single  [browserslist](https://github.com/browserslist/browserslist) file
+    - Create a  `.browserslistrc` file on your project root and specify the supported browsers there.
+
 ## [0.7.5](https://github.com/ankurk91/laravel-bundler/compare/0.7.4...0.7.5)
 * Change development source map to `eval-source-map`
 * Clean build files just before emitting new

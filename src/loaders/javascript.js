@@ -14,10 +14,6 @@ const defaultBabelConfigs = {
         modules: false,
         forceAllTransforms: Helpers.isProduction(),
         useBuiltIns: false,
-        targets: {
-          // https://browserl.ist/?q=%3E+1%25%2C+not+IE+11
-          browsers: ['> 1%', 'not IE 11']
-        }
       }
     ]
   ],
