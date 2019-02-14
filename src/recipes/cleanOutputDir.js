@@ -13,7 +13,8 @@ module.exports = {
       {
         root: process.cwd(),
         verbose: true,
-        beforeEmit: true
+        beforeEmit: true,
+        exclude: ['.gitignore'],
       }
     ),
   ]
