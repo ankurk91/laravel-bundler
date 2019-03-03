@@ -26,21 +26,21 @@ function defaultLoaderStack(enableModules = false) {
       loader: 'css-loader',
       options: {
         modules: !!enableModules,
-        sourceMap: Helpers.isDev(),
+        sourceMap: Helpers.sourceMapEnabled(),
         importLoaders: 2,
       }
     },
     {
       loader: 'postcss-loader',
       options: Object.assign({}, {
-        sourceMap: Helpers.isDev(),
+        sourceMap: Helpers.sourceMapEnabled(),
         ident: 'postcss',
       }, userConfigExists ? {} : defaultPostCssConfig)
     },
     {
       loader: 'sass-loader',
       options: {
-        sourceMap: Helpers.isDev(),
+        sourceMap: Helpers.sourceMapEnabled(),
         minimize: Helpers.isProduction(),
         implementation: require('sass'),
         fiber: require('fibers'), // speed up dart-sass
