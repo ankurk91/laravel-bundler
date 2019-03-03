@@ -25,7 +25,7 @@ function buildPlugin() {
 function getDefinitions(mergeWith) {
   let regex = /^MIX_/i;
 
-  // Filter out env vars that don't begin with MIX_.
+  // Filter out env vars that don't begin with MIX_
   let filtered = Object.keys(process.env)
     .filter(key => regex.test(key))
     .reduce((value, key) => {

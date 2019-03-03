@@ -18,7 +18,7 @@ module.exports = {
 <title>Webpack dev server</title>
 </head>
 <body>
-<h1>Your Laravel assets will se served from this address.</h1>
+<h1>Your Laravel assets will be served from this address.</h1>
 <h2>You should visit your application as normal.</h2>
 </body>
 </html>`.trim());
