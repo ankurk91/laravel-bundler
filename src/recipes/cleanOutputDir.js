@@ -2,20 +2,17 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   plugins: [
-    new CleanWebpackPlugin(
-      [
-        './public/js',
-        './public/css',
-        './public/fonts',
-        './public/images',
-        './public/mix-manifest.json',
+    new CleanWebpackPlugin({
+      cleanStaleWebpackAssets: false,
+      cleanOnceBeforeBuildPatterns: [
+        '!.gitignore',
+        './js/',
+        './css/',
+        './fonts/',
+        './images/',
+        './mix-manifest.json',
       ],
-      {
-        root: process.cwd(),
-        verbose: true,
-        beforeEmit: true,
-        exclude: ['.gitignore'],
-      }
-    ),
+      verbose: true,
+    }),
   ]
 };
