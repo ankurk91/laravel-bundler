@@ -25,6 +25,7 @@ module.exports = require('laravel-bundler')({
   entry: {
     app: './resources/js/app.js',
   },
+  // Other webpack configs
 });
 ```
 Update your `package.json`
@@ -72,7 +73,7 @@ Update your `.gitignore`
 * Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_`
-* SourceMap support in development
+* Intelligent SourceMap 
 
 ### Documentation
 * [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) in progress
