@@ -9,7 +9,8 @@ function buildPlugin() {
   // Expand everything to process.env
   expand(
     dotenv.config({
-      path: filePath
+      path: filePath,
+      debug: false
     })
   );
 
