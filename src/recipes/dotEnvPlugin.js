@@ -36,15 +36,14 @@ function getDefinitions(mergeWith) {
 
   let final = Object.assign(filtered, mergeWith);
 
-  return {
-    'process.env': Object.keys(final)
+  return Object.keys(final)
     // Stringify all values so they can be fed into Webpack's DefinePlugin.
-      .reduce((value, key) => {
-        value[key] = JSON.stringify(final[key]);
+    .reduce((value, key) => {
+        value[`process.env.${key}`] = JSON.stringify(final[key]);
 
         return value;
-      }, {})
-  };
+      }, {}
+    );
 }
 
 module.exports = {

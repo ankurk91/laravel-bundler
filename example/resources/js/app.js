@@ -8,7 +8,7 @@ import ExampleVue from './example';
 Vue.component('example', ExampleVue);
 
 function boot(...args) {
-  console.log("App main file");
+  console.log("App main file", NODE_ENV, process.env.DOES_NOT_EXIST);
   console.log("MIX_APP_URL=" + process.env.MIX_APP_URL);
   console.log("MIX_SAMPLE_VAR=" + process.env.MIX_SAMPLE_VAR);
 }
