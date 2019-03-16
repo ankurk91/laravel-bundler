@@ -3,7 +3,7 @@
 ## [0.9.0](https://github.com/ankurk91/laravel-bundler/compare/0.8.0..0.9.0)
 * `Helpers.isDev()` only return `true` when `npm run dev`
 * Upgrade `clean-webpack-plugin` to v2.x
-* Generate full source map (separate file) in `dev` mode while `watch` and `hot` behaviour remains same. 
+* Generate full source map (separate file) in `dev` mode while `watch` and `hot` behaviour remains same as before. 
 
 ## [0.8.0](https://github.com/ankurk91/laravel-bundler/compare/0.7.5...0.8.0)
 * `@` alias now points to `resources` rather than `resources/js`

@@ -81,7 +81,6 @@ Update your `.gitignore`
 ### Not in the plan
 These features are not in the plan but can be enabled on demand
 * [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/OS-Notification-Recipe)
-* [PurgeCSS](https://github.com/FullHuman/purgecss-webpack-plugin) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Purge-CSS-Recipe)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * [Image compression](https://github.com/vanwagonet/img-loader)
