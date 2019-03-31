@@ -10,7 +10,6 @@ function buildPlugin() {
   expand(
     dotenv.config({
       path: filePath,
-      debug: false
     })
   );
 
