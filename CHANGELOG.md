@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.10.0](https://github.com/ankurk91/laravel-bundler/compare/0.9.0..0.10.0)
+* Remove Purge CSS recipe
+* Fix loading environment variable from .env
+
 ## [0.9.0](https://github.com/ankurk91/laravel-bundler/compare/0.8.0..0.9.0)
 * `Helpers.isDev()` only return `true` when `npm run dev`
 * Upgrade `clean-webpack-plugin` to v2.x
