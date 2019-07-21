@@ -76,6 +76,9 @@ module.exports = {
   ]),
 
   devtool: Helpers.devTool(),
+  watchOptions: {
+    ignored: /node_modules/
+  },
   performance: {
     hints: false,
   },
