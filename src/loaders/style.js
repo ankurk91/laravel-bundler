@@ -46,9 +46,10 @@ function defaultLoaderStack(enableModules = false) {
       loader: 'sass-loader',
       options: {
         sourceMap: Helpers.sourceMapEnabled(),
-        minimize: Helpers.isProduction(),
         implementation: require('sass'),
-        fiber: require('fibers'), // speed up dart-sass
+        sassOptions: {
+          minimize: Helpers.isProduction(),
+        },
       }
     },
   ].filter(Boolean);
