@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.11.0](https://github.com/ankurk91/laravel-bundler/compare/0.10.0..0.11.0)
+* Upgrade `sass-loader` to v8
+* Upgrade `fibers` to v4
+* Bump min node.js requirement to v10.13
+
 ## [0.10.0](https://github.com/ankurk91/laravel-bundler/compare/0.9.0..0.10.0)
 * Remove Purge CSS recipe
 * Fix loading environment variable from .env
