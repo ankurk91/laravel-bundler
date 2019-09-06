@@ -12,7 +12,6 @@ const defaultBabelConfigs = {
       {
         debug: false,
         modules: false,
-        forceAllTransforms: Helpers.isProduction(),
         useBuiltIns: false,
       }
     ]
