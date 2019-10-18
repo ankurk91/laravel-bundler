@@ -5,6 +5,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const Helpers = require('./helpers');
 const BaseLoaders = require('./loaders');
@@ -67,6 +68,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `css/[name]${Helpers.hash('contenthash')}.css`
     }),
+    new CaseSensitivePathsPlugin(),
   ].concat(Helpers.isProduction() ? [
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),
