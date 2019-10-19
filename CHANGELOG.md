@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.12.0](https://github.com/ankurk91/laravel-bundler/compare/0.11.0..0.12.0)
+* Upgrade `cross-env` package
+* Add `case-sensitive-paths-webpack-plugin`
+
 ## [0.11.0](https://github.com/ankurk91/laravel-bundler/compare/0.10.0..0.11.0)
 * Upgrade `sass-loader` to v8
 * Upgrade `fibers` to v4
