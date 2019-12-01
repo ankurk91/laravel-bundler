@@ -31,9 +31,9 @@ module.exports = require('laravel-bundler')({
 Update your `package.json`
 ```json
 "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --mode development",
+    "dev": "cross-env NODE_ENV=development webpack --progress --mode=development",
     "watch": "npm run dev -- --watch",
-    "prod": "cross-env NODE_ENV=production webpack --progress --mode production",
+    "prod": "cross-env NODE_ENV=production webpack --progress --mode=production",
     "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
 },
 "browserslist": [

@@ -1,5 +1,5 @@
 const Helpers = require('../helpers');
-const cosmiconfig = Helpers.ensureModule('cosmiconfig');
+const cosmiconfig = require('cosmiconfig');
 
 const loaderOptions = {
   cacheDirectory: Helpers.isProduction()

@@ -1,6 +1,6 @@
 const Helpers = require('../helpers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const cosmiconfig = Helpers.ensureModule('cosmiconfig');
+const cosmiconfig = require('cosmiconfig');
 
 const defaultPostCssConfig = {
   plugins: [
