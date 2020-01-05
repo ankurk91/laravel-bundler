@@ -37,8 +37,7 @@ Update your `package.json`
     "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
 },
 "browserslist": [
-    "> 1%",
-    "not IE 11"
+    "> 2%"
 ]  
 ```
 Update your blade template

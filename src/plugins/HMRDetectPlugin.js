@@ -8,8 +8,8 @@ let hotFilePath = null;
 // Make sure to delete the `hot` file when user press CTRL+C
 // https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js
 process.on('SIGINT', () => {
+  console.log(chalk.blue("\n" + 'Terminating ...'));
   deleteHotFile();
-  console.log(chalk.blue('Terminating ...'));
   process.exit(0);
 });
 
@@ -54,7 +54,7 @@ module.exports = class HMRDetectPlugin {
     hotFilePath = path.join(config.output.path, 'hot');
 
     // Make sure this hook runs at very beginning but once
-    compiler.hooks.entryOption.tap('HMRDetectPlugin', () => {
+    compiler.hooks.afterEnvironment.tap('HMRDetectPlugin', () => {
       // Always delete the `hot` file on startup
       deleteHotFile();
 
