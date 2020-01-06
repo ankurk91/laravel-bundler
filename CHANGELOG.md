@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.13.0](https://github.com/ankurk91/laravel-bundler/compare/0.12.0..0.13.0)
+* Internal changes
+
 ## [0.12.0](https://github.com/ankurk91/laravel-bundler/compare/0.11.0..0.12.0)
 * Upgrade `cross-env` package
 * Add `case-sensitive-paths-webpack-plugin`
