@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.13.1](https://github.com/ankurk91/laravel-bundler/compare/0.13.0..0.13.1)
+* Fix: source map generation in `dev` mode
+
 ## [0.13.0](https://github.com/ankurk91/laravel-bundler/compare/0.12.0..0.13.0)
 * Internal changes
 

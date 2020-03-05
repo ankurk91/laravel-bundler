@@ -73,8 +73,7 @@ module.exports = {
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),
   ] : [
-    // https://webpack.js.org/plugins/source-map-dev-tool-plugin/
-    new webpack.SourceMapDevToolPlugin(),
+    // Dev only plugins
   ]),
 
   devtool: Helpers.devTool(),
