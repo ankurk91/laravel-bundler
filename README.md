@@ -19,6 +19,21 @@ npm install laravel-bundler
 ```
 
 ## Usage
+Create a `resources/js/app.js` file like
+```js
+// Import libraries
+import 'vue';
+import { BootstrapVue } from 'bootstrap-vue'
+// You can import styles like this
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+// Write your own code
+Vue.use(BootstrapVue);
+
+new Vue({
+  'el': '#app'
+})
+```
 Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
 ```js
 module.exports = require('laravel-bundler')({
