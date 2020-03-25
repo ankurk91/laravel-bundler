@@ -5,6 +5,7 @@
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](https://yarnpkg.com/en/package/laravel-bundler)
 [![build-status](https://travis-ci.com/ankurk91/laravel-bundler.svg?branch=master)](https://travis-ci.com/ankurk91/laravel-bundler)
+[![Build status](https://ci.appveyor.com/api/projects/status/f5v3uv63d53tyu1u/branch/master?svg=true)](https://ci.appveyor.com/project/ankurk91/laravel-bundler/branch/master)
 
 Modern asset building tool for Laravel framework with better defaults.
 
