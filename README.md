@@ -10,7 +10,7 @@
 Modern asset building tool for Laravel framework with better defaults.
 
 ## Installation
-:warning: This package does not work with `laravel-mix`; you should remove `laravel-mix` before using this one
+:warning: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this package
 ```bash
 # yarn
 yarn add laravel-bundler
@@ -83,7 +83,7 @@ Update your `.gitignore`
 * PostCSS loader with `autoprefixer` and `cssnano`
 * Font and image files handling
 * HMR support, even for CSS :fire:
-* Extract all css to a separate file 
+* Extract all css to a separate file (based on entry)
 * Extract all vendor js to a separate file 
 * Clean output directories before build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
