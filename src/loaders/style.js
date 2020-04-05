@@ -20,11 +20,11 @@ const userConfigExists = !!cosmiconfig('postcss').searchSync();
 
 function defaultLoaderStack(enableModules = false) {
   return [
-    'css-hot-loader', // will auto disable itself in modes other than hmr
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        hmr: false
+        hmr: Helpers.isHmr(),
+        reloadAll: true,
       }
     },
     {
