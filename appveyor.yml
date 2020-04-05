@@ -1,5 +1,4 @@
 # Config file for - http://www.appveyor.com/
-# Ref - http://www.appveyor.com/docs/appveyor-yml
 # Validate here - https://ci.appveyor.com/tools/validate-yaml
 
 version: 1.0.{build}-{branch}
@@ -7,7 +6,6 @@ version: 1.0.{build}-{branch}
 init:
   - git config --global core.autocrlf input
 
-# Test against this version of Node.js
 environment:
   nodejs_version: "12"
 
@@ -16,17 +14,11 @@ platform: x64
 matrix:
   fast_finish: true
 
-# set git clone depth
-clone_depth: 1                      # clone entire repository history if not defined
-
 # Install scripts. (runs after repo cloning)
 install:
-  # Get the defined version of Node.js
   - ps: Install-Product node $env:nodejs_version x86
-  # Install node packages
   - yarn install --non-interactive
 
-# Post-install test scripts.
 test_script:
   - node --version
   - npm --version
@@ -34,11 +26,9 @@ test_script:
   - yarn run example:dev
   - yarn run example:prod
 
-# Cache folder to speed up builds
 cache:
-  - node_modules -> package.json # preserve "node_modules" directory in the root of build folder but will reset it if package.json is modified
+  - node_modules -> package.json,yarn,lock
 
-# which git branch to watch
 branches:
   only:
     - master
