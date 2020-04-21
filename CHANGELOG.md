@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.14.1](https://github.com/ankurk91/laravel-bundler/compare/0.14.1..0.14.1)
+* Fix: source-maps were broken on hmr mode
+
 ## [0.14.0](https://github.com/ankurk91/laravel-bundler/compare/0.13.1..0.14.0)
 * Remove the need of `css-hot-loader`, utilize `mini-css-extract-plugin` features
 * Add `webpack-fix-style-only-entries` plugin
