@@ -76,7 +76,11 @@ module.exports = {
     new webpack.HashedModuleIdsPlugin(),
   ] : [
     // Dev only plugins
-  ]),
+  ]).concat((Helpers.isHmr() || Helpers.isWatch()) ? [
+    // Workaround
+    // We need this plugin only for inline source maps
+    new webpack.SourceMapDevToolPlugin(),
+  ] : []),
 
   devtool: Helpers.devTool(),
   watchOptions: {
