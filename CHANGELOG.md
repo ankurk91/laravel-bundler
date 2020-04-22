@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.14.2](https://github.com/ankurk91/laravel-bundler/compare/0.14.1..0.14.2)
+* Fix: `mix-manifest.json` was not being generated due to breaking change in a dependency
+
 ## [0.14.1](https://github.com/ankurk91/laravel-bundler/compare/0.14.1..0.14.1)
 * Fix: source-maps were broken on hmr mode
 
