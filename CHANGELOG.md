@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.14.3](https://github.com/ankurk91/laravel-bundler/compare/0.14.2..0.14.3)
+* Fix: vendor.js was not being extracted on Windows OS
+
 ## [0.14.2](https://github.com/ankurk91/laravel-bundler/compare/0.14.1..0.14.2)
 * Fix: `mix-manifest.json` was not being generated due to breaking change in a dependency
 
