@@ -30,9 +30,10 @@ function deleteHotFile() {
 
   console.log(chalk.blue("\n" + `HMR: Deleting file "${hotFilePath}"`));
 
-  fs.unlinkSync(hotFilePath, (error) => {
+  fs.unlink(hotFilePath, (error) => {
     if (error) {
-      // silent
+      console.log(chalk.bold.red("\n" + `Error: Unable to delete hot file`));
+      console.log(error)
     }
   });
 }
