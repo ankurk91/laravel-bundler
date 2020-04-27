@@ -13,7 +13,7 @@ module.exports = {
         vendors: false,
 
         vendorScripts: {
-          test: /node_modules\/(.*)\.js/,
+          test: /[\\/]node_modules[\\/].*\.js$/,
           name: 'vendor',
           chunks: 'all',//initial, async or all
           enforce: true,
