@@ -28,7 +28,7 @@ function defaultLoaderStack(enableModules = false) {
       }
     },
     {
-      loader: 'css-loader',
+      loader: require.resolve('css-loader'),
       options: {
         modules: !!enableModules,
         sourceMap: Helpers.sourceMapEnabled(),
@@ -36,14 +36,14 @@ function defaultLoaderStack(enableModules = false) {
       }
     },
     {
-      loader: 'postcss-loader',
+      loader: require.resolve('postcss-loader'),
       options: Object.assign({}, {
         sourceMap: Helpers.sourceMapEnabled(),
         ident: 'postcss',
       }, userConfigExists ? {} : defaultPostCssConfig)
     },
     {
-      loader: 'sass-loader',
+      loader: require.resolve('sass-loader'),
       options: {
         sourceMap: Helpers.sourceMapEnabled(),
         implementation: require('sass'),

@@ -1,11 +1,13 @@
 const Helpers = require('../helpers');
 
+// You must install `ts-loader` and `typescript` in your project
+
 module.exports = {
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: require.resolve('ts-loader'),
         options: {
           transpileOnly: Helpers.isHmr(),
           appendTsSuffixTo: [/\.vue$/]

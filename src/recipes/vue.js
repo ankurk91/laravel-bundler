@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: require.resolve('vue-loader'),
         exclude: /node_modules/,
         options: {
           compilerOptions: {

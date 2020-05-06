@@ -33,7 +33,7 @@ const userConfigExists = () => {
 module.exports = {
   // Handle js and jsx both
   test: /\.jsx?$/,
-  loader: 'babel-loader',
+  loader: require.resolve('babel-loader'),
   exclude: /node_modules/,
   options: Object.assign({}, loaderOptions, userConfigExists() ? {} : defaultBabelConfigs)
 };
