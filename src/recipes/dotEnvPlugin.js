@@ -2,16 +2,23 @@ const path = require('path');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const expand = require('dotenv-expand');
+const chalk = require('chalk');
 
 function buildPlugin() {
   let filePath = path.join(process.cwd(), '.env');
 
   // Expand everything to process.env
-  expand(
-    dotenv.config({
-      path: filePath,
-    })
-  );
+  const result = dotenv.config({
+    path: filePath,
+  });
+
+  // We wont stop process if we could not load .env
+  if (result.error) {
+    console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from .env file.`));
+    console.log(result.error.message);
+  }
+
+  expand(result);
 
   return new webpack.DefinePlugin(
     getDefinitions({
@@ -34,12 +41,12 @@ function getDefinitions(mergeWith) {
       return value;
     }, {});
 
-  let final = Object.assign(filtered, mergeWith);
+  let envVars = Object.assign(filtered, mergeWith);
 
-  return Object.keys(final)
+  return Object.keys(envVars)
     // Stringify all values so they can be fed into Webpack's DefinePlugin.
     .reduce((value, key) => {
-        value[`process.env.${key}`] = JSON.stringify(final[key]);
+        value[`process.env.${key}`] = JSON.stringify(envVars[key]);
 
         return value;
       }, {}
