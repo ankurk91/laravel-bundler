@@ -1,6 +1,6 @@
 module.exports = [
-  require('./javascript'),
-  require('./style'),
-  require('./image'),
-  require('./font'),
+  require('./javascript.js'),
+  require('./style.js'),
+  require('./image.js'),
+  require('./font.js'),
 ];

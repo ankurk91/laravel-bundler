@@ -1,7 +1,7 @@
 // https://webpack.js.org/configuration/dev-server/
 const path = require('path');
-const HMRDetectPlugin = require('../plugins/HMRDetectPlugin');
-const Helpers = require('../helpers');
+const HMRDetectPlugin = require('../plugins/HMRDetectPlugin.js');
+const Helpers = require('../helpers.js');
 
 module.exports = {
   output: {},

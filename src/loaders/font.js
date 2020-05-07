@@ -1,4 +1,4 @@
-const Helpers = require('../helpers');
+const Helpers = require('../helpers.js');
 
 module.exports = {
   // include all font files and svg font files that are coming from a font* directory

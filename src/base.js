@@ -8,8 +8,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
-const Helpers = require('./helpers');
-const BaseLoaders = require('./loaders');
+const Helpers = require('./helpers.js');
+const BaseLoaders = require('./loaders/index.js');
 
 module.exports = {
   name: 'laravel-app',

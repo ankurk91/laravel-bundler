@@ -25,9 +25,9 @@
   "homepage": "https://github.com/ankurk91/laravel-bundler",
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
-    "example:dev": "cd example && cross-env NODE_ENV=development webpack --progress --mode development",
+    "example:dev": "cd example && cross-env NODE_ENV=development webpack --mode development",
     "example:watch": "yarn run example:dev --watch",
-    "example:prod": "cd example && cross-env NODE_ENV=production webpack --progress --mode production",
+    "example:prod": "cd example && cross-env NODE_ENV=production webpack --mode production",
     "example:hot": "cd example && cross-env NODE_ENV=development webpack-dev-server --hot --progress"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-const Helpers = require('../helpers');
+const Helpers = require('../helpers.js');
 
 module.exports = {
   // only include svg that doesn't have font in the path or file name by using negative lookahead

@@ -1,4 +1,4 @@
-const Helpers = require('../helpers');
+const Helpers = require('../helpers.js');
 
 // You must install `ts-loader` and `typescript` in your project
 
