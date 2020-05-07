@@ -49,6 +49,7 @@ function defaultLoaderStack(enableModules = false) {
         implementation: require('sass'),
         sassOptions: {
           minimize: Helpers.isProduction(),
+          outputStyle: 'expanded'
         },
       }
     },

@@ -37,7 +37,7 @@ module.exports = {
   },
   ensureModule: (dependency) => {
     try {
-      return require(dependency);
+      return require.resolve(dependency);
     } catch (error) {
       console.log(chalk.bold.red(`Error: Required package "${dependency}" not found.`));
       console.log(chalk.blue('Install the package by running:'));
