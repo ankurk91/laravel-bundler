@@ -93,5 +93,6 @@ module.exports = {
     modules: false,
     children: false,
     entrypoints: false,
+    performance: Helpers.isProduction(),
   }
 };
