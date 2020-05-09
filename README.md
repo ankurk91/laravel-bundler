@@ -36,10 +36,16 @@ new Vue({
 ```
 Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
 ```js
+const webpack = require('webpack');
+const ReloadOnBladeChange = require('laravel-bundler/plugins/ReloadOnBladeChange.js');
+
 module.exports = require('laravel-bundler')({
   entry: {
     app: './resources/js/app.js',
   },
+  plugins: [
+    //new ReloadOnBladeChange()
+  ],
   // Other webpack configs may go here
 });
 ```
@@ -90,6 +96,7 @@ Update your `.gitignore`
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_`
 * Intelligent SourceMap based on mode
+* Can auto-reload browser on blade template change (opt-in feature)
 
 ### Documentation
 * [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) in progress

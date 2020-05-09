@@ -9,14 +9,13 @@ module.exports = class ReloadOnBladeChange {
   watcher = null;
 
   apply(compiler) {
-    let webpackConfig = compiler.options;
     if (!Helpers.isHmr()) {
       return;
     }
 
-    this.captureServerInstance(webpackConfig)
+    this.captureServerInstance(compiler.options)
 
-    // Make sure this hook run once
+    // Make sure this hook run once at last on first successful compilation
     compiler.hooks.done.tap('ReloadOnBladeChange', () => {
       if (this.watcher) {
         return true;

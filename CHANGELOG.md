@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.15.0](https://github.com/ankurk91/laravel-bundler/compare/0.14.3..0.15.0)
+* Add: Auto reload browser on blade file change (opt-in plugin)
+* Add: TypeScript recipe (opt-in)
+
 ## [0.14.3](https://github.com/ankurk91/laravel-bundler/compare/0.14.2..0.14.3)
 * Fix: vendor.js was not being extracted on Windows OS
 

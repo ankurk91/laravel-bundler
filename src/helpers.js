@@ -13,7 +13,7 @@ module.exports = {
     return process.env.NODE_ENV === 'development';
   },
   isWatch() {
-    return process.argv.includes('--watch') || process.argv.includes('--watch-poll');
+    return process.argv.includes('--watch');
   },
   shouldVersion() {
     return !this.isHmr() && !this.isWatch()

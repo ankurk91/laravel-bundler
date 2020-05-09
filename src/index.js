@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const Helpers = require('./helpers');
+const Helpers = require('./helpers.js');
 
 module.exports = (...userConfig) => (env, argv) =>
   merge.smart(
