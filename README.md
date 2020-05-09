@@ -37,7 +37,7 @@ new Vue({
 Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
 ```js
 const webpack = require('webpack');
-const ReloadOnBladeChange = require('laravel-bundler/plugins/ReloadOnBladeChange.js');
+const ReloadOnBladeChange = require('laravel-bundler/src/plugins/ReloadOnBladeChange.js');
 
 module.exports = require('laravel-bundler')({
   entry: {
