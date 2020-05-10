@@ -3,69 +3,27 @@ const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 
-let hotFilePath = null;
-
-// Make sure to delete the `hot` file when user press CTRL+C
-// https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js
-process.on('SIGINT', () => {
-  console.log(chalk.blue("\n" + 'Terminating ...'));
-  deleteHotFile();
-  process.exit(0);
-});
-
-// Detect IDE window close
-process.on('SIGHUP', (code) => {
-  deleteHotFile();
-  process.exit(0);
-});
-
-function deleteHotFile() {
-  if (!hotFilePath) {
-    return
-  }
-
-  if (!fs.existsSync(hotFilePath)) {
-    return;
-  }
-
-  console.log(chalk.blue("\n" + `HMR: Deleting file "${hotFilePath}"`));
-
-  fs.unlink(hotFilePath, (error) => {
-    if (error) {
-      console.log(chalk.bold.red("\n" + `Error: Unable to delete hot file`));
-      console.log(error)
-    }
-  });
-}
-
-function getFileContents(configs) {
-  let protocol = configs.https ? 'https' : 'http';
-
-  return protocol +
-    '://' +
-    configs.host +
-    ':' +
-    configs.port;
-}
-
 module.exports = class HMRDetectPlugin {
 
+  hotFilePath = null;
+
   apply(compiler) {
+    this.registerExitEvents();
     let config = compiler.options;
-    hotFilePath = path.join(config.output.path, 'hot');
+    this.hotFilePath = path.join(config.output.path, 'hot');
 
     // Make sure this hook runs at very beginning but once
     compiler.hooks.afterEnvironment.tap('HMRDetectPlugin', () => {
       // Always delete the `hot` file on startup
-      deleteHotFile();
+      this.deleteHotFile();
 
       if (!Helpers.isHmr()) {
         return;
       }
 
-      console.log(chalk.blue(`HMR: Creating file "${hotFilePath}"`));
+      console.log(chalk.blue(`HMR: Creating file "${this.hotFilePath}"`));
 
-      fs.writeFile(hotFilePath, getFileContents(config.devServer),
+      fs.writeFile(this.hotFilePath, this.getFileContents(config.devServer),
         error => {
           if (error) {
             console.log(chalk.bold.red('Error: Unable to create hot file:'));
@@ -75,5 +33,50 @@ module.exports = class HMRDetectPlugin {
         }
       );
     });
+  }
+
+  registerExitEvents() {
+    // Make sure to delete the `hot` file when user press CTRL+C
+    // https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js
+    process.on('SIGINT', () => {
+      console.log(chalk.blue("\n" + 'Terminating ...'));
+      this.deleteHotFile();
+      process.exit(0);
+    });
+
+    // Detect IDE window close
+    process.on('SIGHUP', (code) => {
+      this.deleteHotFile();
+      process.exit(0);
+    });
+  }
+
+  deleteHotFile() {
+    if (!this.hotFilePath) {
+      return
+    }
+
+    if (!fs.existsSync(this.hotFilePath)) {
+      return;
+    }
+
+    console.log(chalk.cyan("\n" + `HMR: Deleting file "${this.hotFilePath}"`));
+
+    fs.unlinkSync(this.hotFilePath, (error) => {
+      if (error) {
+        console.log(chalk.bold.red("\n" + `Error: Unable to delete hot file`));
+        console.log(error)
+      }
+    });
+  }
+
+  getFileContents(configs) {
+    let protocol = configs.https ? 'https' : 'http';
+
+    return protocol +
+      '://' +
+      configs.host +
+      ':' +
+      configs.port;
   }
 };

@@ -1,5 +1,5 @@
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
+const { VueLoaderPlugin } = require('vue-loader');
 
 // You must install `vue` and `vue-template-compiler` in your project
 
