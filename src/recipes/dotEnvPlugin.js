@@ -4,28 +4,21 @@ const dotenv = require('dotenv');
 const expand = require('dotenv-expand');
 const chalk = require('chalk');
 
-function buildPlugin() {
-  let filePath = path.join(process.cwd(), '.env');
+let filePath = path.join(process.cwd(), '.env');
 
-  // Expand everything to process.env
-  const result = dotenv.config({
-    path: filePath,
-  });
+// Expand everything to process.env
+const result = dotenv.config({
+  path: filePath,
+});
 
-  // We wont stop process if we could not load .env
-  if (result.error) {
-    console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from .env file.`));
-    console.log(result.error.message);
-  }
-
-  expand(result);
-
-  return new webpack.DefinePlugin(
-    getDefinitions({
-      NODE_ENV: process.env.NODE_ENV || 'development'
-    })
-  );
+// We wont stop process if we could not load .env
+if (result.error) {
+  console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from .env file.`));
+  console.error(result.error);
 }
+
+expand(result);
+
 
 // Copied from
 // https://github.com/JeffreyWay/laravel-mix/blob/master/src/webpackPlugins/MixDefinitionsPlugin.js
@@ -55,6 +48,10 @@ function getDefinitions(mergeWith) {
 
 module.exports = {
   plugins: [
-    buildPlugin()
+    new webpack.DefinePlugin(
+      getDefinitions({
+        NODE_ENV: process.env.NODE_ENV || 'development'
+      })
+    )
   ]
 };

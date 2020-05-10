@@ -29,6 +29,7 @@ module.exports = {
     chunkFilename: `js/[name]${Helpers.hash('chunkhash')}.js`,
     globalObject: 'this',
     crossOriginLoading: 'anonymous',
+    pathinfo: false,
   },
 
   module: {

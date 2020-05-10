@@ -5,9 +5,11 @@ const Helpers = require('../helpers.js');
 
 module.exports = class ReloadOnBladeChange {
 
-  serverHandler = null;
-  watcher = null;
-
+  constructor() {
+    this.serverHandler = null;
+    this.watcher = null;
+  }
+  
   apply(compiler) {
     if (!Helpers.isHmr()) {
       return;

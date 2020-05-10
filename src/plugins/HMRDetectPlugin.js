@@ -1,11 +1,13 @@
-const Helpers = require('../helpers');
+const Helpers = require('../helpers.js');
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 
 module.exports = class HMRDetectPlugin {
 
-  hotFilePath = null;
+  constructor() {
+    this.hotFilePath = null;
+  }
 
   apply(compiler) {
     this.registerExitEvents();
@@ -26,8 +28,8 @@ module.exports = class HMRDetectPlugin {
       fs.writeFile(this.hotFilePath, this.getFileContents(config.devServer),
         error => {
           if (error) {
-            console.log(chalk.bold.red('Error: Unable to create hot file:'));
-            console.log(error);
+            console.log(chalk.bold.red('Error: Unable to create hot file!'));
+            console.error(error);
             process.exit(1);
           }
         }
@@ -65,7 +67,7 @@ module.exports = class HMRDetectPlugin {
     fs.unlinkSync(this.hotFilePath, (error) => {
       if (error) {
         console.log(chalk.bold.red("\n" + `Error: Unable to delete hot file`));
-        console.log(error)
+        console.error(error)
       }
     });
   }
