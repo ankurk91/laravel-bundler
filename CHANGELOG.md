@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.15.1](https://github.com/ankurk91/laravel-bundler/compare/0.15.3..0.15.1)
+* Fix: `ReloadOnBladeChange` was broken on node.js 10.x
+
 ## [0.15.0](https://github.com/ankurk91/laravel-bundler/compare/0.14.3..0.15.0)
 * Add: Auto reload browser on blade file change (opt-in plugin)
 * Add: TypeScript recipe (opt-in)

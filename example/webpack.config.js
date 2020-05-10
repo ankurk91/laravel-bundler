@@ -1,4 +1,5 @@
 const path = require('path');
+const ReloadOnBladeChange = require('../src/plugins/ReloadOnBladeChange.js');
 
 module.exports = require('../src/index')({
   entry: {
@@ -10,4 +11,7 @@ module.exports = require('../src/index')({
       path.resolve(process.cwd(), './../node_modules'),
     ],
   },
+  plugins: [
+    new ReloadOnBladeChange()
+  ]
 });
