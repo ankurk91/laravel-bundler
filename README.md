@@ -88,21 +88,21 @@ Update your `.gitignore`
 * `CSS` and `SASS|SCSS` with CSS modules support
 * PostCSS loader with `autoprefixer` and `cssnano`
 * Font and image files handling
-* HMR support, even for CSS :fire:
+* HMR support for Vue, even for CSS :fire:
 * Extract all css to a separate file (based on entry)
 * Accepts css/scss file as entry
 * Extract all vendor js to a separate file 
 * Clean output directories just before successful build
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
-* Load environment variables from `.env` file that are prefixed with `MIX_`
+* Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
-* Can auto-reload browser on blade template change (opt-in feature)
+* Can auto-reload browser on blade template change (opt-in feature) :rocket:
 
 ### Documentation
 * [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) in progress
 
 ### Not in the plan
-These features are not in the plan but can be enabled on demand
+These features are not in the plan but can be enabled on demand :man_shrugging:
 * [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/OS-Notification-Recipe)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
