@@ -15,7 +15,7 @@ module.exports = {
         res.send(`
 <html lang="en">
 <head>
-<title>Webpack dev server</title>
+<title>Laravel Bundler</title>
 </head>
 <body>
 <h1>Only assets will be served from this address.</h1>

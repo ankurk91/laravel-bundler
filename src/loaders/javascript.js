@@ -19,13 +19,16 @@ const defaultBabelConfigs = {
   plugins: [],
 };
 
+// https://babeljs.io/docs/en/config-files#configuration-file-types
 const userConfigExists = () => {
   return !!cosmiconfig('babel', {
     searchPlaces: [
       'package.json',
       '.babelrc',
+      '.babelrc.json',
       '.babelrc.js',
-      'babel.config.js'
+      'babel.config.json',
+      'babel.config.js',
     ]
   }).searchSync()
 };

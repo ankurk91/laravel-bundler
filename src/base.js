@@ -12,7 +12,7 @@ const Helpers = require('./helpers.js');
 const BaseLoaders = require('./loaders/index.js');
 
 module.exports = {
-  name: 'laravel-app',
+  name: 'laravel-bundler',
   context: process.cwd(),
   mode: 'development',
   resolve: {
