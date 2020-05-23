@@ -48,7 +48,6 @@ function defaultLoaderStack(enableModules = false) {
         sourceMap: Helpers.sourceMapEnabled(),
         implementation: require('sass'),
         sassOptions: {
-          minimize: Helpers.isProduction(),
           outputStyle: 'expanded'
         },
       }
