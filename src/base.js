@@ -54,15 +54,6 @@ module.exports = {
           }
         }
       }),
-      // https://github.com/NMFR/optimize-css-assets-webpack-plugin
-      new OptimizeCssAssetsPlugin({
-        cssProcessorPluginOptions: {
-          // same as css-nano options
-          preset: ['default', {
-            discardComments: {removeAll: true}
-          }],
-        }
-      }),
     ] : [],
   },
 
@@ -75,6 +66,14 @@ module.exports = {
   ].concat(Helpers.isProduction() ? [
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', {
+          discardComments: {removeAll: true}
+        }],
+      }
+    }),
   ] : [
     // Dev only plugins
   ]).concat((Helpers.isHmr() || Helpers.isWatch()) ? [
