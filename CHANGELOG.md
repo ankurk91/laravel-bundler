@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.16.0](https://github.com/ankurk91/laravel-bundler/compare/0.15.1..0.16.0)
+* Add: `vue@3` support (opt-in)
+* Fix: `OptimizeCssAssetsPlugin` position in stack
+* Chore: bump dependencies, test on node.js v14.x
+
 ## [0.15.1](https://github.com/ankurk91/laravel-bundler/compare/0.15.0..0.15.1)
 * Fix: `ReloadOnBladeChange` was broken on node.js 10.x
 
