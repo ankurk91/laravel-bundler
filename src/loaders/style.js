@@ -46,7 +46,7 @@ function defaultLoaderStack(enableModules = false) {
       loader: require.resolve('sass-loader'),
       options: {
         sourceMap: Helpers.sourceMapEnabled(),
-        implementation: require('sass'),
+        additionalData: '$env: ' + process.env.NODE_ENV + ';',
         sassOptions: {
           outputStyle: 'expanded'
         },
