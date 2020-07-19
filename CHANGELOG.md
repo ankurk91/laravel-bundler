@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.17.0](https://github.com/ankurk91/laravel-bundler/compare/0.16.0..0.17.0)
+* Upgrade `webpack-merge` to v5
+* Upgrade `sass-loader` to v9
+
 ## [0.16.0](https://github.com/ankurk91/laravel-bundler/compare/0.15.1..0.16.0)
 * Add: `vue@3` support (opt-in)
 * Fix: `OptimizeCssAssetsPlugin` position in stack
