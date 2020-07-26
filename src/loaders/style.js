@@ -30,7 +30,7 @@ function defaultLoaderStack(enableModules = false) {
     {
       loader: require.resolve('css-loader'),
       options: {
-        modules: !!enableModules,
+        modules: enableModules,
         sourceMap: Helpers.sourceMapEnabled(),
         importLoaders: 2,
       }
@@ -52,7 +52,7 @@ function defaultLoaderStack(enableModules = false) {
         },
       }
     },
-  ].filter(Boolean);
+  ];
 }
 
 module.exports = {
