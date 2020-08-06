@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const { VueLoaderPlugin } = require('vue-loader');
+const {VueLoaderPlugin} = require('vue-loader');
 
 // You must install `vue@^2.0` and `vue-template-compiler` in your project
 
@@ -12,7 +12,8 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           compilerOptions: {
-            preserveWhitespace: false
+            preserveWhitespace: false, //Deprecated
+            whitespace: 'condense',
           }
         }
       },

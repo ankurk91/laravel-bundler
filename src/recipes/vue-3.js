@@ -12,7 +12,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           compilerOptions: {
-            preserveWhitespace: false
+            whitespace: 'condense'
           }
         }
       },
