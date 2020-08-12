@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.18.0](https://github.com/ankurk91/laravel-bundler/compare/0.17.0..0.18.0)
+* Upgrade packages
+
 ## [0.17.0](https://github.com/ankurk91/laravel-bundler/compare/0.16.0..0.17.0)
 * Upgrade `webpack-merge` to v5
 * Upgrade `sass-loader` to v9

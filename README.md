@@ -9,7 +9,7 @@
 Modern asset building tool for Laravel framework with better defaults.
 
 ## Installation
-:warning: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this package
+:warning: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this one
 ```bash
 # yarn
 yarn add laravel-bundler
@@ -99,7 +99,7 @@ Update your `.gitignore`
 * Can auto-reload browser on blade template change (opt-in feature) :rocket:
 
 ### Documentation
-* [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) in progress
+* [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) 
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand :man_shrugging:

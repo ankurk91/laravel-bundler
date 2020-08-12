@@ -1,6 +1,6 @@
 {
   "name": "laravel-bundler",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "Modern asset building tool for Laravel framework with better defaults.",
   "main": "src/index.js",
   "files": [
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "laravel",
+    "vue",
     "laravel-mix",
     "webpack",
     "bundle",
