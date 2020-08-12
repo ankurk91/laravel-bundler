@@ -9,7 +9,7 @@ module.exports = class ReloadOnBladeChange {
     this.serverHandler = null;
     this.watcher = null;
   }
-  
+
   apply(compiler) {
     if (!Helpers.isHmr()) {
       return;
@@ -30,12 +30,16 @@ module.exports = class ReloadOnBladeChange {
   initWatch() {
     const bladePath = path.resolve(process.cwd(), 'resources/views/**/*.blade.php');
 
-    this.watcher = chokidar.watch(bladePath, {
-      ignoreInitial: true
-    }).on('all', (event, path) => {
-      console.log(chalk.cyan('HMR: Blade change detected. Reloading ...'));
-      this.sendReloadSignal()
-    });
+    this.watcher = chokidar
+      .watch(bladePath, {
+        ignoreInitial: true
+      })
+      .on('all', (event, path) => {
+        const time = (new Date()).toLocaleTimeString().substr(0, 8);
+        process.stdout.write(chalk.cyan(`HMR: ${time} - Blade change detected. Reloading browser ...` + '\r'))
+
+        this.sendReloadSignal();
+      });
   }
 
   captureServerInstance(webpackConfig) {
