@@ -21,7 +21,7 @@ const defaultBabelConfigs = {
 
 // https://babeljs.io/docs/en/config-files#configuration-file-types
 const userConfigExists = () => {
-  return !!cosmiconfig('babel', {
+  return !!cosmiconfig.cosmiconfigSync('babel', {
     searchPlaces: [
       'package.json',
       '.babelrc',
@@ -30,7 +30,7 @@ const userConfigExists = () => {
       'babel.config.json',
       'babel.config.js',
     ]
-  }).searchSync()
+  }).search()
 };
 
 module.exports = {

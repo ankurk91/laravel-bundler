@@ -16,7 +16,7 @@ const defaultPostCssConfig = {
   ].filter(Boolean)
 };
 
-const userConfigExists = !!cosmiconfig('postcss').searchSync();
+const userConfigExists = !!cosmiconfig.cosmiconfigSync('postcss').search();
 
 function defaultLoaderStack(enableModules = false) {
   return [
