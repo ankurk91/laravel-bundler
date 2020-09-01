@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.19.0](https://github.com/ankurk91/laravel-bundler/compare/0.18.0..0.19.0)
+* Upgrade packages
+
 ## [0.18.0](https://github.com/ankurk91/laravel-bundler/compare/0.17.0..0.18.0)
 * Upgrade packages
 
