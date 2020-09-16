@@ -34,7 +34,7 @@
   "dependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.6.5",
+    "autoprefixer": "^10.0.0",
     "babel-loader": "^8.0.6",
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
     "chalk": "^2.4.2",
@@ -50,7 +50,8 @@
     "file-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-loader": "^3.0.0",
+    "postcss": "^8.0.3",
+    "postcss-loader": "^4.0.2",
     "sass": "^1.23.0",
     "sass-loader": "^10.0.1",
     "vue-loader": "^15.7.1",

@@ -1,6 +1,5 @@
 const Helpers = require('../helpers.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const cosmiconfig = require('cosmiconfig');
 
 const defaultPostCssConfig = {
   plugins: [
@@ -15,8 +14,6 @@ const defaultPostCssConfig = {
     }) : false
   ].filter(Boolean)
 };
-
-const userConfigExists = !!cosmiconfig.cosmiconfigSync('postcss').search();
 
 function defaultLoaderStack(enableModules = false) {
   return [
@@ -37,10 +34,9 @@ function defaultLoaderStack(enableModules = false) {
     },
     {
       loader: require.resolve('postcss-loader'),
-      options: Object.assign({}, {
-        sourceMap: Helpers.sourceMapEnabled(),
-        ident: 'postcss',
-      }, userConfigExists ? {} : defaultPostCssConfig)
+      options: {
+        postcssOptions: defaultPostCssConfig
+      }
     },
     {
       loader: require.resolve('sass-loader'),
