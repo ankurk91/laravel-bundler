@@ -22,7 +22,7 @@ expand(result);
 
 // Copied from
 // https://github.com/JeffreyWay/laravel-mix/blob/master/src/webpackPlugins/MixDefinitionsPlugin.js
-function getDefinitions(mergeWith) {
+function getDefinitions(mergeWith = {}) {
   let regex = /^MIX_/i;
 
   // Filter out env vars that don't begin with MIX_

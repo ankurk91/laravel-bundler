@@ -47,6 +47,4 @@ node_modules/
 # Project related
 *.tgz
 /dist/
-/docs/
-/tmp/
 /coverage/

@@ -1,8 +1,6 @@
 const Helpers = require('../helpers.js');
 
 // You must install `ts-loader` and `typescript` in your project
-// It is recommended to use
-// https://www.npmjs.com/package/fork-ts-checker-webpack-plugin
 
 module.exports = {
   module: {

@@ -54,7 +54,6 @@
     "postcss-loader": "^4.0.2",
     "sass": "^1.23.0",
     "sass-loader": "^10.0.1",
-    "vue-loader": "^15.7.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
@@ -67,6 +66,7 @@
   },
   "devDependencies": {
     "vue": "^2.6.10",
+    "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.10"
   }
 }
