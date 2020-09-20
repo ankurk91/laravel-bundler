@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased (0.20.0)
+* :warning: Vue.js support is no longer enabled by default. Read [here](./docs/vue-js-v2.md)
+* chore: `vue-loader` is no longer bundled, you need to install it manually.
+* chore: upgrade PostCSS related deps
+* docs: moved docs inside the repo instead of wiki.
+
 ## [0.19.0](https://github.com/ankurk91/laravel-bundler/compare/0.18.0..0.19.0)
 * Upgrade packages
 

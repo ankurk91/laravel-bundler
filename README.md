@@ -40,16 +40,18 @@ const webpack = require('webpack');
 const ReloadOnBladeChange = require('laravel-bundler/src/plugins/ReloadOnBladeChange.js');
 
 module.exports = require('laravel-bundler')({
-  entry: {
-    app: './resources/js/app.js',
-  },
-  plugins: [
-    //new ReloadOnBladeChange()
-  ],
-  // Other webpack configs may go here
-});
+      entry: {
+        app: './resources/js/app.js',
+      },
+      plugins: [
+        new ReloadOnBladeChange()
+      ],
+      // Other webpack configs may go here
+    },
+    require('laravel-bundler/src/recipes/vue-2.js')
+);
 ```
-Update your `package.json`
+Update your `package.json` file
 ```json
 "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --progress --mode=development",
@@ -72,7 +74,7 @@ Update your blade template
 <script src="{{ mix('js/vendor.js') }}"></script>
 <script src="{{ mix('js/app.js') }}"></script>
 ```
-Update your `.gitignore`
+Update your `.gitignore` file
 ```git exclude
 /public/hot
 /public/js
@@ -84,7 +86,8 @@ Update your `.gitignore`
 
 ### Baked Features
 * Webpack 4 and Babel 7 with `@babel/preset-env`
-* Vue.js v2 support - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/Vue.js-v2-Recipe)
+* Vue.js v2 support - [Recipe](./docs/vue-js-v2.md)
+* Vue.js v3 support - [Recipe](./docs/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` with CSS modules support
 * PostCSS loader with `autoprefixer` and `cssnano`
 * Font and image files handling
@@ -99,11 +102,11 @@ Update your `.gitignore`
 * Can auto-reload browser on blade template change (opt-in feature) :rocket:
 
 ### Documentation
-* [Wiki](https://github.com/ankurk91/laravel-bundler/wiki) 
+* [Read the docs](./docs) 
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand :man_shrugging:
-* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](https://github.com/ankurk91/laravel-bundler/wiki/OS-Notification-Recipe)
+* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](./docs/os-notifications.md)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * [Image compression](https://github.com/vanwagonet/img-loader)
