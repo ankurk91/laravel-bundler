@@ -11,7 +11,8 @@ module.exports = class HMRDetectPlugin {
 
   apply(compiler) {
     this.registerExitEvents();
-    let config = compiler.options;
+
+    const config = compiler.options;
     this.hotFilePath = path.join(config.output.path, 'hot');
 
     // Make sure this hook runs at very beginning but once

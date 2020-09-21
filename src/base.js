@@ -66,6 +66,7 @@ module.exports = {
   ].concat(Helpers.isProduction() ? [
     // https://webpack.js.org/guides/caching/
     new webpack.HashedModuleIdsPlugin(),
+
     new OptimizeCssAssetsPlugin({
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {

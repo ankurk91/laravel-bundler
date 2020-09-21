@@ -1,5 +1,5 @@
 const Helpers = require('../helpers.js');
-const WebpackNotifierPlugin = Helpers.ensureModule('webpack-notifier');
+const WebpackNotifierPlugin = require('webpack-notifier');
 const path = require('path');
 
 module.exports = {
