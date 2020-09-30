@@ -1641,10 +1641,10 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-collect.js@^4.20.3:
-  version "4.23.0"
-  resolved "https://registry.yarnpkg.com/collect.js/-/collect.js-4.23.0.tgz#0e55d0721329c969afae182ab7b97bfa0775fa99"
-  integrity sha512-EjdXlyRdvISTEXBWzpNEtygkfJGyUVkOuNYblBvcgjdbWnAs7xb4f5rE22HKHHBFKLkgeRwhvNPBbyldTut1VQ==
+collect.js@^4.28.2:
+  version "4.28.2"
+  resolved "https://registry.yarnpkg.com/collect.js/-/collect.js-4.28.2.tgz#08c11c48923641f7e86899adbd55aa31ed5de5b0"
+  integrity sha512-Ok2z0kuyywWJ4AtkeUI61pbSxCmaN5XYr/fkUYJP4bYk6Dz3NKH2FA8RhF7i3Do9Iq80MLRFWasSOpyE9X7hDA==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -6322,12 +6322,12 @@ webpack-fix-style-only-entries@^0.5.0:
   resolved "https://registry.yarnpkg.com/webpack-fix-style-only-entries/-/webpack-fix-style-only-entries-0.5.0.tgz#d55613c23eded1d6fe182f698e84d1c7c2de91d3"
   integrity sha512-WMRf2Mt6LQof8Rtd72DlPyzGzPsDA0/uExNZDoIP1MpxxcsJzNJluuRzomST225qCXQVYCERvThZINAS/g2X3A==
 
-webpack-laravel-mix-manifest@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/webpack-laravel-mix-manifest/-/webpack-laravel-mix-manifest-2.1.3.tgz#66a98b51b91fdd1d234a3200a297cf827ee5b43e"
-  integrity sha512-l/T1+5W/qUhIeWmpTEhlNjE3VEkRE8zkxZ9dvUH2BZa9QWihPDd9dCtXXUn4i9Cew8xnCpWCUwE3vD08ooD1uQ==
+webpack-laravel-mix-manifest@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-laravel-mix-manifest/-/webpack-laravel-mix-manifest-2.2.0.tgz#7f3861ada513f620ddd1079fea8ca583b6b55285"
+  integrity sha512-jl4MztZyQDlw17z8XHnQvUXeiQ0eMUUtF8ruX6SPfHP2sFk6X2z25fJ9BGxZuK6eWQDzWllvK8g+yC8BAXRASg==
   dependencies:
-    collect.js "^4.20.3"
+    collect.js "^4.28.2"
 
 webpack-log@^2.0.0:
   version "2.0.0"

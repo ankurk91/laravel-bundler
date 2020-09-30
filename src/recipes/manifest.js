@@ -1,7 +1,7 @@
-const ManifestPlugin = require('webpack-laravel-mix-manifest');
+const { WebpackLaravelMixManifest } = require('webpack-laravel-mix-manifest/dist/cjs/index');
 
 module.exports = {
   plugins:[
-    new ManifestPlugin(),
+    new WebpackLaravelMixManifest(),
   ]
 };
