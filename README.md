@@ -86,8 +86,8 @@ Update your `.gitignore` file
 
 ### Baked Features
 * Webpack 4 and Babel 7 with `@babel/preset-env`
-* Vue.js v2 support - [Recipe](./docs/vue-js-v2.md)
-* Vue.js v3 support - [Recipe](./docs/vue-js-v3.md)
+* Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
+* Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` with CSS modules support
 * PostCSS loader with `autoprefixer` and `cssnano`
 * Font and image files handling
@@ -102,11 +102,11 @@ Update your `.gitignore` file
 * Can auto-reload browser on blade template change (opt-in feature) :rocket:
 
 ### Documentation
-* [Read the docs](./docs) 
+* [Read the docs](./wiki) 
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand :man_shrugging:
-* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](./docs/os-notifications.md)
+* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](./wiki/os-notifications.md)
 * [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * [Image compression](https://github.com/vanwagonet/img-loader)
