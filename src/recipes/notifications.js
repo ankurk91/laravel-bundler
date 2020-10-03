@@ -1,4 +1,3 @@
-const Helpers = require('../helpers.js');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const path = require('path');
 
