@@ -3,7 +3,7 @@
 Babel loader with `@babel/preset-env` is already configured for you.
 
 In order to override default configuration; you can create your own config file on project root.
-File name can be one of `.babelrc`, `.babelrc.js`, `babel.config.js`
+File name can be one of `.babelrc`, `.babelrc.js` or, `babel.config.js`
 
 Here is the example `babel.config.js` file:
 ```js
