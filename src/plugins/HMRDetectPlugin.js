@@ -41,17 +41,16 @@ module.exports = class HMRDetectPlugin {
   registerExitEvents() {
     // Make sure to delete the `hot` file when user press CTRL+C
     // https://stackoverflow.com/questions/10021373/what-is-the-windows-equivalent-of-process-onsigint-in-node-js
-    process.on('SIGINT', () => {
-      console.log(chalk.blue("\n" + 'Terminating ...'));
-      this.deleteHotFile();
-      process.exit(0);
-    });
+    process.on('SIGINT', this.deleteAndExit.bind(this));
 
     // Detect IDE window close
-    process.on('SIGHUP', (code) => {
-      this.deleteHotFile();
-      process.exit(0);
-    });
+    process.on('SIGHUP', this.deleteAndExit.bind(this));
+  }
+
+  deleteAndExit() {
+    console.log(chalk.blue("\n" + 'Terminating ...'));
+    this.deleteHotFile();
+    process.exit(0);
   }
 
   deleteHotFile() {
