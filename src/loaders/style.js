@@ -15,20 +15,21 @@ const defaultPostCssConfig = {
   ].filter(Boolean)
 };
 
-function defaultLoaderStack(enableModules = false) {
-  return [
+module.exports = {
+  // Handle css and scss both
+  test: /\.s[ac]ss|\.css/,
+  use: [
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        hmr: Helpers.isHmr(),
-        reloadAll: true,
+        esModule: false,
       }
     },
     {
       loader: require.resolve('css-loader'),
       options: {
-        modules: enableModules,
-        sourceMap: Helpers.sourceMapEnabled(),
+        modules: false,
+        esModule: false,
         importLoaders: 2,
       }
     },
@@ -48,21 +49,5 @@ function defaultLoaderStack(enableModules = false) {
         },
       }
     },
-  ];
-}
-
-module.exports = {
-  // Handle css and scss both
-  test: /\.s[ac]ss|\.css/,
-  oneOf: [
-    {
-      // support css modules
-      // https://vue-loader.vuejs.org/guide/css-modules.html#opt-in-usage
-      resourceQuery: /module/,
-      use: defaultLoaderStack(true)
-    },
-    {
-      use: defaultLoaderStack()
-    }
   ]
 };

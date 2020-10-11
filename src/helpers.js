@@ -19,16 +19,16 @@ module.exports = {
   },
   devTool() {
     if (this.isHmr() || this.isWatch()) {
-      return '#eval-source-map'
+      return 'eval-source-map'
     }
 
     if (this.isDev()) {
-      return '#source-map'
+      return 'source-map'
     }
 
     return false;
   },
-  hash(hash = 'hash') {
+  hash(hash = 'fullhash') {
     return this.shouldVersion() ? `-[${hash}]` : '';
   },
 };

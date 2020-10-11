@@ -1,6 +1,6 @@
 <template>
   <div class="hello-vue">
-    <h1 class="heading" :class="$style.red">Hello from Vue.</h1>
+    <h1 class="heading">Hello from Vue.</h1>
   </div>
 </template>
 
@@ -25,11 +25,5 @@
 <style scoped>
   .heading {
     color: green;
-  }
-</style>
-
-<style module>
-  .red {
-    color: red;
   }
 </style>

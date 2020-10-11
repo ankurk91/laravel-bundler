@@ -31,6 +31,9 @@ module.exports = {
     crossOriginLoading: 'anonymous',
     pathinfo: false,
   },
+  // Workaround
+  // https://github.com/webpack/webpack-dev-server/issues/2758
+  target: Helpers.isDev() ? 'web' : 'browserslist',
 
   module: {
     rules: BaseLoaders
@@ -42,6 +45,7 @@ module.exports = {
         cache: true,
         parallel: true,
         sourceMap: false,
+        extractComments: false,
         terserOptions: {
           output: {
             comments: false,
@@ -64,9 +68,6 @@ module.exports = {
     }),
     new CaseSensitivePathsPlugin(),
   ].concat(Helpers.isProduction() ? [
-    // https://webpack.js.org/guides/caching/
-    new webpack.HashedModuleIdsPlugin(),
-
     new OptimizeCssAssetsPlugin({
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {

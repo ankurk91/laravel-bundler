@@ -1,8 +1,6 @@
-// https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
-// https://webpack.js.org/plugins/split-chunks-plugin
-
 module.exports = {
   optimization: {
+    moduleIds: 'deterministic',
     runtimeChunk: {
       name: 'manifest'
     },

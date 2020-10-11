@@ -58,7 +58,7 @@ Update your `package.json` file
     "dev": "cross-env NODE_ENV=development webpack --progress --mode=development",
     "watch": "npm run dev -- --watch",
     "prod": "cross-env NODE_ENV=production webpack --mode=production",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
+    "hot": "cross-env NODE_ENV=development webpack serve --progress --hot"
 },
 "browserslist": [
     "> 2%",
@@ -86,10 +86,10 @@ Update your `.gitignore` file
 ```
 
 ### Baked Features
-* Webpack 4 and Babel 7 with `@babel/preset-env`
+* Webpack 5 and Babel 7 with `@babel/preset-env`
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
-* `CSS` and `SASS|SCSS` with CSS modules support
+* `CSS` and `SASS|SCSS` support
 * PostCSS loader preconfigured with `autoprefixer` and `cssnano`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:
