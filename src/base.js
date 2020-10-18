@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
@@ -58,6 +58,16 @@ module.exports = {
           }
         }
       }),
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            'default',
+            {
+              discardComments: {removeAll: true}
+            }
+          ],
+        }
+      }),
     ] : [],
   },
 
@@ -68,14 +78,7 @@ module.exports = {
     }),
     new CaseSensitivePathsPlugin(),
   ].concat(Helpers.isProduction() ? [
-    new OptimizeCssAssetsPlugin({
-      cssProcessor: require('cssnano'),
-      cssProcessorPluginOptions: {
-        preset: ['default', {
-          discardComments: {removeAll: true}
-        }],
-      }
-    }),
+    //
   ] : [
     // Dev only plugins
   ]).concat((Helpers.isHmr() || Helpers.isWatch()) ? [
