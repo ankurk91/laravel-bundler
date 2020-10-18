@@ -5,6 +5,7 @@
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](https://yarnpkg.com/en/package/laravel-bundler)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
+[![install size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
 
 Modern asset building tool for Laravel framework with better defaults.
 
@@ -89,7 +90,7 @@ Update your `.gitignore` file
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` with CSS modules support
-* PostCSS loader with `autoprefixer` and `cssnano`
+* PostCSS loader preconfigured with `autoprefixer` and `cssnano`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:
 * Extract all css to a separate file (based on entry)
