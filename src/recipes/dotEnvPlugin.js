@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const expand = require('dotenv-expand');
 const chalk = require('chalk');
 
-let filePath = path.join(process.cwd(), '.env');
+const filePath = path.join(process.cwd(), '.env');
 
 // Expand everything to process.env
 const result = dotenv.config({
@@ -19,36 +19,22 @@ if (result.error) {
 
 expand(result);
 
-
-// Copied from
-// https://github.com/JeffreyWay/laravel-mix/blob/master/src/webpackPlugins/MixDefinitionsPlugin.js
-function getDefinitions(mergeWith = {}) {
+function getDefinitions() {
   let regex = /^MIX_/i;
 
   // Filter out env vars that don't begin with MIX_
-  let filtered = Object.keys(process.env)
+  return Object.keys(process.env)
     .filter(key => regex.test(key))
-    .reduce((value, key) => {
-      value[key] = process.env[key];
+    .reduce((result, key) => {
+      result[key] = process.env[key];
 
-      return value;
+      return result;
     }, {});
-
-  let envVars = Object.assign(filtered, mergeWith);
-
-  return Object.keys(envVars)
-    // Stringify all values so they can be fed into Webpack's DefinePlugin.
-    .reduce((value, key) => {
-        value[`process.env.${key}`] = JSON.stringify(envVars[key]);
-
-        return value;
-      }, {}
-    );
 }
 
 module.exports = {
   plugins: [
-    new webpack.DefinePlugin(
+    new webpack.EnvironmentPlugin(
       getDefinitions()
     )
   ]
