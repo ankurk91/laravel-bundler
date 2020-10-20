@@ -49,9 +49,7 @@ function getDefinitions(mergeWith = {}) {
 module.exports = {
   plugins: [
     new webpack.DefinePlugin(
-      getDefinitions({
-        NODE_ENV: process.env.NODE_ENV || 'development'
-      })
+      getDefinitions()
     )
   ]
 };
