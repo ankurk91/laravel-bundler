@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 const Helpers = require('./helpers.js');
 const BaseLoaders = require('./loaders/index.js');
@@ -72,7 +71,6 @@ module.exports = {
   },
 
   plugins: [
-    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: `css/[name]${Helpers.hash('contenthash')}.css`
     }),
