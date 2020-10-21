@@ -3,16 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const defaultPostCssConfig = {
   plugins: [
-    require('autoprefixer')(),
-    Helpers.isProduction() ? require('cssnano')({
-      preset: [
-        'default', {
-          discardComments: {
-            removeAll: true,
-          },
-        }]
-    }) : false
-  ].filter(Boolean)
+    'postcss-preset-env',
+  ]
 };
 
 module.exports = {
