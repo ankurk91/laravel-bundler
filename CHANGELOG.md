@@ -1,11 +1,14 @@
 # Changelog
 
 ## Next
-* Webpack 5
+* Bump to Webpack v5
 * Drop CSS modules support
+* Remove `webpack-fix-style-only-entries` plugin until it gets support for v5
+* Use `postcss-preset-env`
+* Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
 
 ## [0.20.0](https://github.com/ankurk91/laravel-bundler/compare/0.19.0..0.20.0)
-* :warning: Vue.js support is no longer enabled by default. Read [here](./docs/vue-js-v2.md)
+* :warning: Vue.js support is no longer enabled by default. Read [here](./wiki/vue-js-v2.md)
 * chore: `vue-loader` is no longer bundled, you need to install it manually.
 * chore: upgrade PostCSS related deps
 * docs: move docs inside the repo instead of maintaining the wiki.
