@@ -107,10 +107,9 @@ Update your `.gitignore` file
 
 ### Not in the plan
 These features are not in the plan but can be enabled on demand :man_shrugging:
-* [OS Notification](https://github.com/Turbo87/webpack-notifier) - [Recipe](./wiki/os-notifications.md)
-* [BrowserSync](https://github.com/Va1/browser-sync-webpack-plugin) 
+* [Build Notification](https://github.com/RoccoC/webpack-build-notifier) 
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
-* [Image compression](https://github.com/vanwagonet/img-loader)
+* [Image compression](https://github.com/webpack-contrib/image-minimizer-webpack-plugin)
 * CSS Preprocessors other than `sass|scss`
 * Additional Babel plugins
 

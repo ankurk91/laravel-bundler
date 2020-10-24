@@ -1,7 +1,7 @@
 ## Browserslist
 
 [Browserslist](https://github.com/browserslist/browserslist) allows us to share browsers target with various build tools,
-for example babel, PostCSS, Auto-prefixer etc.
+for example Babel, PostCSS, Auto-prefixer etc.
 
 The simplest way is to create a `.browserslistrc` file on your project root and define supported browsers there.
 

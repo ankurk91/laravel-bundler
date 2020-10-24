@@ -1,6 +1,6 @@
 ## PostCSS
 
-[PostCSS](https://github.com/postcss/postcss) loader is already configured with `autoprefixer` and `cssnano`.
+[PostCSS](https://github.com/postcss/postcss) loader is already configured with [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
 
 In order to override default configuration; you can create your own PostCSS config file on project root. 
 File name can be one of `.postcssrc`, `.postcssrc.json`, `.postcssrc.js` or, `postcss.config.js`
@@ -9,17 +9,7 @@ The example config looks like this - `postcss.config.js`
 ```js
 module.exports = {
   plugins: [
-    require('autoprefixer')({
-      // browsers: ['> 2%', 'not dead']
-    }),
-    require('cssnano')({
-      preset: [
-        'default', {
-          discardComments: {
-            removeAll: true,
-          },
-        }]
-    })
+    'postcss-preset-env',
   ]
 }
 ```

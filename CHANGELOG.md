@@ -6,6 +6,11 @@
 * Remove `webpack-fix-style-only-entries` plugin until it gets support for v5
 * Use `postcss-preset-env`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
+* Update your `package.json` scripts like:
+```diff
+- "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
++ "hot": "cross-env NODE_ENV=development webpack serve --progress --hot"
+```
 
 ## [0.20.0](https://github.com/ankurk91/laravel-bundler/compare/0.19.0..0.20.0)
 * :warning: Vue.js support is no longer enabled by default. Read [here](./wiki/vue-js-v2.md)
