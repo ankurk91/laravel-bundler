@@ -41,9 +41,7 @@ module.exports = {
   optimization: {
     minimizer: Helpers.isProduction() ? [
       new TerserPlugin({
-        cache: true,
         parallel: true,
-        sourceMap: false,
         extractComments: false,
         terserOptions: {
           output: {
