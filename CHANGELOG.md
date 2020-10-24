@@ -4,6 +4,7 @@
 * Bump to Webpack v5
 * Drop CSS modules support
 * Remove `webpack-fix-style-only-entries` plugin until it gets support for v5
+* Remove OS Notification recipe
 * Use `postcss-preset-env`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
 * Update your `package.json` scripts like:
