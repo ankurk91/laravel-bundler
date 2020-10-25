@@ -90,6 +90,12 @@ module.exports = {
   performance: {
     hints: false,
   },
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      defaultWebpack: ['webpack/lib/', 'laravel-bundler/src/'],
+    }
+  },
   stats: {
     modules: false,
     children: false,
