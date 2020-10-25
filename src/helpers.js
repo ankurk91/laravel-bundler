@@ -1,15 +1,25 @@
+const parseArgs = require('minimist');
+
+const argv = parseArgs(process.argv.slice(2), {
+  default: {
+    mode: 'development',
+    watch: false,
+    hot: false
+  }
+});
+
 module.exports = {
   isHmr() {
-    return process.argv.includes('--hot');
+    return argv.hot;
   },
   isProduction() {
-    return process.env.NODE_ENV === 'production';
+    return argv.mode === 'production';
   },
   isDev() {
-    return process.env.NODE_ENV === 'development';
+    return argv.mode === 'development';
   },
   isWatch() {
-    return process.argv.includes('--watch');
+    return argv.watch;
   },
   shouldVersion() {
     return !this.isHmr() && !this.isWatch()

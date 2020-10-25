@@ -26,9 +26,9 @@
   "homepage": "https://github.com/ankurk91/laravel-bundler",
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
-    "example:dev": "cd example && webpack --mode development",
+    "example:dev": "cd example && webpack --mode=development",
     "example:watch": "yarn run example:dev --watch",
-    "example:prod": "cd example && webpack --mode production",
+    "example:prod": "cd example && webpack --mode=production",
     "example:hot": "cd example && webpack serve --hot --progress"
   },
   "dependencies": {
@@ -48,6 +48,7 @@
     "fibers": "^5.0.0",
     "file-loader": "^6.1.1",
     "mini-css-extract-plugin": "^1.2.0",
+    "minimist": "^1.2.5",
     "postcss": "^7.0.0",
     "postcss-loader": "^4.0.4",
     "postcss-preset-env": "^6.7.0",
