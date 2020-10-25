@@ -7,6 +7,7 @@
 * Remove OS Notification recipe
 * Use `postcss-preset-env`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
+* Remove the need of `cross-env`
 * Update your `package.json` scripts like:
 ```diff
 - "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
