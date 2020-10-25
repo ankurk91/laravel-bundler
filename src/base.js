@@ -82,14 +82,15 @@ module.exports = {
   ] : []),
 
   devtool: Helpers.devTool(),
-  cache: {
+  cache: (Helpers.isHmr() || Helpers.isWatch()) ? true : {
     type: 'filesystem',
     buildDependencies: {
       defaultWebpack: ['webpack/lib/'],
       laravelBundler: ['laravel-bundler/src/', 'laravel-bundler/package.json'],
+      userConfig: [path.resolve(process.cwd(), 'webpack.config.js')]
     }
   },
-  bail: true,
+  bail: Helpers.isProduction(),
   watchOptions: {
     ignored: /node_modules/
   },
