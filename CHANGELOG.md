@@ -4,7 +4,6 @@
 * Upgrade to Webpack v5
 * Drop CSS modules support
 * Remove `webpack-fix-style-only-entries` plugin until it gets support for Webpack v5
-* Remove then need of `cross-env`
 * Remove OS Notification recipe
 * Use `postcss-preset-env` in `postcss-loader`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 

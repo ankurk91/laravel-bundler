@@ -2,7 +2,7 @@ const parseArgs = require('minimist');
 
 const argv = parseArgs(process.argv.slice(2), {
   default: {
-    mode: 'development',
+    mode: process.env.NODE_ENV || 'development',
     watch: false,
     hot: false
   }
@@ -13,7 +13,7 @@ module.exports = {
     return argv.mode;
   },
   isHmr() {
-    return argv.hot;
+    return argv.hot || argv.includes('serve');
   },
   isProduction() {
     return this.nodeEnv() === 'production';
