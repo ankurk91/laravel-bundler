@@ -9,14 +9,17 @@ const argv = parseArgs(process.argv.slice(2), {
 });
 
 module.exports = {
+  nodeEnv() {
+    return argv.mode;
+  },
   isHmr() {
     return argv.hot;
   },
   isProduction() {
-    return argv.mode === 'production';
+    return this.nodeEnv() === 'production';
   },
   isDev() {
-    return argv.mode === 'development';
+    return this.nodeEnv() === 'development';
   },
   isWatch() {
     return argv.watch;

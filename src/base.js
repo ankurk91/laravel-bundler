@@ -39,6 +39,7 @@ module.exports = {
   },
 
   optimization: {
+    minimize: Helpers.isProduction(),
     minimizer: Helpers.isProduction() ? [
       new TerserPlugin({
         parallel: true,
@@ -46,19 +47,16 @@ module.exports = {
         terserOptions: {
           output: {
             comments: false,
-            beautify: false,
           },
           compress: {
-            drop_debugger: true,
             drop_console: true,
-            dead_code: true,
           }
         }
       }),
       new CssMinimizerPlugin({
         minimizerOptions: {
           preset: [
-            'default',
+            'cssnano-preset-default',
             {
               discardComments: {removeAll: true}
             }
@@ -74,7 +72,7 @@ module.exports = {
     }),
     new CaseSensitivePathsPlugin(),
   ].concat(Helpers.isProduction() ? [
-    //
+    // Prod only plugins
   ] : [
     // Dev only plugins
   ]).concat((Helpers.isHmr() || Helpers.isWatch()) ? [
@@ -84,17 +82,19 @@ module.exports = {
   ] : []),
 
   devtool: Helpers.devTool(),
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      defaultWebpack: ['webpack/lib/'],
+      laravelBundler: ['laravel-bundler/src/', 'laravel-bundler/package.json'],
+    }
+  },
+  bail: true,
   watchOptions: {
     ignored: /node_modules/
   },
   performance: {
     hints: false,
-  },
-  cache: {
-    type: 'filesystem',
-    buildDependencies: {
-      defaultWebpack: ['webpack/lib/', 'laravel-bundler/src/'],
-    }
   },
   stats: {
     modules: false,

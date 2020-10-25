@@ -26,7 +26,7 @@
   "homepage": "https://github.com/ankurk91/laravel-bundler",
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
-    "example:dev": "cd example && webpack --mode=development",
+    "example:dev": "cd example && webpack",
     "example:watch": "yarn run example:dev --watch",
     "example:prod": "cd example && webpack --mode=production",
     "example:hot": "cd example && webpack serve --hot --progress"

@@ -7,7 +7,8 @@ module.exports = {
   output: {},
   devServer: {
     allowedHosts: [
-      'localhost'
+      'localhost',
+      '127.0.0.1'
     ],
     before: (app, server) => {
       app.get('/', (req, res) => {
@@ -28,7 +29,6 @@ module.exports = {
     disableHostCheck: true,
     host: 'localhost',
     hot: true,
-    historyApiFallback: false,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
@@ -41,6 +41,7 @@ module.exports = {
     publicPath: '//localhost:8080/',
     stats: 'errors-only',
     logTime: true,
+    clientLogLevel: 'warn',
   },
   plugins: [
     new HMRDetectPlugin()

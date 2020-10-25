@@ -35,7 +35,7 @@ module.exports = {
       loader: require.resolve('sass-loader'),
       options: {
         sourceMap: Helpers.sourceMapEnabled(),
-        additionalData: '$env: ' + process.env.NODE_ENV + ';',
+        additionalData: '$env: ' + Helpers.nodeEnv() + ';',
         sassOptions: {
           outputStyle: 'expanded'
         },

@@ -64,7 +64,7 @@ module.exports = class HMRDetectPlugin {
 
     console.log(chalk.cyan("\n" + `HMR: Deleting file "${this.hotFilePath}"`));
 
-    fs.unlinkSync(this.hotFilePath, (error) => {
+    fs.unlink(this.hotFilePath, (error) => {
       if (error) {
         console.log(chalk.bold.red("\n" + `Error: Unable to delete hot file`));
         console.error(error)
