@@ -13,16 +13,16 @@ Modern asset building tool for Laravel framework with better defaults.
 :warning: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this one
 ```bash
 # yarn
-yarn add laravel-bundler
+yarn add --dev laravel-bundler
 
 # npm
-npm install laravel-bundler 
+npm install --dev laravel-bundler 
 ```
 
 ## Usage
 Create a `resources/js/app.js` file like
 ```js
-// Import libraries
+// Import libraries, eg: Vue.js v2
 import 'vue';
 import { BootstrapVue } from 'bootstrap-vue'
 // You can import styles like this
@@ -78,10 +78,10 @@ Update your blade template
 Update your `.gitignore` file
 ```git exclude
 /public/hot
-/public/js
-/public/css
-/public/fonts
-/public/images
+/public/js/
+/public/css/
+/public/fonts/
+/public/images/
 /public/mix-manifest.json
 ```
 
@@ -90,7 +90,7 @@ Update your `.gitignore` file
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` support
-* PostCSS loader preconfigured with `autoprefixer` and `cssnano`
+* PostCSS loader preconfigured with `postcss-preset-env`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:
 * Extract all css to a separate file (based on entry)
@@ -100,7 +100,8 @@ Update your `.gitignore` file
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
-* Can auto-reload browser on blade template change (opt-in feature) :rocket:
+* Can auto-reload browser on blade template change (opt-in feature) :wink:
+* Webpack 5 inbuilt persistent cache across builds :rocket:
 
 ### Documentation
 * [Read the docs](./wiki) 
