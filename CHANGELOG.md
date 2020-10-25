@@ -1,18 +1,14 @@
 # Changelog
 
 ## Next
-* Bump to Webpack v5
+* Upgrade to Webpack v5
 * Drop CSS modules support
 * Remove `webpack-fix-style-only-entries` plugin until it gets support for v5
+* Remove `cross-env`
 * Remove OS Notification recipe
 * Use `postcss-preset-env`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
-* Remove the need of `cross-env`
-* Update your `package.json` scripts like:
-```diff
-- "hot": "cross-env NODE_ENV=development webpack-dev-server --progress --hot"
-+ "hot": "cross-env NODE_ENV=development webpack serve --progress --hot"
-```
+* Read upgrade [guide](./UPGRADING.md) to migrate
 
 ## [0.20.0](https://github.com/ankurk91/laravel-bundler/compare/0.19.0..0.20.0)
 * :warning: Vue.js support is no longer enabled by default. Read [here](./wiki/vue-js-v2.md)
