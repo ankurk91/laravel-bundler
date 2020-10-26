@@ -4,7 +4,8 @@ const argv = parseArgs(process.argv.slice(2), {
   default: {
     mode: process.env.NODE_ENV || 'development',
     watch: false,
-    hot: false
+    hot: false,
+    _: []
   }
 });
 
@@ -13,7 +14,7 @@ module.exports = {
     return argv.mode;
   },
   isHmr() {
-    return argv.hot || argv.includes('serve');
+    return argv.hot || argv._.includes('serve');
   },
   isProduction() {
     return this.nodeEnv() === 'production';
