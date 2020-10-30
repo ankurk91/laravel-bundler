@@ -14,14 +14,14 @@ module.exports = {
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
-        esModule: false,
+        esModule: true,
       }
     },
     {
       loader: require.resolve('css-loader'),
       options: {
         modules: false,
-        esModule: false,
+        esModule: true,
         importLoaders: 2,
       }
     },

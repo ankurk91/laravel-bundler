@@ -32,8 +32,8 @@
     "example:hot": "cd example && cross-env NODE_ENV=development webpack serve --hot --progress"
   },
   "dependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "chalk": "^4.1.0",
@@ -47,15 +47,15 @@
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "fibers": "^5.0.0",
-    "file-loader": "^6.1.1",
-    "mini-css-extract-plugin": "^1.2.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.2.1",
     "minimist": "^1.2.5",
     "postcss": "^7.0.0",
     "postcss-loader": "^4.0.4",
     "postcss-preset-env": "^6.7.0",
-    "sass": "^1.27.0",
+    "sass": "^1.28.0",
     "sass-loader": "^10.0.4",
-    "webpack": "^5.2.0",
+    "webpack": "^5.3.2",
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-laravel-mix-manifest": "^3.0.2",
@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "vue": "^2.6.12",
-    "vue-loader": "^15.9.3",
+    "vue-loader": "^15.9.4",
     "vue-template-compiler": "^2.6.12"
   }
 }
