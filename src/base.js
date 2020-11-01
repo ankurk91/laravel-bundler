@@ -27,7 +27,6 @@ module.exports = {
     filename: `js/[name]${Helpers.hash()}.js`,
     chunkFilename: `js/[name]${Helpers.hash('chunkhash')}.js`,
     globalObject: 'this',
-    crossOriginLoading: 'anonymous',
     pathinfo: false,
   },
   // Workaround
@@ -40,9 +39,8 @@ module.exports = {
 
   optimization: {
     minimize: Helpers.isProduction(),
-    minimizer: Helpers.isProduction() ? [
+    minimizer: [
       new TerserPlugin({
-        parallel: true,
         extractComments: false,
         terserOptions: {
           output: {
@@ -63,7 +61,7 @@ module.exports = {
           ],
         }
       }),
-    ] : [],
+    ]
   },
 
   plugins: [
@@ -71,11 +69,7 @@ module.exports = {
       filename: `css/[name]${Helpers.hash('contenthash')}.css`
     }),
     new CaseSensitivePathsPlugin(),
-  ].concat(Helpers.isProduction() ? [
-    // Prod only plugins
-  ] : [
-    // Dev only plugins
-  ]).concat((Helpers.isHmr() || Helpers.isWatch()) ? [
+  ].concat((Helpers.isHmr() || Helpers.isWatch()) ? [
     // Workaround
     // We need this plugin only for inline source maps
     new webpack.SourceMapDevToolPlugin(),

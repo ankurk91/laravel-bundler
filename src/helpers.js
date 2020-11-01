@@ -28,9 +28,6 @@ module.exports = {
   shouldVersion() {
     return !this.isHmr() && !this.isWatch()
   },
-  sourceMapEnabled() {
-    return !this.isProduction();
-  },
   devTool() {
     if (this.isHmr() || this.isWatch()) {
       return 'eval-source-map'
