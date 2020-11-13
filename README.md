@@ -55,10 +55,10 @@ module.exports = require('laravel-bundler')({
 Update your `package.json` file
 ```json
 "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress",
+    "dev": "webpack --env NODE_ENV=development --progress",
     "watch": "npm run dev -- --watch",
-    "prod": "cross-env NODE_ENV=production webpack --mode=production",
-    "hot": "cross-env NODE_ENV=development webpack serve --progress --hot"
+    "prod": "webpack --env NODE_ENV=production --mode=production",
+    "hot": "webpack serve --env NODE_ENV=development --progress --hot"
 },
 "browserslist": [
     "> 2%",

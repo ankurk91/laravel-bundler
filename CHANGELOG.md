@@ -7,6 +7,7 @@
 * Remove OS Notification recipe
 * Use `postcss-preset-env` in `postcss-loader`
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
+* Remove the need of `cross-env` package
 * Enable persistent cache, [details](https://github.com/webpack/changelog-v5/blob/master/guides/persistent-caching.md)
 * Read the upgrade [guide](./UPGRADING.md) to migrate
 
