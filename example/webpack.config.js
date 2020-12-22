@@ -12,7 +12,8 @@ module.exports = require('../src/index')({
       ],
     },
     plugins: [
-      new ReloadOnBladeChange()
+      // todo temporary disabled
+      //new ReloadOnBladeChange()
     ]
   },
   require('../src/recipes/vue-2.js')

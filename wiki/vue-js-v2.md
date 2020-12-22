@@ -19,4 +19,4 @@ module.exports = require('laravel-bundler')({
 
 #### Notes
 * Your styles from `*.vue` SFC will be extracted and merged with the main `app.css`.
-* You can use css or sass within vue SFC, if you want other pre-processor support; you need to configure them manually.
+* You can use css or sass within Vue SFC, if you want other pre-processor support; you need to configure them manually.

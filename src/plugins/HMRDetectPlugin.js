@@ -72,13 +72,13 @@ module.exports = class HMRDetectPlugin {
     });
   }
 
-  getFileContents(configs) {
-    let protocol = configs.https ? 'https' : 'http';
+  getFileContents({host, port}) {
+    const protocol = process.argv.includes('--https') ? 'https' : 'http';
 
     return protocol +
       '://' +
-      configs.host +
+      host +
       ':' +
-      configs.port;
+      port;
   }
 };

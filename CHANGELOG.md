@@ -9,6 +9,7 @@
 * Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
 * Remove the need of `cross-env` package
 * Enable persistent cache, [details](https://github.com/webpack/changelog-v5/blob/master/guides/persistent-caching.md)
+* `ReloadOnBladeChange` is not working for now, don't use it unless there is a workaround
 * Read the upgrade [guide](./UPGRADING.md) to migrate
 
 ## [0.20.0](https://github.com/ankurk91/laravel-bundler/compare/0.19.0..0.20.0)
