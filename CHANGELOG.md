@@ -1,15 +1,14 @@
 # Changelog
 
-## Next
+## [0.22.0](https://github.com/ankurk91/laravel-bundler/compare/0.20.0..0.22.0)
 * Upgrade to Webpack v5
 * Drop CSS modules support
 * Remove `webpack-fix-style-only-entries` plugin until it gets support for Webpack v5
 * Remove OS Notification recipe
-* Use `postcss-preset-env` in `postcss-loader`
-* Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin` 
 * Remove the need of `cross-env` package
+* Use `postcss-preset-env` in `postcss-loader`
+* Replace unsupported `optimize-css-assets-plugin` with better `css-minimizer-plugin`
 * Enable persistent cache, [details](https://github.com/webpack/changelog-v5/blob/master/guides/persistent-caching.md)
-* `ReloadOnBladeChange` is not working for now, don't use it unless there is a workaround
 * Read the upgrade [guide](./UPGRADING.md) to migrate
 
 ## [0.20.0](https://github.com/ankurk91/laravel-bundler/compare/0.19.0..0.20.0)
