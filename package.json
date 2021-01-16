@@ -58,7 +58,8 @@
     "webpack-cli": "^4.1.0",
     "webpack-dev-server": "^4.0.0-beta.0",
     "webpack-laravel-mix-manifest": "^3.0.2",
-    "webpack-merge": "^5.7.2"
+    "webpack-merge": "^5.7.2",
+    "webpack-remove-empty-scripts": "^0.7.1"
   },
   "engines": {
     "node": ">=12.13.0"
