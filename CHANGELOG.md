@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.22.1](https://github.com/ankurk91/laravel-bundler/compare/0.22.0..0.22.1)
+* Bring back `webpack-remove-empty-scripts`
+
 ## [0.22.0](https://github.com/ankurk91/laravel-bundler/compare/0.20.0..0.22.0)
 * Upgrade to Webpack v5
 * Drop CSS modules support
