@@ -23,7 +23,7 @@ module.exports = {
     return this.nodeEnv() === 'development';
   },
   isWatch() {
-    return argv.watch;
+    return argv.watch || argv._.includes('watch');
   },
   shouldVersion() {
     return !this.isHmr() && !this.isWatch()
