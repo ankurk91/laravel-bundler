@@ -1,9 +1,7 @@
 # http://git-scm.com/docs/gitignore
 
-# sublime and other ide
+# IDE
 .idea/
-.project
-*.sublime-*
 .vscode/
 
 # logs and cache
@@ -11,7 +9,6 @@
 npm-debug.log*
 .sass-cache
 .cache
-.php_cs.cache
 
 # OS generated files
 [Tt]humbs.db
