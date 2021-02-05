@@ -26,10 +26,10 @@
   "homepage": "https://github.com/ankurk91/laravel-bundler",
   "scripts": {
     "test": "echo \"Error: tests are coming soon.\" && exit 1",
-    "example:dev": "cd example && webpack --env NODE_ENV=development",
-    "example:watch": "cd example && webpack watch --env NODE_ENV=development",
-    "example:prod": "cd example && webpack --mode=production --env NODE_ENV=production ",
-    "example:hot": "cd example && webpack serve --env NODE_ENV=development --hot --progress"
+    "example:dev": "cd example && webpack --node-env=development",
+    "example:watch": "cd example && webpack watch --node-env=development",
+    "example:hot": "cd example && webpack serve --hot --progress --node-env=development",
+    "example:prod": "cd example && webpack --node-env=production"
   },
   "dependencies": {
     "@babel/core": "^7.12.13",

@@ -64,10 +64,10 @@ Update your `package.json` file
 ```json
 {
     "scripts": {
-        "dev": "webpack --env NODE_ENV=development --progress",
-        "watch": "webpack watch --env NODE_ENV=development --progress",
-        "prod": "webpack --env NODE_ENV=production --mode=production",
-        "hot": "webpack serve --env NODE_ENV=development --progress --hot"
+        "dev": "webpack --node-env=development --progress",
+        "watch": "webpack watch --node-env=development --progress",
+        "hot": "webpack serve --node-env=production --progress --hot",
+        "prod": "webpack --node-env=production"
     },
     "browserslist": [
         "> 2%",
