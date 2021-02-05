@@ -116,7 +116,7 @@ Update your `.gitignore` file
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
 * Can auto-reload browser on blade template change (opt-in feature) :wink:
-* Webpack 5 inbuilt persistent cache across builds :rocket:
+* Webpack 5 inbuilt persistent cache across builds (opt-in feature) :rocket:
 
 ### Documentation
 

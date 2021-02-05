@@ -11,7 +11,6 @@ module.exports = (...userConfig) => (env, argv) => {
     require('./recipes/devServer.js'),
     require('./recipes/extractVendor.js'),
     require('./recipes/dotEnvPlugin.js'),
-    require('./recipes/persistentCache.js'),
     ...userConfig
   );
 }
