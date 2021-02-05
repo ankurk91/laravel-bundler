@@ -33,5 +33,3 @@ jobs:
       - run: yarn install --non-interactive --frozen-lockfile
       - run: yarn run example:dev
       - run: yarn run example:prod
-        env:
-          CI: true
