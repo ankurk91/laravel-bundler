@@ -67,7 +67,7 @@ Update your `package.json` file
         "dev": "webpack --node-env=development --progress",
         "watch": "webpack watch --node-env=development --progress",
         "hot": "webpack serve --node-env=production --progress --hot",
-        "prod": "webpack --node-env=production"
+        "prod": "webpack --node-env=production --progress"
     },
     "browserslist": [
         "> 2%",
