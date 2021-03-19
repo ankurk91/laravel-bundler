@@ -43,11 +43,11 @@ module.exports = class ReloadOnBladeChange {
   }
 
   captureServerInstance(webpackConfig) {
-    const originalCallbackFn = webpackConfig.devServer.onAfterSetupMiddleware;
+    const originalCallbackFn = webpackConfig.devServer.after;
 
-    webpackConfig.devServer.onAfterSetupMiddleware = (server) => {
+    webpackConfig.devServer.after = (app, server) => {
       if (typeof originalCallbackFn === 'function') {
-        originalCallbackFn(server);
+        originalCallbackFn(app, server);
       }
 
       this.serverHandler = server;

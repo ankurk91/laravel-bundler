@@ -5,28 +5,45 @@ const Helpers = require('../helpers.js');
 module.exports = {
   output: {},
   devServer: {
-    firewall: false,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      '::1',
+    ],
+    before: (app, server) => {
+      app.get('/', (req, res) => {
+        res.set('Content-Type', 'text/html');
+        res.send(`
+<html lang="en">
+<head>
+<title>Laravel Bundler</title>
+</head>
+<body>
+<h1>Only assets will be served from this address.</h1>
+<h2>You should visit your Laravel app as normal.</h2>
+</body>
+</html>`.trim());
+      });
+    },
+    contentBase: path.resolve(process.cwd(), 'public'),
+    disableHostCheck: true,
     host: 'localhost',
-    port: 8080,
-    client: {
-      host: 'localhost',
-      port: 8080,
+    hot: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization'
     },
     open: false,
-    liveReload: false,
     overlay: {
       warnings: false,
       errors: true
     },
-    static: path.resolve(process.cwd(), 'public'),
-    dev: {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
-        'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization'
-      },
-      publicPath: '//localhost:8080/',
-    }
+    port: 8080,
+    publicPath: '//localhost:8080/',
+    stats: 'errors-only',
+    logTime: true,
+    clientLogLevel: 'warn',
   },
   plugins: [
     new HMRDetectPlugin()
@@ -36,5 +53,5 @@ module.exports = {
 if (Helpers.isHmr()) {
   // This is required to make HMR work,
   // specially when main application is running on a different domain than dev server
-  module.exports.output.publicPath = module.exports.devServer.dev.publicPath;
+  module.exports.output.publicPath = module.exports.devServer.publicPath;
 }

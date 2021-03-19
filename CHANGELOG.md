@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.24.0](https://github.com/ankurk91/laravel-bundler/compare/0.23.0..0.24.0)
+* Rollback to use `webpack-dev-server` v3.x as v4.beta is not working well with HMR
+* Upgrade `sass-loader` to v11
+
 ## [0.23.0](https://github.com/ankurk91/laravel-bundler/compare/0.22.1..0.23.0)
 * Disable persistent cache feature, you have to opt-in manually from now.
 * Update docs `scripts` section to use new `webpack-cli` flags
