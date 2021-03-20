@@ -1,12 +1,15 @@
 ## Vue.js v2.x
 
-* Install required dependencies 
+* Install required dependencies
+
 ```
 yarn add vue@^2.0 vue-template-compiler@^2.0 vue-loader@^15.0
 ```
-:warning: `vue` and `vue-template-compiler` versions must be same. 
+
+:warning: `vue` and `vue-template-compiler` versions must be same.
 
 * Update your `webpack.config.js` like:
+
 ```js
 module.exports = require('laravel-bundler')({
     entry: {
@@ -18,5 +21,6 @@ module.exports = require('laravel-bundler')({
 ```
 
 #### Notes
+
 * Your styles from `*.vue` SFC will be extracted and merged with the main `app.css`.
 * You can use css or sass within Vue SFC, if you want other pre-processor support; you need to configure them manually.

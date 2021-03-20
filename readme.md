@@ -5,7 +5,7 @@
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](https://yarnpkg.com/en/package/laravel-bundler)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
-[![install size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
+[![install-size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
 
 Modern asset building tool for Laravel framework with better defaults.
 
@@ -32,7 +32,7 @@ import {BootstrapVue} from 'bootstrap-vue'
 // You can import styles like this
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-// Write your own code
+
 Vue.use(BootstrapVue);
 
 new Vue({
@@ -115,7 +115,7 @@ Update your `.gitignore` file
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
-* Can auto-reload browser on blade template change (opt-in feature) :wink:
+* Can auto-reload web-browser when blade templates gets changed (opt-in feature) :wink:
 * Webpack 5 inbuilt persistent cache across builds (opt-in feature) :rocket:
 
 ### Documentation
