@@ -11,13 +11,13 @@ module.exports = {
     client: {
       host: 'localhost',
       port: 8080,
+      overlay: {
+        warnings: false,
+        errors: true
+      },
     },
     open: false,
     liveReload: false,
-    overlay: {
-      warnings: false,
-      errors: true
-    },
     static: path.resolve(process.cwd(), 'public'),
     dev: {
       headers: {
