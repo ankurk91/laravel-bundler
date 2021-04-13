@@ -17,7 +17,6 @@ module.exports = {
       },
     },
     open: false,
-    liveReload: false,
     static: path.resolve(process.cwd(), 'public'),
     dev: {
       headers: {
@@ -27,9 +26,12 @@ module.exports = {
       },
       publicPath: '//localhost:8080/',
     },
-    watchFiles: [
-      path.resolve(process.cwd(), 'resources/views/**/*.blade.php')
-    ]
+    liveReload: true,
+    watchFiles: {
+      paths: [
+        path.resolve(process.cwd(), 'resources/views/**/*.blade.php')
+      ]
+    }
   },
   plugins: [
     new HMRDetectPlugin()
