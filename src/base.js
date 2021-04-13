@@ -55,7 +55,7 @@ module.exports = {
       new CssMinimizerPlugin({
         minimizerOptions: {
           preset: [
-            'cssnano-preset-default',
+            'default',
             {
               discardComments: {removeAll: true}
             }
