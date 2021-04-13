@@ -26,7 +26,10 @@ module.exports = {
         'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization'
       },
       publicPath: '//localhost:8080/',
-    }
+    },
+    watchFiles: [
+      path.resolve(process.cwd(), 'resources/views/**/*.blade.php')
+    ]
   },
   plugins: [
     new HMRDetectPlugin()

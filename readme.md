@@ -115,7 +115,7 @@ Update your `.gitignore` file
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
-* Can auto-reload web-browser when blade templates gets changed (opt-in feature) :wink:
+* Can auto-reload web-browser when blade templates gets changed :wink:
 * Webpack 5 inbuilt persistent cache across builds (opt-in feature) :rocket:
 
 ### Documentation

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.25.0](https://github.com/ankurk91/laravel-bundler/compare/0.24.0..0.25.0)
+* Removed `ReloadOnBladeChange` plugin, since this feature is baked in into `webpack-dev-server` now
+* Upgrade `cssnano` to v5
+
 ## [0.24.0](https://github.com/ankurk91/laravel-bundler/compare/0.23.0..0.24.0)
 * Upgrade `sass-loader` to v11
 * Upgrade `webpack-dev-server` to v4.0.0-beta.1

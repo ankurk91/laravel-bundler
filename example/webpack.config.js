@@ -1,5 +1,4 @@
 const path = require('path');
-const ReloadOnBladeChange = require('../src/plugins/ReloadOnBladeChange.js');
 
 module.exports = require('../src/index.js')({
     entry: {
@@ -12,7 +11,7 @@ module.exports = require('../src/index.js')({
       ],
     },
     plugins: [
-      new ReloadOnBladeChange()
+      //
     ]
   },
   require('../src/recipes/vue-2.js'),
