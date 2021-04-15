@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.26.0](https://github.com/ankurk91/laravel-bundler/compare/0.25.0..0.26.0)
+* Downgrade `css-minimizer-webpack-plugin`, `cssnano` and `postcss` until compatible with `postcss-preset-env`
+
 ## [0.25.0](https://github.com/ankurk91/laravel-bundler/compare/0.24.0..0.25.0)
 * Removed `ReloadOnBladeChange` plugin, since this feature is baked in into `webpack-dev-server` now
 * Upgrade `cssnano` to v5
