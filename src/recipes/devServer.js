@@ -18,7 +18,7 @@ module.exports = {
     },
     open: false,
     static: path.resolve(process.cwd(), 'public'),
-    dev: {
+    devMiddleware: {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
@@ -41,5 +41,5 @@ module.exports = {
 if (Helpers.isHmr()) {
   // This is required to make HMR work,
   // specially when main application is running on a different domain than dev server
-  module.exports.output.publicPath = module.exports.devServer.dev.publicPath;
+  module.exports.output.publicPath = module.exports.devServer.devMiddleware.publicPath;
 }
