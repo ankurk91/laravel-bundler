@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.27.0](https://github.com/ankurk91/laravel-bundler/compare/0.26.0..0.27.0)
+* Upgrade `webpack-dev-server` to v4.0.0-beta.3
+* Upgrade `dotenv` to v9
+
 ## [0.26.0](https://github.com/ankurk91/laravel-bundler/compare/0.25.0..0.26.0)
 * Downgrade `css-minimizer-webpack-plugin`, `cssnano` and `postcss` until compatible with `postcss-preset-env`
 
