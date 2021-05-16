@@ -1,7 +1,7 @@
 ## PostCSS
 
 [PostCSS](https://github.com/postcss/postcss) loader is already configured
-with [postcss-preset-env](https://github.com/csstools/postcss-preset-env)
+with [autoprefixer](https://github.com/postcss/autoprefixer)
 
 In order to override default configuration; you can create your own PostCSS config file on project root. File name can
 be one of `.postcssrc`, `.postcssrc.json`, `.postcssrc.js` or, `postcss.config.js`

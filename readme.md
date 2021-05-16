@@ -11,7 +11,7 @@ Modern asset building tool for Laravel framework with better defaults.
 
 ## Installation
 
-:warning: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this one
+:bulb: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this one
 
 ```bash
 # yarn
@@ -55,6 +55,7 @@ module.exports = require('laravel-bundler')({
         // Other webpack configs may go here
     },
     // Incluce vue v2 recipe
+    // Dont forget to install required packages by this recipe
     require('laravel-bundler/src/recipes/vue-2.js')
 );
 ```
@@ -105,7 +106,7 @@ Update your `.gitignore` file
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` support
-* PostCSS loader preconfigured with `postcss-preset-env`
+* PostCSS loader preconfigured with `autoprefixer`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:
 * Extract all css to a separate file (based on entry)

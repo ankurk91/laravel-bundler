@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const defaultPostCssConfig = {
   plugins: [
-    'postcss-preset-env',
+    'autoprefixer',
   ]
 };
 
