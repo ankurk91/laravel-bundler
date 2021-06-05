@@ -17,14 +17,13 @@ module.exports = {
                 modules: false,
                 useBuiltIns: false,
                 targets: {
-                    // https://browserl.ist
                     // browsers: ['> 2%', 'not dead']
                 }
             }
         ]
     ],
     plugins: [
-        // Your plugins
+        // Your babel plugins
     ],
 }
 ```

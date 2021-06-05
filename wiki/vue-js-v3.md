@@ -2,7 +2,7 @@
 
 * Install required dependencies
 
-```
+```bash
 yarn add vue@^3.0 @vue/compiler-sfc@^3.0 vue-loader@^16
 ```
 

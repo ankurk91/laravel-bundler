@@ -62,7 +62,7 @@
     "webpack-remove-empty-scripts": "^0.7.1"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=14.15.0"
   },
   "devDependencies": {
     "vue": "^2.6.12",

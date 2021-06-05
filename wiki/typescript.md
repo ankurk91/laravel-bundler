@@ -2,14 +2,14 @@
 
 * Install required dependencies
 
-```
+```bash
 yarn add ts-loader typescript --dev
 ```
 
 * Generate an initial [ts-config](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file in your project
   root
 
-```
+```bash
 node_modules/.bin/tsc --init
 ```
 

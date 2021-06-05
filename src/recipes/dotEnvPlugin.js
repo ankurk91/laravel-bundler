@@ -13,7 +13,7 @@ const result = dotenv.config({
 
 // We wont stop process if we could not load .env
 if (result.error) {
-  console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from .env file.`));
+  console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from '${filePath}' file.`));
   console.error(result.error);
 }
 

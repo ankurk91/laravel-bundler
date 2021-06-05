@@ -16,7 +16,7 @@ module.exports = require('laravel-bundler')({
     },
     output: {},
     plugins: [
-        // Your plugins
+        // Your webpack plugins
     ],
     module: {
       rules: []

@@ -2,7 +2,7 @@
 
 * Install required dependencies
 
-```
+```bash
 yarn add vue@^2.0 vue-template-compiler@^2.0 vue-loader@^15.0
 ```
 
