@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.29.0](https://github.com/ankurk91/laravel-bundler/compare/0.28.0..0.29.0)
+## [0.29.0](https://github.com/ankurk91/laravel-bundler/compare/0.28.0..0.29.1)
 
 * Bump min node.js version to v14.15.0
 
