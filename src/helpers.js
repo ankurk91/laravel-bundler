@@ -1,6 +1,6 @@
-const parseArgs = require('minimist');
+const yargs = require('yargs-parser');
 
-const argv = parseArgs(process.argv.slice(2), {
+const argv = yargs(process.argv.slice(2), {
   default: {
     mode: process.env.NODE_ENV || 'development',
     watch: false,
