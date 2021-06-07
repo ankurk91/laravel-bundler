@@ -46,7 +46,6 @@
     "cssnano": "^5.0.2",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
-    "fibers": "^5.0.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.6.0",
     "minimist": "^1.2.5",
