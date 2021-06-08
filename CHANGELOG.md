@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.29.2](https://github.com/ankurk91/laravel-bundler/compare/0.29.1..0.29.2)
+
+* Remove [fibers](https://github.com/laverdet/node-fibers) package
+* Replace `minimist` with `yargs-parser` package
+
 ## [0.29.0](https://github.com/ankurk91/laravel-bundler/compare/0.28.0..0.29.1)
 
 * Bump min node.js version to v14.15.0
