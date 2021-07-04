@@ -7,6 +7,5 @@ module.exports = {
   options: {
     name: `[folder]/[name]${Helpers.hash('hash:8')}.[ext]`,
     outputPath: 'images/',
-    publicPath: '../images'
   }
 };
