@@ -14,7 +14,7 @@ const BaseLoaders = require('./loaders/index.js');
 module.exports = {
   name: 'laravel-bundler',
   context: process.cwd(),
-  mode: process.env.NODE_ENV || 'development',
+  mode: Helpers.nodeEnv(),
   resolve: {
     modules: [
       path.resolve(process.cwd(), 'node_modules'),

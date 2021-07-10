@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.30.0](https://github.com/ankurk91/laravel-bundler/compare/0.29.3..0.30.0)
+
+* :warning: Remove persistence Cache recipe, as it is buggy in cache invalidation
+* Upgrade `mini-css-extract-plugin` to v2.0
+
 ## [0.29.3](https://github.com/ankurk91/laravel-bundler/compare/0.29.2..0.29.3)
 
 * Fix: in-correct webpack mode
