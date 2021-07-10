@@ -15,5 +15,4 @@ module.exports = require('../src/index.js')({
     ]
   },
   require('../src/recipes/vue-2.js'),
-  require('../src/recipes/persistentCache.js')
 );
