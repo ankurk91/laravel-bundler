@@ -44,12 +44,15 @@ module.exports = {
       new TerserPlugin({
         extractComments: false,
         terserOptions: {
-          output: {
+          format: {
             comments: false,
+            ascii_only: true,
+            wrap_func_args: false,
           },
           compress: {
             drop_console: true,
-          }
+          },
+          ecma: 2017,
         }
       }),
       new CssMinimizerPlugin({
