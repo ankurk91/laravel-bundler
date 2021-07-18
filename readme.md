@@ -81,23 +81,18 @@ Update your blade template
 
 ```blade
 <!-- header -->
-<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+<link href="{{ mix('css/app.css', 'dist') }}" rel="stylesheet">
 
 <!-- footer -->
-<script src="{{ mix('js/manifest.js') }}"></script>
-<script src="{{ mix('js/vendor.js') }}"></script>
-<script src="{{ mix('js/app.js') }}"></script>
+<script src="{{ mix('js/manifest.js', 'dist') }}"></script>
+<script src="{{ mix('js/vendor.js', 'dist') }}"></script>
+<script src="{{ mix('js/app.js', 'dist') }}"></script>
 ```
 
 Update your `.gitignore` file
 
 ```bash
-/public/hot
-/public/js/
-/public/css/
-/public/fonts/
-/public/images/
-/public/mix-manifest.json
+/public/dist/
 ```
 
 ### Baked Features
@@ -112,7 +107,7 @@ Update your `.gitignore` file
 * Extract all css to a separate file (based on entry)
 * Accepts css/scss file as entry
 * Extract all vendor js to a separate file
-* Clean output directories just before successful build
+* Clean the output directory before emitting the assets
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode

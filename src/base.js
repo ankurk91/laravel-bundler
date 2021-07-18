@@ -23,7 +23,8 @@ module.exports = {
   },
   entry: {},
   output: {
-    path: path.resolve(process.cwd(), 'public'),
+    clean: true,
+    path: path.resolve(process.cwd(), 'public/dist'),
     publicPath: 'auto',
     filename: `js/[name]${Helpers.hash()}.js`,
     chunkFilename: `js/[name]${Helpers.hash('chunkhash')}.js`,

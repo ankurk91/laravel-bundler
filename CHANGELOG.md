@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+* Output path has been changed from `./public` to `./public/dist`
+
 ## [0.30.0](https://github.com/ankurk91/laravel-bundler/compare/0.29.3..0.30.0)
 
 * :warning: Remove persistence Cache recipe, as it is buggy in cache invalidation
