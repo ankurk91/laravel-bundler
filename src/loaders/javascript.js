@@ -2,7 +2,7 @@ const Helpers = require('../helpers.js');
 const cosmiconfig = require('cosmiconfig');
 
 const loaderOptions = {
-  cacheDirectory: Helpers.isProduction()
+  cacheDirectory: true,
 };
 
 const defaultBabelConfigs = {
