@@ -30,9 +30,6 @@ module.exports = {
     globalObject: 'this',
     pathinfo: false,
   },
-  // Workaround
-  // https://github.com/webpack/webpack-dev-server/issues/2758
-  target: Helpers.isDev() ? 'web' : 'browserslist',
 
   module: {
     rules: BaseLoaders

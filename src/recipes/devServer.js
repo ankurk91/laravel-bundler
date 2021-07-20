@@ -5,12 +5,10 @@ const Helpers = require('../helpers.js');
 module.exports = {
   output: {},
   devServer: {
-    firewall: false,
+    allowedHosts: 'all',
     host: 'localhost',
     port: 8080,
     client: {
-      host: 'localhost',
-      port: 8080,
       overlay: {
         warnings: false,
         errors: true
@@ -26,6 +24,7 @@ module.exports = {
       },
       publicPath: '//localhost:8080/',
     },
+    compress: false,
     liveReload: true,
     watchFiles: {
       paths: [
