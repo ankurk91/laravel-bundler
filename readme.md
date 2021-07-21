@@ -92,7 +92,7 @@ Update your blade template
 Update your `.gitignore` file
 
 ```bash
-/public/dist/
+/public/dist
 ```
 
 ### Baked Features
@@ -115,7 +115,7 @@ Update your `.gitignore` file
 
 ### Documentation
 
-* [Read the docs](./wiki)
+* [Read the additional docs](./wiki)
 
 ### Not in the plan
 
