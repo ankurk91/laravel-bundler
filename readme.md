@@ -99,7 +99,7 @@ Update your blade template
 
 Update your `.gitignore` file
 
-```bash
+```.gitignore
 /public/dist
 ```
 

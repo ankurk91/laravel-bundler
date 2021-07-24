@@ -1,11 +1,11 @@
 # Changelog
 
-## Unreleased
+## [0.31.1](https://github.com/ankurk91/laravel-bundler/compare/0.30.3..0.31.1)
 
 * :warning: Output path has been changed from `./public` to `./public/dist`
+* :warning: `babel-loader` no longer have default configs, you need to define your own
 * Upgrade `webpack-dev-server`
 * Tweak `babel-loader` and `terser` options
-* `babel-loader` no longer have default configs, you need to define your own
 
 ## [0.30.0](https://github.com/ankurk91/laravel-bundler/compare/0.29.3..0.30.0)
 
