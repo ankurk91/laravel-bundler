@@ -73,7 +73,15 @@ Update your `package.json` file
     "browserslist": [
         "> 2%",
         "not dead"
-    ]
+    ],
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env"
+            ]
+        ],
+        "plugins": []
+    }
 }
 ```
 

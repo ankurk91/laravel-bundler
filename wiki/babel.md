@@ -2,10 +2,7 @@
 
 Babel loader with `@babel/preset-env` is already configured for you.
 
-In order to override default configuration; you can create your own config file on project root. File name can be one
-of `.babelrc`, `.babelrc.js` or, `babel.config.js`
-
-Here is the example `babel.config.js` file:
+Create a `babel.config.js` file on your project root like:
 
 ```js
 module.exports = {
@@ -13,7 +10,6 @@ module.exports = {
         [
             '@babel/preset-env',
             {
-                debug: false,
                 modules: false,
                 useBuiltIns: false,
                 targets: {
@@ -28,4 +24,6 @@ module.exports = {
 }
 ```
 
-Laravel-Bundler will skip its default config and should pick right configuration automatically.
+Remove `babel` property from you `package.json`.
+
+* [Read more](https://babeljs.io/docs/en/config-files)

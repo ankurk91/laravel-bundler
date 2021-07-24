@@ -21,6 +21,21 @@
 + <script src="{{ mix('js/app.js', 'dist') }}"></script>
 ```
 
+* Add babel config in your `package.json`, since there is no default config
+
+```json
+{
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env"
+            ]
+        ],
+        "plugins": []
+    }
+}
+```
+
 ### From 0.20.0 to 0.21.0
 
 * Update your `package.json` scripts as described in [readme.md](./readme.md)

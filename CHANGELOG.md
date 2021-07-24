@@ -5,6 +5,7 @@
 * :warning: Output path has been changed from `./public` to `./public/dist`
 * Upgrade `webpack-dev-server`
 * Tweak `babel-loader` and `terser` options
+* `babel-loader` no longer have default configs, you need to define your own
 
 ## [0.30.0](https://github.com/ankurk91/laravel-bundler/compare/0.29.3..0.30.0)
 
