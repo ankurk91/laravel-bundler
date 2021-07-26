@@ -1,6 +1,6 @@
 # Upgrading
 
-### From 0.30.0 to 0.31.0
+### From 0.30.0 to 0.31.2
 
 * Update your `.gitignore` file
 

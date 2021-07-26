@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.31.1](https://github.com/ankurk91/laravel-bundler/compare/0.30.3..0.31.1)
+## [0.31.2](https://github.com/ankurk91/laravel-bundler/compare/0.30.3..0.31.2)
 
 * :warning: Output path has been changed from `./public` to `./public/dist`
 * :warning: `babel-loader` no longer have default configs, you need to define your own
