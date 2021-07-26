@@ -24,7 +24,9 @@ module.exports = class HMRDetectPlugin {
         return;
       }
 
-      console.log(chalk.blue(`HMR: Creating file "${this.hotFilePath}"`));
+      this.createOutputDir(compiler.options.output.path)
+
+      console.log(chalk.blue(`HMR: Creating file: "${this.hotFilePath}"`));
 
       fs.writeFile(this.hotFilePath, this.getFileContents(config.devServer),
         error => {
@@ -51,6 +53,13 @@ module.exports = class HMRDetectPlugin {
     console.log(chalk.blue("\n" + 'Terminating ...'));
     this.deleteHotFile();
     process.exit(0);
+  }
+
+  createOutputDir(path) {
+    if (!fs.existsSync(path)) {
+      console.log(chalk.blue("\n" + `HMR: Creating directory: "${path}"`));
+      fs.mkdirSync(path, {recursive: true});
+    }
   }
 
   deleteHotFile() {
