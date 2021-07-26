@@ -31,6 +31,9 @@
     "demo:hot": "cd example && webpack serve --hot --progress --node-env=development",
     "demo:prod": "cd example && webpack --progress --node-env=production"
   },
+  "bin": {
+    "bundler": "bin/bundler.js"
+  },
   "dependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
