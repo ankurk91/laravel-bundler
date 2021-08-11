@@ -1,4 +1,3 @@
-const Helpers = require('../helpers.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const defaultPostCssConfig = {
@@ -7,10 +6,8 @@ const defaultPostCssConfig = {
   ]
 };
 
-module.exports = {
-  // Handle css and scss both
-  test: /\.s[ac]ss|\.css/,
-  use: [
+module.exports = (importLoaders = 1) => {
+  return [
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
@@ -22,7 +19,7 @@ module.exports = {
       options: {
         modules: false,
         esModule: true,
-        importLoaders: 2,
+        importLoaders
       }
     },
     {
@@ -31,14 +28,6 @@ module.exports = {
         postcssOptions: defaultPostCssConfig
       }
     },
-    {
-      loader: require.resolve('sass-loader'),
-      options: {
-        additionalData: '$env: ' + Helpers.nodeEnv() + ';',
-        sassOptions: {
-          outputStyle: 'expanded'
-        },
-      }
-    },
   ]
-};
+}
+
