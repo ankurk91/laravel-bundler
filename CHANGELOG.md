@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.32.0](https://github.com/ankurk91/laravel-bundler/compare/0.31.3..0.32.0)
+
+* Fix: dynamic import support
+* Perf: don't process css file with sass loader
+
 ## [0.31.2](https://github.com/ankurk91/laravel-bundler/compare/0.30.3..0.31.2)
 
 * :warning: Output path has been changed from `./public` to `./public/dist`

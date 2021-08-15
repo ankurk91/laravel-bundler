@@ -33,10 +33,15 @@ import {BootstrapVue} from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+const LazyLoadedComponent = () => import('./DynamicImport.vue')
+
 Vue.use(BootstrapVue);
 
 new Vue({
-    'el': '#app'
+    'el': '#app',
+    components: {
+        LazyLoadedComponent,
+    }
 })
 ```
 
