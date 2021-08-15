@@ -133,7 +133,6 @@ These features are not in the plan but can be enabled on demand :man_shrugging:
 * [Copy files and folder](https://github.com/webpack-contrib/copy-webpack-plugin)
 * [Image compression](https://github.com/webpack-contrib/image-minimizer-webpack-plugin)
 * CSS Preprocessors other than `sass|scss`
-* Additional Babel plugins
 
 ## License
 

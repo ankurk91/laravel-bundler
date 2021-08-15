@@ -13,7 +13,8 @@ module.exports = {
         vendorScripts: {
           test: /[\\/]node_modules[\\/].*\.js$/,
           name: 'vendor',
-          chunks: 'all',//initial, async or all
+          idHint: 'vendors',
+          chunks: 'initial', //initial, async or all
           enforce: true,
           priority: 20
         },
