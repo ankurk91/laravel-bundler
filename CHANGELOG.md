@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.32.1](https://github.com/ankurk91/laravel-bundler/compare/0.32.0..0.32.1)
+
+* Update `webpack-dev-server` to v4 stable
+
 ## [0.32.0](https://github.com/ankurk91/laravel-bundler/compare/0.31.3..0.32.0)
 
 * Fix: dynamic import support
@@ -29,7 +33,7 @@
 
 ## [0.29.0](https://github.com/ankurk91/laravel-bundler/compare/0.28.0..0.29.1)
 
-* Bump min node.js version to v14.15.0
+* Bump minimum node.js version requirement to v14.15.0
 
 ## [0.28.0](https://github.com/ankurk91/laravel-bundler/compare/0.27.0..0.28.0)
 

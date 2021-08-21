@@ -26,14 +26,14 @@ npm install --dev laravel-bundler
 Create a `resources/js/app.js` file like
 
 ```js
-// Import libraries, eg: Vue.js v2
+// Import libraries, eg: Vue.js v2 with bootstrap-vue
 import 'vue';
 import {BootstrapVue} from 'bootstrap-vue'
 // You can import styles like this
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-const LazyLoadedComponent = () => import('./DynamicImport.vue')
+const LazyLoadedComponent = () => import('./HeavyComponent.vue')
 
 Vue.use(BootstrapVue);
 
@@ -82,7 +82,10 @@ Update your `package.json` file
     "babel": {
         "presets": [
             [
-                "@babel/preset-env"
+                "@babel/preset-env",
+                {
+                    "bugfixes": true
+                }
             ]
         ],
         "plugins": []
@@ -120,6 +123,7 @@ Update your `.gitignore` file
 * Extract all css to a separate file (based on entry)
 * Accepts css/scss file as entry
 * Extract all vendor js to a separate file
+* Dynamic import support
 * Clean the output directory before emitting the assets
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
