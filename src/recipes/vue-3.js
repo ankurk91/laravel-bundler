@@ -22,6 +22,10 @@ module.exports = {
     new webpack.ProvidePlugin({
       Vue: ['vue/dist/vue.esm-bundler.js', 'default'],
     }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false
+    }),
     new VueLoaderPlugin(),
   ],
   resolve: {
