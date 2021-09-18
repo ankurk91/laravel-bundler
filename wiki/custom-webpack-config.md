@@ -12,7 +12,6 @@ const webpack = require('webpack');
 module.exports = require('laravel-bundler')({
     entry: {
       app: './resources/js/app.js',
-      admin: './resources/js/admin/app.js',
     },
     output: {},
     plugins: [

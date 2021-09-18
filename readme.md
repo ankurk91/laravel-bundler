@@ -38,7 +38,7 @@ const LazyLoadedComponent = () => import('./HeavyComponent.vue')
 Vue.use(BootstrapVue);
 
 new Vue({
-    'el': '#app',
+    el: "#app",
     components: {
         LazyLoadedComponent,
     }
@@ -117,7 +117,7 @@ Update your `.gitignore` file
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` support
-* PostCSS loader preconfigured with `autoprefixer`
+* PostCSS loader pre-configured with `autoprefixer`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:
 * Extract all css to a separate file (based on entry)

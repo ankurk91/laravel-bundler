@@ -10,7 +10,6 @@ module.exports = {
         loader: require.resolve('ts-loader'),
         options: {
           transpileOnly: Helpers.isHmr(),
-          experimentalWatchApi: true,
           appendTsSuffixTo: [/\.vue$/]
         },
         exclude: /node_modules/

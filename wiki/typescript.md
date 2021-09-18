@@ -10,7 +10,7 @@ yarn add ts-loader typescript --dev
   root
 
 ```bash
-node_modules/.bin/tsc --init
+./node_modules/.bin/tsc --init
 ```
 
 * Update your `webpack.config.js` file like:
