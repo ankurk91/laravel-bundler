@@ -30,7 +30,8 @@ module.exports = {
       paths: [
         path.resolve(process.cwd(), 'resources/views/**/*.blade.php')
       ]
-    }
+    },
+    setupExitSignals: true,
   },
   plugins: [
     new HMRDetectPlugin()
