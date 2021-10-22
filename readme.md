@@ -11,14 +11,15 @@ Modern asset building tool for Laravel framework with better defaults.
 
 ## Installation
 
-:bulb: This package does not work with `laravel-mix`; you must remove `laravel-mix` before using this one
+:bulb: This package does not work with [laravel-mix](https://github.com/laravel-mix/laravel-mix); 
+you must remove `laravel-mix` before using this one
 
 ```bash
 # yarn
 yarn add --dev laravel-bundler
 
 # npm
-npm install --dev laravel-bundler 
+npm install --save-dev laravel-bundler 
 ```
 
 ## Usage
