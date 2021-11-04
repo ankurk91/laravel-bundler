@@ -18,7 +18,7 @@ module.exports = (importLoaders = 1) => {
       loader: require.resolve('css-loader'),
       options: {
         modules: false,
-        esModule: true,
+        esModule: false,
         importLoaders
       }
     },

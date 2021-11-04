@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.33.1](https://github.com/ankurk91/laravel-bundler/compare/0.32.1..0.33.1)
+
+* Update `css-loader` to v6
+
 ## [0.32.1](https://github.com/ankurk91/laravel-bundler/compare/0.32.0..0.32.1)
 
 * Update `webpack-dev-server` to v4 stable
