@@ -10,6 +10,7 @@ module.exports = {
         [
             '@babel/preset-env',
             {
+                bugfixes: true,
                 modules: false,
                 useBuiltIns: false,
                 targets: {
@@ -24,6 +25,6 @@ module.exports = {
 }
 ```
 
-Remove `babel` property from you `package.json`.
+You can remove the `babel` property from your `package.json`.
 
 * [Read more](https://babeljs.io/docs/en/config-files)

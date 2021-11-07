@@ -20,6 +20,9 @@ yarn add --dev laravel-bundler
 
 # npm
 npm install --save-dev laravel-bundler 
+
+# pnpm
+pnpm add --save-dev laravel-bundler
 ```
 
 ## Usage
@@ -60,7 +63,7 @@ module.exports = require('laravel-bundler')({
         ],
         // Other webpack configs may go here
     },
-    // Incluce vue v2 recipe
+    // Include vue v2 recipe
     // Dont forget to install required packages by this recipe
     require('laravel-bundler/src/recipes/vue-2.js')
 );
@@ -112,7 +115,7 @@ Update your `.gitignore` file
 /public/dist
 ```
 
-### Baked Features
+### Features
 
 * Webpack 5 and Babel 7 with `@babel/preset-env`
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
