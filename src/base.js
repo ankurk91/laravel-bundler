@@ -7,6 +7,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const browserslistToEsbuild = require('browserslist-to-esbuild');
 
 const Helpers = require('./helpers.js');
 const BaseLoaders = require('./loaders/index.js');
@@ -54,14 +55,18 @@ module.exports = {
         }
       }),
       new CssMinimizerPlugin({
+        minify: CssMinimizerPlugin.esbuildMinify,
         minimizerOptions: {
-          preset: [
-            'default',
-            {
-              discardComments: {removeAll: true}
-            }
-          ],
-        }
+          legalComments: 'none',
+          target: browserslistToEsbuild(),
+        },
+        warningsFilter: (warning, file, source) => {
+          if (/"@charset" must be the first rule in the file/i.test(warning)) {
+            return true;
+          }
+
+          return false;
+        },
       }),
     ]
   },
