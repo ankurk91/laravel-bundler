@@ -41,17 +41,11 @@ module.exports = {
     minimize: Helpers.isProduction(),
     minimizer: [
       new TerserPlugin({
-        extractComments: false,
+        minify: TerserPlugin.esbuildMinify,
         terserOptions: {
-          format: {
-            comments: false,
-            ascii_only: true,
-            wrap_func_args: false,
-          },
-          compress: {
-            drop_console: true,
-          },
-          ecma: 2017,
+          legalComments: 'none',
+          target: browserslistToEsbuild(),
+          pure: ['console.log'],
         }
       }),
       new CssMinimizerPlugin({
