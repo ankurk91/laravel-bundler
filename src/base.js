@@ -55,11 +55,11 @@ module.exports = {
           target: browserslistToEsbuild(),
         },
         warningsFilter: (warning, file, source) => {
-          if (/"@charset" must be the first rule in the file/i.test(warning)) {
-            return true;
+          if (/@charset/i.test(warning?.message)) {
+            return false;
           }
 
-          return false;
+          return true;
         },
       }),
     ]

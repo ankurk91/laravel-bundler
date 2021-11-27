@@ -7,7 +7,7 @@
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
 [![install-size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
 
-Modern asset building tool for Laravel framework with better defaults.
+Modern and fast asset building tool for Laravel framework with better defaults.
 
 ## Installation
 
@@ -118,6 +118,7 @@ Update your `.gitignore` file
 ### Features
 
 * Webpack 5 and Babel 7 with `@babel/preset-env`
+* Use [esbuild](https://esbuild.github.io/) to minify CSS and JS :rocket:
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` support
@@ -127,7 +128,7 @@ Update your `.gitignore` file
 * Extract all css to a separate file (based on entry)
 * Accepts css/scss file as entry
 * Extract all vendor js to a separate file
-* Dynamic import support
+* Dynamic import (code splitting) support
 * Clean the output directory before emitting the assets
 * `mix-manifest.json` compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.35.0](https://github.com/ankurk91/laravel-bundler/compare/0.33.1..0.35.0)
+
+* Use [es-build](https://esbuild.github.io/) to minify CSS and JS
+
 ## [0.33.1](https://github.com/ankurk91/laravel-bundler/compare/0.32.1..0.33.1)
 
 * Update `css-loader` to v6
