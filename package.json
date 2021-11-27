@@ -38,39 +38,39 @@
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "autoprefixer": "^10.4.0",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "browserslist-to-esbuild": "^1.0.1",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
-    "chalk": "^4.1.1",
-    "chokidar": "^3.5.1",
+    "chalk": "^4.0.0",
+    "chokidar": "^3.5.2",
     "css-loader": "^6.5.1",
-    "css-minimizer-webpack-plugin": "^3.1.2",
+    "css-minimizer-webpack-plugin": "^3.2.0",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "esbuild": "^0.14.0",
     "file-loader": "^6.2.0",
-    "mini-css-extract-plugin": "^2.0.0",
-    "postcss": "^8.2.15",
-    "postcss-loader": "^6.1.0",
-    "sass": "^1.43.4",
+    "mini-css-extract-plugin": "^2.4.5",
+    "postcss": "^8.4.3",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.43.5",
     "sass-loader": "^12.3.0",
     "terser-webpack-plugin": "^5.2.5",
-    "webpack": "^5.62.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.4.0",
-    "webpack-laravel-mix-manifest": "^3.0.5",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-laravel-mix-manifest": "^3.1.1",
     "webpack-merge": "^5.8.0",
     "webpack-remove-empty-scripts": "^0.7.1",
-    "yargs-parser": "^20.2.7"
+    "yargs-parser": "^21.0.0"
   },
   "engines": {
     "node": ">=14.15.0"
   },
   "devDependencies": {
-    "vue": "^2.6.12",
+    "vue": "^2.6.14",
     "vue-loader": "^15.9.8",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   }
 }
