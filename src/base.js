@@ -3,13 +3,11 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const browserslistToEsbuild = require('browserslist-to-esbuild');
 
 const Helpers = require('./helpers.js');
+const Optimization = require('./optimization.js');
 const BaseLoaders = require('./loaders/index.js');
 
 module.exports = {
@@ -37,33 +35,7 @@ module.exports = {
     rules: BaseLoaders
   },
 
-  optimization: {
-    minimize: Helpers.isProduction(),
-    minimizer: [
-      new TerserPlugin({
-        minify: TerserPlugin.esbuildMinify,
-        terserOptions: {
-          legalComments: 'none',
-          target: browserslistToEsbuild(),
-          pure: ['console.log'],
-        }
-      }),
-      new CssMinimizerPlugin({
-        minify: CssMinimizerPlugin.esbuildMinify,
-        minimizerOptions: {
-          legalComments: 'none',
-          target: browserslistToEsbuild(),
-        },
-        warningsFilter: (warning, file, source) => {
-          if (/@charset/i.test(warning?.message)) {
-            return false;
-          }
-
-          return true;
-        },
-      }),
-    ]
-  },
+  optimization: Optimization,
 
   plugins: [
     new RemoveEmptyScriptsPlugin(),
