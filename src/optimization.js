@@ -11,7 +11,7 @@ module.exports = {
       terserOptions: {
         legalComments: 'none',
         target: browserslistToEsbuild(),
-        pure: ['console.log'],
+        drop: ['debugger', 'console'],
       }
     }),
     new CssMinimizerPlugin({

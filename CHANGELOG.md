@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.35.1](https://github.com/ankurk91/laravel-bundler/compare/0.35.0..0.35.1)
+
+* Upgrade deps to use `drop` feature in esbuild minification
+
 ## [0.35.0](https://github.com/ankurk91/laravel-bundler/compare/0.33.1..0.35.0)
 
 * Use [es-build](https://esbuild.github.io/) to minify CSS and JS
