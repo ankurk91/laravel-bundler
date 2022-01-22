@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.35.2](https://github.com/ankurk91/laravel-bundler/compare/0.35.1..0.35.2)
+
+* Upgrade [dotenv](https://github.com/motdotla/dotenv) package to v14.x
+
 ## [0.35.1](https://github.com/ankurk91/laravel-bundler/compare/0.35.0..0.35.1)
 
 * Upgrade deps to use `drop` feature in esbuild minification

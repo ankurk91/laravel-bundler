@@ -11,8 +11,8 @@ specifiers:
   chokidar: ^3.5.2
   css-loader: ^6.5.1
   css-minimizer-webpack-plugin: ^3.3.1
-  dotenv: ^10.0.0
-  dotenv-expand: ^5.1.0
+  dotenv: ^14.2.0
+  dotenv-expand: ^6.0.1
   esbuild: ^0.14.10
   file-loader: ^6.2.0
   mini-css-extract-plugin: ^2.4.5
@@ -43,8 +43,8 @@ dependencies:
   chokidar: 3.5.2
   css-loader: 6.5.1_webpack@5.65.0
   css-minimizer-webpack-plugin: 3.3.1_esbuild@0.14.10+webpack@5.65.0
-  dotenv: 10.0.0
-  dotenv-expand: 5.1.0
+  dotenv: 14.2.0
+  dotenv-expand: 6.0.1
   esbuild: 0.14.10
   file-loader: 6.2.0_webpack@5.65.0
   mini-css-extract-plugin: 2.4.5_webpack@5.65.0
@@ -2310,13 +2310,14 @@ packages:
       domhandler: 4.3.0
     dev: false
 
-  /dotenv-expand/5.1.0:
-    resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
+  /dotenv-expand/6.0.1:
+    resolution: {integrity: sha512-GNHcCOyRKLCXWnH3L/+sJ04PQxxgTOZDCPuQQnqkqPMGIilyoxHZ2JUNmh2VWKCfzVKH/AZsqcbuSYlDDVb/xw==}
+    engines: {node: '>=12'}
     dev: false
 
-  /dotenv/10.0.0:
-    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
-    engines: {node: '>=10'}
+  /dotenv/14.2.0:
+    resolution: {integrity: sha512-05POuPJyPpO6jqzTNweQFfAyMSD4qa4lvsMOWyTRTdpHKy6nnnN+IYWaXF+lHivhBH/ufDKlR4IWCAN3oPnHuw==}
+    engines: {node: '>=12'}
     dev: false
 
   /ee-first/1.1.1:

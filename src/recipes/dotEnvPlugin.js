@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-const expand = require('dotenv-expand');
+const dotenvExpand = require('dotenv-expand');
 const chalk = require('chalk');
 
 const filePath = path.join(process.cwd(), '.env');
@@ -9,15 +9,16 @@ const filePath = path.join(process.cwd(), '.env');
 // Expand everything to process.env
 const result = dotenv.config({
   path: filePath,
+  multiline: false,
 });
 
 // We wont stop process if we could not load .env
 if (result.error) {
-  console.log(chalk.bold.yellow("\n" + `WARN: Unable to load variables from '${filePath}' file.`));
+  console.log(chalk.bold.yellow("\n" + `WARN: Failed to load variables from '${filePath}' file.`));
   console.error(result.error);
 }
 
-expand(result);
+dotenvExpand.expand(result);
 
 function getDefinitions() {
   let regex = /^MIX_/i;

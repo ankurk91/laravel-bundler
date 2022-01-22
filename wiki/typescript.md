@@ -3,7 +3,7 @@
 * Install required dependencies
 
 ```bash
-yarn add ts-loader typescript --dev
+npm install ts-loader typescript@^4
 ```
 
 * Generate an initial [ts-config](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file in your project

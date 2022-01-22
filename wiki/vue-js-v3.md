@@ -3,7 +3,7 @@
 * Install required dependencies
 
 ```bash
-yarn add vue@^3.0 @vue/compiler-sfc@^3.0 vue-loader@^16
+npm install vue@^3.0 @vue/compiler-sfc@^3.0 vue-loader@^16
 ```
 
 :warning: `vue` and `@vue/compiler-sfc` versions must be same.
