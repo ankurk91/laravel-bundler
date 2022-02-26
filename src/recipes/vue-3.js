@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const {VueLoaderPlugin} = require('vue-loader');
 
-// You must install `vue@^3.0`, `@vue/compiler-sfc@^3.0` and 'vue-loader@^16` in your project
+// You must install `vue@^3.0`, `@vue/compiler-sfc@^3.0` and 'vue-loader@^17` in your project
 
 module.exports = {
   module: {
