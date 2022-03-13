@@ -2,7 +2,7 @@
 
 ### From 0.30.0 to 0.31.2
 
-* Update your `.gitignore` file
+* Update your `.gitignore` file like:
 
 ```diff
 - /public/hot
@@ -38,4 +38,4 @@
 
 ### From 0.20.0 to 0.21.0
 
-* Update your `package.json` scripts as described in [readme.md](./readme.md)
+* Update your `package.json` scripts as described in [README.md](./README.md)

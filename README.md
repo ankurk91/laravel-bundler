@@ -15,14 +15,14 @@ Modern and fast asset building tool for Laravel framework with better defaults.
 you must remove `laravel-mix` before using this one
 
 ```bash
-# yarn
-yarn add --dev laravel-bundler
+# pnpm
+pnpm add --save-dev laravel-bundler
 
 # npm
 npm install --save-dev laravel-bundler 
 
-# pnpm
-pnpm add --save-dev laravel-bundler
+# yarn
+yarn add --dev laravel-bundler
 ```
 
 ## Usage

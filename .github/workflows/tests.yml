@@ -10,7 +10,7 @@ on:
       - main
       - dev
   schedule:
-    - cron: '0 0 15 * *'
+    - cron: '0 0 16 * *'
 
 jobs:
   tests:
@@ -31,9 +31,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.1
         with:
-          version: 6.24.4
+          version: 6.x.x
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run demo:dev
