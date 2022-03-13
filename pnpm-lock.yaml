@@ -11,8 +11,8 @@ specifiers:
   chalk: ^4.0.0
   css-loader: ^6.7.1
   css-minimizer-webpack-plugin: ^3.4.1
-  dotenv: ^14.2.0
-  dotenv-expand: ^6.0.1
+  dotenv: ^16.0.0
+  dotenv-expand: ^8.0.2
   esbuild: ^0.14.25
   file-loader: ^6.2.0
   mini-css-extract-plugin: ^2.6.0
@@ -41,8 +41,8 @@ dependencies:
   chalk: 4.1.2
   css-loader: 6.7.1_webpack@5.70.0
   css-minimizer-webpack-plugin: 3.4.1_esbuild@0.14.25+webpack@5.70.0
-  dotenv: 14.2.0
-  dotenv-expand: 6.0.1
+  dotenv: 16.0.0
+  dotenv-expand: 8.0.2
   esbuild: 0.14.25
   file-loader: 6.2.0_webpack@5.70.0
   mini-css-extract-plugin: 2.6.0_webpack@5.70.0
@@ -2404,13 +2404,13 @@ packages:
       domhandler: 4.3.0
     dev: false
 
-  /dotenv-expand/6.0.1:
-    resolution: {integrity: sha512-GNHcCOyRKLCXWnH3L/+sJ04PQxxgTOZDCPuQQnqkqPMGIilyoxHZ2JUNmh2VWKCfzVKH/AZsqcbuSYlDDVb/xw==}
+  /dotenv-expand/8.0.2:
+    resolution: {integrity: sha512-vKKAk+VOzAWOV/dPIeSYqhgC/TQY+6L6Ibkzfsr8xd1stdBsTuGu9asCOXgbYbBeS+f2Y6lqqEuw7riOA+xEUQ==}
     engines: {node: '>=12'}
     dev: false
 
-  /dotenv/14.2.0:
-    resolution: {integrity: sha512-05POuPJyPpO6jqzTNweQFfAyMSD4qa4lvsMOWyTRTdpHKy6nnnN+IYWaXF+lHivhBH/ufDKlR4IWCAN3oPnHuw==}
+  /dotenv/16.0.0:
+    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
     engines: {node: '>=12'}
     dev: false
 
