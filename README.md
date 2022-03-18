@@ -70,6 +70,7 @@ Update your `package.json` file
         "dev": "webpack --node-env=development --progress",
         "watch": "webpack watch --node-env=development --progress",
         "hot": "webpack serve --node-env=development --progress --hot",
+        "hot:https": "npm run hot -- --https",
         "prod": "webpack --node-env=production --progress"
     },
     "browserslist": [

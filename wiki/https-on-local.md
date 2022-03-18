@@ -16,9 +16,10 @@ mkcert localhost 127.0.0.01 ::1
 ```json
 {
     "scripts": {
-        "hot:https": "npm run hot -- --https --https-cert=./storage/localhost.pem --https-key=./storage/localhost-key.pem"
+        "hot:https": "npm run hot --  --https-request-cert --https-cert ./storage/localhost.pem --https-key ./storage/localhost-key.pem"
     }
 }
 ```
 
 * Run command `npm run hot:https`
+* Read [docs](https://webpack.js.org/configuration/dev-server/#devserverhttps) for more info
