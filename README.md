@@ -15,14 +15,7 @@ Modern and fast asset building tool for Laravel framework with better defaults.
 you must remove `laravel-mix` before using this one
 
 ```bash
-# pnpm
-pnpm add --save-dev laravel-bundler
-
-# npm
 npm install --save-dev laravel-bundler 
-
-# yarn
-yarn add --dev laravel-bundler
 ```
 
 ## Usage
@@ -46,7 +39,7 @@ new Vue({
     components: {
         LazyLoadedComponent,
     }
-})
+});
 ```
 
 Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
