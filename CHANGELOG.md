@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.37.0](https://github.com/ankurk91/laravel-bundler/compare/0.36.0..0.37.0)
+
+* Add a recipe to fix the sourcemap generation for `*.vue` files (opt-in)
+* Add helper method to generate sourcemap in production
+
 ## [0.36.0](https://github.com/ankurk91/laravel-bundler/compare/0.35.2..0.36.0)
 
 * Upgrade [dotenv](https://github.com/motdotla/dotenv) package to v16
