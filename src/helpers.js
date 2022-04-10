@@ -42,4 +42,7 @@ module.exports = {
   hash(hash = 'fullhash') {
     return this.shouldVersion() ? `-[${hash}]` : '';
   },
+  sourceMapsInProduction() {
+    return this.isProduction() ? 'source-map' : this.devTool();
+  }
 };
