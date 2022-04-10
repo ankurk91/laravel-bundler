@@ -23,16 +23,12 @@ npm install --save-dev laravel-bundler
 Create a `resources/js/app.js` file like
 
 ```js
-// Import libraries, eg: Vue.js v2 with bootstrap-vue
-import 'vue';
-import {BootstrapVue} from 'bootstrap-vue'
+// Example: Vue.js v2 with bootstrap
+import Vue from 'vue';
 // You can import styles like this
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 const LazyLoadedComponent = () => import('./HeavyComponent.vue')
-
-Vue.use(BootstrapVue);
 
 new Vue({
     el: "#app",

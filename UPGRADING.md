@@ -28,7 +28,10 @@
     "babel": {
         "presets": [
             [
-                "@babel/preset-env"
+                "@babel/preset-env",
+                {
+                    "bugfixes": true
+                }
             ]
         ],
         "plugins": []
