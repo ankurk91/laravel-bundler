@@ -25,7 +25,7 @@ module.exports = {
     clean: true,
     path: path.resolve(process.cwd(), 'public/dist'),
     publicPath: 'auto',
-    filename: `js/[name]${Helpers.hash()}.js`,
+    filename: `js/[name]${Helpers.hash('contenthash')}.js`,
     chunkFilename: `js/chunks/[name]${Helpers.hash('chunkhash')}.js`,
     globalObject: 'this',
     pathinfo: false,
@@ -44,7 +44,7 @@ module.exports = {
     }),
     new CaseSensitivePathsPlugin(),
   ].concat((Helpers.isHmr() || Helpers.isWatch()) ? [
-    // Workaround
+    // Workaround:
     // We need this plugin only for inline source maps
     new webpack.SourceMapDevToolPlugin(),
   ] : []),
