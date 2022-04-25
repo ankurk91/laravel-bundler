@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.37.1](https://github.com/ankurk91/laravel-bundler/compare/0.37.0..0.37.1)
+
+* Fix: file hash issue
+
 ## [0.37.0](https://github.com/ankurk91/laravel-bundler/compare/0.36.0..0.37.0)
 
 * Add a recipe to fix the sourcemap generation for `*.vue` files (opt-in)
