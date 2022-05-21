@@ -11,7 +11,7 @@ Modern and fast asset building tool for Laravel framework with better defaults.
 
 ## Installation
 
-:bulb: This package does not work with [laravel-mix](https://github.com/laravel-mix/laravel-mix); 
+:bulb: This package does not work with [laravel-mix](https://github.com/laravel-mix/laravel-mix);
 you must remove `laravel-mix` before using this one
 
 ```bash
@@ -112,6 +112,7 @@ Update your `.gitignore` file
 * Vue.js v2 support - [Recipe](./wiki/vue-js-v2.md)
 * Vue.js v3 support - [Recipe](./wiki/vue-js-v3.md)
 * `CSS` and `SASS|SCSS` support
+* 2x faster SASS compilation with `sass-embedded` :rocket:
 * PostCSS loader pre-configured with `autoprefixer`
 * Font and image files handling
 * Full HMR support for Vue, even for CSS :fire:

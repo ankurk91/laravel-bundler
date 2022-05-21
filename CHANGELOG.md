@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.38.1](https://github.com/ankurk91/laravel-bundler/compare/0.37.1..0.38.1)
+
+* Perf: use `sass-embedded` instead of `sass`
+
 ## [0.37.1](https://github.com/ankurk91/laravel-bundler/compare/0.37.0..0.37.1)
 
 * Fix: file hash issue
