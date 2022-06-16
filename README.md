@@ -5,7 +5,6 @@
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](https://yarnpkg.com/en/package/laravel-bundler)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
-[![install-size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
 
 Modern and fast asset building tool for Laravel framework with better defaults.
 
@@ -28,11 +27,13 @@ import Vue from 'vue';
 // You can import styles like this
 import 'bootstrap/dist/css/bootstrap.css'
 
-const LazyLoadedComponent = () => import('./HeavyComponent.vue')
+import RegularComponent from './Regular.vue'
+const LazyLoadedComponent = () => import('./HeavyComponent.vue');
 
 new Vue({
     el: "#app",
     components: {
+        RegularComponent,
         LazyLoadedComponent,
     }
 });

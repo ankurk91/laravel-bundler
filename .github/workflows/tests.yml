@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        node-version: [14.x, 16.x]
+        node-version: [14.x, 16.x, 18.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -31,9 +31,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: pnpm/action-setup@v2.2.1
-        with:
-          version: 7.x.x
+      - name: Install pnpm
+        run: npm install -g pnpm@^7
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm run demo:dev
