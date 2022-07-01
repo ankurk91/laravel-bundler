@@ -1,12 +1,10 @@
-## Vue.js v2.x
+## Vue.js v2.7+
 
 * Install required dependencies
 
 ```bash
-npm install vue@^2.0 vue-template-compiler@^2.0 vue-loader@^15.0
+npm install vue@^2.7 vue-loader@^15.10
 ```
-
-:warning: `vue` and `vue-template-compiler` versions must be same.
 
 * Update your `webpack.config.js` like:
 
