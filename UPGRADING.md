@@ -1,5 +1,14 @@
 # Upgrading
 
+### From 0.38.1 to 0.39.0
+
+* You must add `.vue` extension to while importing vue components
+
+```diff
+- import './Components/Login';
++ import './Components/Login.vue';
+```
+
 ### From 0.30.0 to 0.31.2
 
 * Update your `.gitignore` file like:

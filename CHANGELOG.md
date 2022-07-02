@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.39.0](https://github.com/ankurk91/laravel-bundler/compare/0.38.1..0.39.0)
+
+* :warning: Force to have `.env` extension while importing Vue components
+* Remove `@vendor` alias
+
 ## [0.38.1](https://github.com/ankurk91/laravel-bundler/compare/0.37.1..0.38.1)
 
 * Perf: use `sass-embedded` instead of `sass`
