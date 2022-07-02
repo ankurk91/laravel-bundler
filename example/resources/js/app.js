@@ -3,7 +3,7 @@ import '../css/index.css';
 
 import {createApp} from 'vue'
 
-import ExampleVue from './example';
+import ExampleVue from './example.vue';
 
 const app = createApp({});
 app.component('example', ExampleVue);
