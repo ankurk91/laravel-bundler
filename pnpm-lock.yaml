@@ -12,7 +12,7 @@ specifiers:
   css-loader: ^6.7.1
   css-minimizer-webpack-plugin: ^4.0.0
   dotenv: ^16.0.1
-  dotenv-expand: ^8.0.3
+  dotenv-expand: ^9.0.0
   esbuild: ^0.15.2
   file-loader: ^6.2.0
   mini-css-extract-plugin: ^2.6.1
@@ -28,7 +28,7 @@ specifiers:
   webpack-dev-server: ^4.9.2
   webpack-laravel-mix-manifest: ^3.1.2
   webpack-merge: ^5.8.0
-  webpack-remove-empty-scripts: ^0.8.1
+  webpack-remove-empty-scripts: ^1.0.1
   yargs-parser: ^21.0.1
 
 dependencies:
@@ -42,7 +42,7 @@ dependencies:
   css-loader: 6.7.1_webpack@5.73.0
   css-minimizer-webpack-plugin: 4.0.0_l6e57f7lwspmvusy7rc4bdf2la
   dotenv: 16.0.1
-  dotenv-expand: 8.0.3
+  dotenv-expand: 9.0.0
   esbuild: 0.15.2
   file-loader: 6.2.0_webpack@5.73.0
   mini-css-extract-plugin: 2.6.1_webpack@5.73.0
@@ -56,7 +56,7 @@ dependencies:
   webpack-dev-server: 4.9.2_77l47gmqkrqiei5z7sbwz5iaj4
   webpack-laravel-mix-manifest: 3.1.2_webpack@5.73.0
   webpack-merge: 5.8.0
-  webpack-remove-empty-scripts: 0.8.1_webpack@5.73.0
+  webpack-remove-empty-scripts: 1.0.1_webpack@5.73.0
   yargs-parser: 21.0.1
 
 devDependencies:
@@ -1653,8 +1653,8 @@ packages:
     dependencies:
       color-convert: 2.0.1
 
-  /ansis/1.3.6:
-    resolution: {integrity: sha512-TMXlWGGK5cOYT//DNX8V4zGnr824j95Oh888GV2J3eVFwKnolgdym9jje9MNLa3a8YNl0MnyX7C5tVj8dw5amA==}
+  /ansis/1.5.2:
+    resolution: {integrity: sha512-T3vUABrcgSj/HXv27P+A/JxGk5b/ydx0JjN3lgjBTC2iZUFxQGjh43zCzLSbU4C1QTgmx9oaPeWNJFM+auI8qw==}
     engines: {node: '>=12.13'}
     dev: false
 
@@ -2285,8 +2285,8 @@ packages:
       domhandler: 4.3.1
     dev: false
 
-  /dotenv-expand/8.0.3:
-    resolution: {integrity: sha512-SErOMvge0ZUyWd5B0NXMQlDkN+8r+HhVUsxgOO7IoPDOdDRD2JjExpN6y3KnFR66jsJMwSn1pqIivhU5rcJiNg==}
+  /dotenv-expand/9.0.0:
+    resolution: {integrity: sha512-uW8Hrhp5ammm9x7kBLR6jDfujgaDarNA02tprvZdyrJ7MpdzD1KyrIHG4l+YoC2fJ2UcdFdNWNWIjt+sexBHJw==}
     engines: {node: '>=12'}
     dev: false
 
@@ -4570,13 +4570,13 @@ packages:
       clone-deep: 4.0.1
       wildcard: 2.0.0
 
-  /webpack-remove-empty-scripts/0.8.1_webpack@5.73.0:
-    resolution: {integrity: sha512-61hc2jfZOI6SAFDpIAQ910VFWc7ic+JWyjU0H/5A+1poKD9nOQRHnXaaixwsxXWI0+N1HUvmiREC3h9Dqn9xWw==}
+  /webpack-remove-empty-scripts/1.0.1_webpack@5.73.0:
+    resolution: {integrity: sha512-xYiTgeS2ahqwExL7igmUeUMnZ+CQX7mrRFjSIR83PsEj1U7lM/GVEpzrayJxYTYZEdSTBYtoCCVulUWO9gtLmA==}
     engines: {node: '>=12.14'}
     peerDependencies:
       webpack: '>=5.32.0'
     dependencies:
-      ansis: 1.3.6
+      ansis: 1.5.2
       webpack: 5.73.0_fg2tjejij6jk34oqsqc7irznp4
     dev: false
 
