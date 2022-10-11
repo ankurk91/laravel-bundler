@@ -11,6 +11,7 @@ module.exports = {
         loader: require.resolve('vue-loader'),
         exclude: /node_modules/,
         options: {
+          reactivityTransform: true,
           compilerOptions: {
             whitespace: 'condense'
           }
