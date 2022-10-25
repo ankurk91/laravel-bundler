@@ -25,6 +25,6 @@ module.exports = {
 }
 ```
 
-You can remove the `babel` property from your `package.json`.
+You should remove the `babel` property from your `package.json` now.
 
 * [Read more](https://babeljs.io/docs/en/config-files)
