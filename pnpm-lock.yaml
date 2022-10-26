@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.18.5
   '@babel/preset-env': ^7.18.2
-  '@vue/compiler-sfc': ^3.2.37
   autoprefixer: ^10.4.7
   babel-loader: ^8.2.5
   browserslist-to-esbuild: ^1.1.1
@@ -60,7 +59,6 @@ dependencies:
   yargs-parser: 21.0.1
 
 devDependencies:
-  '@vue/compiler-sfc': 3.2.37
   vue: 3.2.37
   vue-loader: 17.0.0_webpack@5.73.0
 
