@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.0](https://github.com/ankurk91/laravel-bundler/compare/0.41.0..1.0.0)
+
+* Convert to Pure ESM package
+
 ## [0.41.0](https://github.com/ankurk91/laravel-bundler/compare/0.39.0..0.40.1)
 
 * Add `@vue/compat` recipe

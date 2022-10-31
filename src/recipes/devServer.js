@@ -1,8 +1,8 @@
-const path = require('path');
-const HMRDetectPlugin = require('../plugins/HMRDetectPlugin.js');
-const Helpers = require('../helpers.js');
+import path from "path";
+import HMRDetectPlugin from '../plugins/HMRDetectPlugin.js';
+import Helpers from '../helpers.js';
 
-module.exports = {
+const config = {
   output: {},
   devServer: {
     allowedHosts: 'all',
@@ -41,5 +41,7 @@ module.exports = {
 if (Helpers.isHmr()) {
   // This is required to make HMR work,
   // specially when main application is running on a different domain than dev server
-  module.exports.output.publicPath = module.exports.devServer.devMiddleware.publicPath;
+  config.output.publicPath = config.devServer.devMiddleware.publicPath;
 }
+
+export default config;

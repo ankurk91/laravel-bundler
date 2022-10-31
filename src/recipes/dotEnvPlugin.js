@@ -1,8 +1,8 @@
-const path = require('path');
-const webpack = require('webpack');
-const dotenv = require('dotenv');
-const dotenvExpand = require('dotenv-expand');
-const chalk = require('chalk');
+import webpack from 'webpack';
+import path from 'path';
+import dotenv from 'dotenv';
+import dotenvExpand from 'dotenv-expand';
+import chalk from 'chalk';
 
 const filePath = path.join(process.cwd(), '.env');
 
@@ -12,7 +12,7 @@ const result = dotenv.config({
   multiline: false,
 });
 
-// We wont stop process if we could not load .env
+// We won't stop process if we could not load .env
 if (result.error) {
   console.log(chalk.bold.yellow("\n" + `WARN: Failed to load variables from '${filePath}' file.`));
   console.error(result.error);
@@ -33,7 +33,7 @@ function getDefinitions() {
     }, {});
 }
 
-module.exports = {
+export default {
   plugins: [
     new webpack.EnvironmentPlugin(
       getDefinitions()

@@ -1,11 +1,10 @@
-const webpack = require('webpack');
-
+import webpack from 'webpack';
 // jQuery 3.x
 // Force slim build
 
 const jQueryPath = 'jquery/dist/jquery.slim.js';
 
-module.exports = {
+export default {
   resolve: {
     alias: {
       'jquery$': jQueryPath,

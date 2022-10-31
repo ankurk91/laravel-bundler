@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-'use strict';
+import webpack from 'webpack/bin/webpack'
 
-return require('webpack/bin/webpack');
+return webpack;

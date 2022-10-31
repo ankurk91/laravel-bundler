@@ -1,8 +1,13 @@
 {
   "name": "laravel-bundler",
-  "version": "0.40.1",
+  "version": "1.0.0",
   "description": "Modern and fast asset building tool for Laravel framework with better defaults.",
-  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./src/recipes/*": "./src/recipes/*",
+    "./src/*": "./src/*"
+  },
+  "type": "module",
   "files": [
     "src",
     "bin",

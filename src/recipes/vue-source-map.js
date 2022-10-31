@@ -1,9 +1,9 @@
-const path = require('path');
+import path from "path";
 
 // https://github.com/vuejs/vue-loader/issues/146
 // https://github.com/vuejs/vue-cli/issues/2978
 // https://forum.vuejs.org/t/56370
-module.exports = {
+export default {
   output: {
     devtoolModuleFilenameTemplate: info => {
       let resPath = path.normalize(info.resourcePath)

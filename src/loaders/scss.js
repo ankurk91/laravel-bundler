@@ -1,11 +1,11 @@
-const Helpers = require('../helpers.js');
-const createCssRules = require('./cssRuleFactory.js');
+import Helpers from '../helpers.js';
+import createCssRules from './cssRuleFactory.js';
 
-module.exports = {
+export default {
   test: /\.s[ac]ss$/i,
   use: createCssRules(2).concat(
     {
-      loader: require.resolve('sass-loader'),
+      loader: 'sass-loader',
       options: {
         additionalData: '$env: ' + Helpers.nodeEnv() + ';',
         sassOptions: {

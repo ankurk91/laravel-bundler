@@ -1,4 +1,4 @@
-const yargs = require('yargs-parser');
+import yargs from 'yargs-parser';
 
 const argv = yargs(process.argv.slice(2), {
   default: {
@@ -9,7 +9,7 @@ const argv = yargs(process.argv.slice(2), {
   }
 });
 
-module.exports = {
+export default {
   nodeEnv() {
     return argv.mode;
   },

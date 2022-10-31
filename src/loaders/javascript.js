@@ -1,7 +1,7 @@
-module.exports = {
+export default {
   // Handle js and jsx both
   test: /\.jsx?$/,
-  loader: require.resolve('babel-loader'),
+  loader: 'babel-loader',
   exclude: /node_modules/,
   options: {
     cacheDirectory: true,

@@ -1,9 +1,9 @@
-const Helpers = require("./helpers.js");
-const TerserPlugin = require("terser-webpack-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const browserslistToEsbuild = require('browserslist-to-esbuild');
+import Helpers from "./helpers.js";
+import TerserPlugin from "terser-webpack-plugin";
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 
-module.exports = {
+export default {
   minimize: Helpers.isProduction(),
   minimizer: [
     new TerserPlugin({

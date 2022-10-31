@@ -1,6 +1,8 @@
-const path = require('path');
+import path from 'path';
+import {createConfig} from '../src/index.js';
+import vue3Recipe from '../src/recipes/vue-3.js'
 
-module.exports = require('../src/index.js')({
+export default createConfig({
     entry: {
       app: './resources/js/app.js',
     },
@@ -14,5 +16,5 @@ module.exports = require('../src/index.js')({
       //
     ]
   },
-  require('../src/recipes/vue-3.js'),
+  vue3Recipe,
 );

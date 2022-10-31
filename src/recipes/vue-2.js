@@ -1,14 +1,14 @@
-const webpack = require('webpack');
-const {VueLoaderPlugin} = require('vue-loader');
+import webpack from "webpack";
+import {VueLoaderPlugin} from 'vue-loader';
 
 // You must install `vue@^2.7`, and 'vue-loader@^15.10` in your project
 
-module.exports = {
+export default {
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: require.resolve('vue-loader'),
+        loader: 'vue-loader',
         exclude: /node_modules/,
         options: {
           compilerOptions: {

@@ -1,16 +1,16 @@
 'use strict';
 
-const webpack = require('webpack');
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+import webpack from 'webpack';
+import path from 'path';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
+import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts';
 
-const Helpers = require('./helpers.js');
-const Optimization = require('./optimization.js');
-const BaseLoaders = require('./loaders/index.js');
+import Helpers from './helpers.js';
+import Optimization from './optimization.js';
+import BaseLoaders from './loaders/index.js';
 
-module.exports = {
+export default {
   name: 'laravel-bundler',
   context: process.cwd(),
   mode: Helpers.nodeEnv(),

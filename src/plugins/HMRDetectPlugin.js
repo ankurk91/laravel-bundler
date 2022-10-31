@@ -1,9 +1,9 @@
-const Helpers = require('../helpers.js');
-const path = require('path');
-const fs = require('fs');
-const chalk = require('chalk');
+import Helpers from '../helpers.js';
+import path from 'path';
+import * as fs from 'fs';
+import chalk from 'chalk';
 
-module.exports = class HMRDetectPlugin {
+export default class HMRDetectPlugin {
 
   constructor() {
     this.hotFilePath = null;

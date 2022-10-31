@@ -1,13 +1,13 @@
-const Helpers = require('../helpers.js');
+import Helpers from '../helpers.js';
 
 // You must install `ts-loader` and `typescript` in your project
 
-module.exports = {
+export default {
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: require.resolve('ts-loader'),
+        loader: 'ts-loader',
         options: {
           transpileOnly: Helpers.isHmr(),
           appendTsSuffixTo: [/\.vue$/]

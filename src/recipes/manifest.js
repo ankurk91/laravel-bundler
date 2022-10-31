@@ -1,7 +1,7 @@
-const { WebpackLaravelMixManifest } = require('webpack-laravel-mix-manifest');
+import {WebpackLaravelMixManifest} from 'webpack-laravel-mix-manifest';
 
-module.exports = {
-  plugins:[
+export default {
+  plugins: [
     new WebpackLaravelMixManifest(),
   ]
 };

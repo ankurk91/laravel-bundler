@@ -1,6 +1,6 @@
-const createCssRules = require('./cssRuleFactory.js');
+import createCssRules from './cssRuleFactory.js';
 
-module.exports = {
+export default {
   test: /\.css$/i,
   use: createCssRules(1)
 };

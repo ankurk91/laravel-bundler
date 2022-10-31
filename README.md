@@ -2,8 +2,8 @@
 
 [![downloads](https://badgen.net/npm/dt/laravel-bundler)](https://npm-stat.com/charts.html?package=laravel-bundler&from=2018-11-01)
 [![npm-version](https://badgen.net/npm/v/laravel-bundler)](https://www.npmjs.com/package/laravel-bundler)
-[![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/)
-[![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](https://yarnpkg.com/en/package/laravel-bundler)
+[![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/tags)
+[![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](LICENSE.txt)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
 
 Modern and fast asset building tool for Laravel framework with better defaults.
@@ -42,9 +42,11 @@ new Vue({
 Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
 
 ```js
-const webpack = require('webpack');
+import webpack from 'webpack'
+import {createConfig} from 'laravel-bundler';
+import vue2Recipe from 'laravel-bundler/src/recipes/vue-2.js';
 
-module.exports = require('laravel-bundler')({
+export default createConfig({
         entry: {
             app: './resources/js/app.js',
         },
@@ -55,7 +57,7 @@ module.exports = require('laravel-bundler')({
     },
     // Include vue v2 recipe
     // Dont forget to install required packages by this recipe
-    require('laravel-bundler/src/recipes/vue-2.js')
+    vue2Recipe
 );
 ```
 
@@ -63,6 +65,7 @@ Update your `package.json` file
 
 ```json
 {
+    "type": "module",
     "scripts": {
         "dev": "webpack --node-env=development --progress",
         "watch": "webpack watch --node-env=development --progress",
