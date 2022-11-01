@@ -14,6 +14,7 @@ specifiers:
   dotenv-expand: ^9.0.0
   esbuild: ^0.15.2
   file-loader: ^6.2.0
+  get-port: ^6.1.2
   mini-css-extract-plugin: ^2.6.1
   postcss: ^8.4.14
   postcss-loader: ^7.0.0
@@ -44,6 +45,7 @@ dependencies:
   dotenv-expand: 9.0.0
   esbuild: 0.15.2
   file-loader: 6.2.0_webpack@5.73.0
+  get-port: 6.1.2
   mini-css-extract-plugin: 2.6.1_webpack@5.73.0
   postcss: 8.4.14
   postcss-loader: 7.0.0_mepnsno3xmng6eyses4tepu7bu
@@ -2775,6 +2777,11 @@ packages:
       function-bind: 1.1.1
       has: 1.0.3
       has-symbols: 1.0.3
+
+  /get-port/6.1.2:
+    resolution: {integrity: sha512-BrGGraKm2uPqurfGVj/z97/zv8dPleC6x9JBNRTrDNtCkkRF4rPwrQXFgL7+I+q8QSdU4ntLQX2D7KIxSy8nGw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
 
   /get-stream/5.2.0:
     resolution: {integrity: sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==}

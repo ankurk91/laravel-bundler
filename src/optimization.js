@@ -3,6 +3,8 @@ import TerserPlugin from "terser-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 
+const target = browserslistToEsbuild();
+
 export default {
   minimize: Helpers.isProduction(),
   minimizer: [
@@ -10,7 +12,7 @@ export default {
       minify: TerserPlugin.esbuildMinify,
       terserOptions: {
         legalComments: 'none',
-        target: browserslistToEsbuild(),
+        target: target,
         drop: ['debugger', 'console'],
       }
     }),
@@ -18,7 +20,7 @@ export default {
       minify: CssMinimizerPlugin.esbuildMinify,
       minimizerOptions: {
         legalComments: 'none',
-        target: browserslistToEsbuild(),
+        target: target,
       },
       warningsFilter: (warning, file, source) => {
         if (/@charset/i.test(warning?.message)) {

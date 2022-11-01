@@ -1,4 +1,4 @@
-import webpack from "webpack";
+import webpack from 'webpack';
 import {VueLoaderPlugin} from 'vue-loader';
 
 // You must install `vue@^2.7`, and 'vue-loader@^15.10` in your project

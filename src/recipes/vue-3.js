@@ -1,4 +1,4 @@
-import webpack from "webpack";
+import webpack from 'webpack';
 import {VueLoaderPlugin} from 'vue-loader';
 // You must install `vue@^3.0`, `@vue/compiler-sfc@^3.0` and 'vue-loader@^17` in your project
 

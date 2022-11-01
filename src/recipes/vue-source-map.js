@@ -1,4 +1,4 @@
-import path from "path";
+import path from 'path';
 
 // https://github.com/vuejs/vue-loader/issues/146
 // https://github.com/vuejs/vue-cli/issues/2978

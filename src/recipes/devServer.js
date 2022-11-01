@@ -1,13 +1,20 @@
-import path from "path";
+import path from 'path';
+import getPort, {portNumbers} from 'get-port';
 import HMRDetectPlugin from '../plugins/HMRDetectPlugin.js';
 import Helpers from '../helpers.js';
+
+const port = await getPort({
+  port: portNumbers(8080, 9000),
+  exclude: [80, 3306],
+  host: 'localhost',
+});
 
 const config = {
   output: {},
   devServer: {
     allowedHosts: 'all',
     host: 'localhost',
-    port: 8080,
+    port: port,
     client: {
       overlay: {
         warnings: false,
@@ -22,7 +29,7 @@ const config = {
         'Access-Control-Allow-Methods': 'GET, HEAD, OPTIONS',
         'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type, Authorization'
       },
-      publicPath: '//localhost:8080/',
+      publicPath: `//localhost:${port}/`,
     },
     compress: false,
     liveReload: true,
