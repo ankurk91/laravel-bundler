@@ -14,7 +14,7 @@ Modern and fast asset building tool for Laravel framework with better defaults.
 you must remove `laravel-mix` before using this one
 
 ```bash
-npm install --save-dev laravel-bundler 
+npm install --save-dev laravel-bundler@^0.40 
 ```
 
 ## Usage
