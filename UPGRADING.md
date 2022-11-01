@@ -1,5 +1,12 @@
 # Upgrading
 
+### From 0.40.0 to v1.0.0
+
+* This package is a Pure ESM now.
+* Update your `package.json` as per [README](./README.md)
+* You can no longer use `require(file)` in your codebase, you have to use `import/export`
+* [Read more](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) about Pure ESM packages
+
 ### From 0.38.1 to 0.39.0
 
 * You must add `.vue` extension to while importing vue components

@@ -4,6 +4,7 @@
 [![npm-version](https://badgen.net/npm/v/laravel-bundler)](https://www.npmjs.com/package/laravel-bundler)
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/tags)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](LICENSE.txt)
+[![install size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
 
 Modern and fast asset building tool for Laravel framework with better defaults.
@@ -14,7 +15,7 @@ Modern and fast asset building tool for Laravel framework with better defaults.
 you must remove `laravel-mix` before using this one
 
 ```bash
-npm install --save-dev laravel-bundler@^0.40 
+npm install --save-dev laravel-bundler@^1 
 ```
 
 ## Usage
@@ -28,6 +29,7 @@ import Vue from 'vue';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import RegularComponent from './Regular.vue'
+
 const LazyLoadedComponent = () => import('./HeavyComponent.vue');
 
 new Vue({
