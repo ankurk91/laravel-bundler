@@ -7,19 +7,20 @@ You can supply any valid configuration, see available webpack [configs](https://
 Here is the example `webpack.config.js` file:
 
 ```js
-const webpack = require('webpack');
+import webpack from 'webpack';
+import {createConfig} from 'laravel-bundler';
 
-module.exports = require('laravel-bundler')({
-    entry: {
-      app: './resources/js/app.js',
+export default createConfig({
+        entry: {
+            app: './resources/js/app.js',
+        },
+        output: {},
+        plugins: [
+            // Your webpack plugins
+        ],
+        module: {
+            rules: []
+        },
     },
-    output: {},
-    plugins: [
-        // Your webpack plugins
-    ],
-    module: {
-      rules: []
-    },
-  },
 );
 ```

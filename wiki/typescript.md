@@ -16,12 +16,16 @@ npm install ts-loader typescript@^4
 * Update your `webpack.config.js` file like:
 
 ```js
-module.exports = require('laravel-bundler')({
-    entry: {
-      app: './resources/js/index.ts',
-    }
-  },
-  require('laravel-bundler/src/recipes/typescript.js')
+import webpack from 'webpack';
+import {createConfig} from 'laravel-bundler';
+import tsRecipe from 'laravel-bundler/src/recipes/typescript.js';
+
+export default createConfig({
+        entry: {
+            app: './resources/js/index.ts',
+        }
+    },
+    tsRecipe,
 );
 ```
 

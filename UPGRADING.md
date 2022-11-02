@@ -4,6 +4,7 @@
 
 * This package is a Pure ESM now.
 * Update your `package.json` as per [README](./README.md)
+* Update your `webpack.config.js` as per [README](./README.md)
 * You can no longer use `require(file)` in your codebase, you have to use `import/export`
 * [Read more](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) about Pure ESM packages
 

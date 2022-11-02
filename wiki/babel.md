@@ -5,7 +5,7 @@ Babel loader with `@babel/preset-env` is already configured for you.
 Create a `babel.config.js` file on your project root like:
 
 ```js
-module.exports = {
+export default {
     presets: [
         [
             '@babel/preset-env',

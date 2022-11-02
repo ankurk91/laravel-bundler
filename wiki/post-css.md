@@ -4,9 +4,9 @@
 with [autoprefixer](https://github.com/postcss/autoprefixer)
 
 In order to override default configuration; you can create your own PostCSS config file on project root. File name can
-be one of `.postcssrc`, `.postcssrc.json`, `.postcssrc.js` or, `postcss.config.js`
+be one of `.postcssrc`, `.postcssrc.json`, `.postcssrc.cjs` or, `postcss.config.cjs`
 
-The example config looks like this - `postcss.config.js`
+The example config looks like this - `postcss.config.cjs`
 
 ```js
 module.exports = {
