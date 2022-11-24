@@ -1,5 +1,9 @@
 # Upgrading
 
+### From 1.1.0 to v2.0.0
+
+* Replace `--node-env` with `--define-process-env-node-env` in your `package.json`
+
 ### From 0.40.0 to v1.0.0
 
 * This package is a Pure ESM now.

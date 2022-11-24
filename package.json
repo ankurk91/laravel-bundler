@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/ankurk91/laravel-bundler",
   "scripts": {
-    "test": "echo \"Error: tests are coming soon.\" && exit 1",
     "demo:dev": "cd example && webpack --define-process-env-node-env=development --progress",
     "demo:watch": "cd example && webpack watch --define-process-env-node-env=development --progress",
     "demo:hot": "cd example && webpack serve --hot --progress --define-process-env-node-env=development",

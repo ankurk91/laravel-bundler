@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.0](https://github.com/ankurk91/laravel-bundler/compare/1.1.0..2.0.0)
+
+* Upgrade `webpack-cli` package to v5.x
+
 ## [1.1.0](https://github.com/ankurk91/laravel-bundler/compare/1.1.0..1.0.0)
 
 * Add automatic port selection for dev server
@@ -8,7 +12,7 @@
 
 * Convert to Pure ESM package
 * Drop node v14 support
-* Upgrade babel-loader to v9
+* Upgrade `babel-loader` to v9
 
 ## [0.41.0](https://github.com/ankurk91/laravel-bundler/compare/0.39.0..0.40.1)
 
