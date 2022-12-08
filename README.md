@@ -127,7 +127,7 @@ Update your `.gitignore` file
 * Extract all vendor js to a separate file
 * Dynamic import (code splitting) support :mage_man:
 * Clean the output directory before emitting the assets
-* `mix-manifest.json` compatible with Laravel's `mix()` helper
+* Generates a `mix-manifest.json` file which is compatible with Laravel's `mix()` helper
 * Load environment variables from `.env` file that are prefixed with `MIX_` :wink:
 * Intelligent SourceMap based on mode
 * Can auto-reload web-browser when blade templates gets changed :wink:

@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.0](https://github.com/ankurk91/laravel-bundler/compare/2.0.0..2.1.0)
+
+* Upgrade esbuild to 0.16.x
+
 ## [2.0.0](https://github.com/ankurk91/laravel-bundler/compare/1.1.0..2.0.0)
 
 * Upgrade `webpack-cli` package to v5.x
