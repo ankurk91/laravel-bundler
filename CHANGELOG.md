@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.2.0](https://github.com/ankurk91/laravel-bundler/compare/2.1.0..2.2.0)
+
+* Upgrade esbuild to 0.17.x
+* Upgrade dotenv-expand to 10.x
+
 ## [2.1.0](https://github.com/ankurk91/laravel-bundler/compare/2.0.0..2.1.0)
 
 * Upgrade esbuild to 0.16.x
