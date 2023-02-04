@@ -1,4 +1,4 @@
-# Laravel Bundler
+# Asset Bundler for Laravel
 
 [![downloads](https://badgen.net/npm/dt/laravel-bundler)](https://npm-stat.com/charts.html?package=laravel-bundler&from=2018-11-01)
 [![npm-version](https://badgen.net/npm/v/laravel-bundler)](https://www.npmjs.com/package/laravel-bundler)
