@@ -1,13 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/ankurk91/laravel-bundler/compare/2.2.0..2.3.0)
+
+* Upgrade `css-minimizer-webpack-plugin` to v5.x
+
 ## [2.2.0](https://github.com/ankurk91/laravel-bundler/compare/2.1.0..2.2.0)
 
-* Upgrade esbuild to 0.17.x
-* Upgrade dotenv-expand to 10.x
+* Upgrade `esbuild` to 0.17.x
+* Upgrade `dotenv-expand` to 10.x
 
 ## [2.1.0](https://github.com/ankurk91/laravel-bundler/compare/2.0.0..2.1.0)
 
-* Upgrade esbuild to 0.16.x
+* Upgrade `esbuild` to 0.16.x
 
 ## [2.0.0](https://github.com/ankurk91/laravel-bundler/compare/1.1.0..2.0.0)
 
