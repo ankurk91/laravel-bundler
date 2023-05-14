@@ -10,7 +10,6 @@ export default {
         loader: 'vue-loader',
         exclude: /node_modules/,
         options: {
-          reactivityTransform: true,
           compilerOptions: {
             whitespace: 'condense'
           }
