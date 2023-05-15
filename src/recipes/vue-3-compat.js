@@ -13,7 +13,7 @@ export default {
         options: {
           compilerOptions: {
             whitespace: 'condense',
-            MODE: 3,
+            MODE: 2,
           }
         }
       },
