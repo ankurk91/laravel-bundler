@@ -3,7 +3,7 @@
 * Install required dependencies
 
 ```bash
-npm install vue@^3.0 vue-loader@^17
+npm install vue@^3.3 vue-loader@^17
 ```
 
 * Update your `webpack.config.js` like:

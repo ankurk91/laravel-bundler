@@ -3,7 +3,7 @@
 * Install required dependencies
 
 ```bash
-npm install ts-loader typescript@^4
+npm install ts-loader typescript@^5
 ```
 
 * Generate an initial [ts-config](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) file in your project
