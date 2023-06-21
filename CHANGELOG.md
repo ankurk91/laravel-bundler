@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.4.2](https://github.com/ankurk91/laravel-bundler/compare/2.4.1..2.4.2)
+
+* Use `sass` instead of `sass-embedded`
+
 ## [2.4.1](https://github.com/ankurk91/laravel-bundler/compare/2.4.0..2.4.1)
 
 * Allow `esbuild` v0.18.x
