@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.4.1](https://github.com/ankurk91/laravel-bundler/compare/2.4.0..2.4.1)
+
+* Allow `esbuild` v0.18.x
+
 ## [2.4.0](https://github.com/ankurk91/laravel-bundler/compare/2.3.0..2.4.0)
 
 * Remove reactivity transform from vue 3 recipe
