@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.5.0](https://github.com/ankurk91/laravel-bundler/compare/2.4.3..2.5.0)
+
+* Upgrade many package
+
 ## [2.4.3](https://github.com/ankurk91/laravel-bundler/compare/2.4.2..2.4.3)
 
 * Update `esbuild` to v 0.19.x
