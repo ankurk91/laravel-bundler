@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.6.0](https://github.com/ankurk91/laravel-bundler/compare/2.5.0..2.6.0)
+
+* Upgrade dotend-expand to v11.x
+
 ## [2.5.0](https://github.com/ankurk91/laravel-bundler/compare/2.4.3..2.5.0)
 
 * Upgrade many package
