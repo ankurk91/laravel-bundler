@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.9.0](https://github.com/ankurk91/laravel-bundler/compare/2.8.0..2.9.0)
+
+* Upgrade some packages
+* 
 ## [2.8.0](https://github.com/ankurk91/laravel-bundler/compare/2.7.0..2.8.0)
 
 * Upgrade some packages
