@@ -41,7 +41,7 @@ new Vue({
 });
 ```
 
-Create a `webpack.config.js` file on your project root and remove `webpack.mix.js` if exists.
+Create a `webpack.config.mjs` file on your project root and remove `webpack.mix.js` if exists.
 
 ```js
 import webpack from 'webpack'
