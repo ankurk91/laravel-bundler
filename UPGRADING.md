@@ -1,8 +1,13 @@
 # Upgrading
 
+### From 2.9.x to v3.0.0
+
+* Update your `package.json` file's scripts section and replace
+`--define-process-env-node-env` flag with `--config-node-env`
+
 ### From 1.1.0 to v2.0.0
 
-* Replace `--node-env` with `--define-process-env-node-env` in your `package.json`
+* Replace `--node-env` with `--define-process-env-node-env` in your `package.json` scripts
 
 ### From 0.40.0 to v1.0.0
 

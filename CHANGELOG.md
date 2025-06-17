@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.0](https://github.com/ankurk91/laravel-bundler/compare/3.0.0..2.9.1)
+
+* :warning: Upgrade `webpack-cli` to v6.x
+* Upgrade `esbuild` to v0.25.x
+* Upgrade `dotenv-expand` to v12.x
+
 ## [2.9.1](https://github.com/ankurk91/laravel-bundler/compare/2.9.0..2.9.1)
 
 * Fix: Keep sass-loader legacy api
