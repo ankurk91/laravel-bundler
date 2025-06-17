@@ -69,11 +69,11 @@ Update your `package.json` file
 {
     "type": "module",
     "scripts": {
-        "dev": "webpack --define-process-env-node-env=development --progress",
-        "watch": "webpack watch --define-process-env-node-env=development --progress",
-        "hot": "webpack serve --define-process-env-node-env=development --progress --hot",
+        "dev": "webpack --config-node-env=development --progress",
+        "watch": "webpack watch --config-node-env=development --progress",
+        "hot": "webpack serve --config-node-env=development --progress --hot",
         "hot:https": "npm run hot -- --https",
-        "prod": "webpack --define-process-env-node-env=production --progress"
+        "prod": "webpack --config-node-env=production --progress"
     },
     "browserslist": [
         "> 2%",
