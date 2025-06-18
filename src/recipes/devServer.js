@@ -5,7 +5,7 @@ import Helpers from '../helpers.js';
 
 const port = await getPort({
   port: portNumbers(8080, 9000),
-  exclude: [80, 3306],
+  exclude: [80, 443, 3306, 5432, 6379],
   host: 'localhost',
 });
 
@@ -16,9 +16,11 @@ const config = {
     host: 'localhost',
     port: port,
     client: {
+      logging: 'warn',
       overlay: {
         warnings: false,
-        errors: true
+        errors: false,
+        runtimeErrors: false,
       },
     },
     open: false,

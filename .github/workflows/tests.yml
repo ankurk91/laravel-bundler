@@ -25,9 +25,10 @@ jobs:
         node-version: [ 20.x, 22.x, 24.x ]
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Clone the repo
+        uses: actions/checkout@v4
 
-      - name: Using Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
+      - name: Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
