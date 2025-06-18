@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.1.0](https://github.com/ankurk91/laravel-bundler/compare/3.0.0..3.1.0)
+
+* Disable dev server error overlay
+
 ## [3.0.0](https://github.com/ankurk91/laravel-bundler/compare/3.0.0..2.9.1)
 
 * :warning: Upgrade `webpack-cli` to v6.x

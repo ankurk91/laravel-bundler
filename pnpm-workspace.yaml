@@ -1,5 +1,3 @@
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-
 onlyBuiltDependencies:
   - esbuild
+  - '@parcel/watcher'

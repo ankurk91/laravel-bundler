@@ -1,6 +1,6 @@
 {
   "name": "laravel-bundler",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Modern and fast asset building tool for Laravel framework with better defaults.",
   "exports": {
     ".": "./src/index.js",
