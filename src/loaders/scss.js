@@ -7,7 +7,6 @@ export default {
     {
       loader: 'sass-loader',
       options: {
-        api: 'legacy',
         additionalData: '$env: ' + Helpers.nodeEnv() + ';',
         sassOptions: {
           outputStyle: 'expanded'

@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.0](https://github.com/ankurk91/laravel-bundler/compare/3.2.0..4.0.0)
+
+* :warning: Require Node.js `^22.18.0 || >=24.11.0`
+* :warning: Upgrade `@babel/core` and `@babel/preset-env` to v8
+* :warning: Upgrade `webpack-dev-server` to v6
+* :warning: Upgrade `sass-loader` to v17, drop legacy Sass API
+* Upgrade `webpack-cli` to v7
+* Upgrade `css-minimizer-webpack-plugin` to v8
+* Upgrade `esbuild` to v0.28.x
+* Upgrade `dotenv` to v18 and `dotenv-expand` to v13
+* Upgrade `chalk` to v6
+* Read the [upgrade guide](./UPGRADING.md)
+
 ## [3.2.0](https://github.com/ankurk91/laravel-bundler/compare/3.1.0..3.2.0)
 
 * Upgrade some packages

@@ -1,5 +1,19 @@
 # Upgrading
 
+### From 3.x to v4.0.0
+
+* Node.js `^22.18.0 || >=24.11.0` is required now.
+* Babel has been upgraded to v8, follow the [migration guide](https://babeljs.io/docs/v8-migration)
+    * Upgrade any Babel plugins/presets used in your project to v8 compatible versions
+    * Define a `.browserslistrc` file or a top-level `targets` option in your `babel.config.js`,
+      otherwise Babel defaults to `"defaults"` query
+    * Remove `loose` and `spec` options from `@babel/preset-env`, use [assumptions](https://babeljs.io/docs/assumptions)
+      instead
+* `sass-loader` no longer uses the legacy Sass JS API, check your `sass-loader` options if you have overridden them.
+* `webpack-dev-server` has been upgraded to v6, check the
+  [changelog](https://github.com/webpack/webpack-dev-server/blob/main/CHANGELOG.md) if you have customized `devServer`
+  options (e.g. `proxy.bypass`, `sockjs`, `spdy` have been removed)
+
 ### From 2.9.x to v3.0.0
 
 * Update your `package.json` file's scripts section and replace

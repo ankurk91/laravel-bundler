@@ -6,16 +6,13 @@ Create a `babel.config.js` file on your project root like:
 
 ```js
 export default {
+    // Omit this if you are using a `.browserslistrc` file
+    // targets: ['> 2%', 'not dead'],
     presets: [
         [
             '@babel/preset-env',
             {
-                bugfixes: true,
                 modules: false,
-                useBuiltIns: false,
-                targets: {
-                    // browsers: ['> 2%', 'not dead']
-                }
             }
         ]
     ],

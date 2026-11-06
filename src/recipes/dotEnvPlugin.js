@@ -9,7 +9,7 @@ const filePath = path.join(process.cwd(), '.env');
 // Expand everything to process.env
 const result = dotenv.config({
   path: filePath,
-  multiline: false,
+  quiet: true,
 });
 
 // We won't stop process if we could not load .env
