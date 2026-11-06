@@ -4,7 +4,7 @@
 [![npm-version](https://badgen.net/npm/v/laravel-bundler)](https://www.npmjs.com/package/laravel-bundler)
 [![github-tag](https://badgen.net/github/tag/ankurk91/laravel-bundler)](https://github.com/ankurk91/laravel-bundler/tags)
 [![license](https://badgen.net/github/license/ankurk91/laravel-bundler)](LICENSE.txt)
-[![install size](https://packagephobia.com/badge?p=laravel-bundler)](https://packagephobia.com/result?p=laravel-bundler)
+[![package size](https://img.shields.io/npm/unpacked-size/laravel-bundler)](https://pkg-size.dev/laravel-bundler)
 [![tests](https://github.com/ankurk91/laravel-bundler/workflows/tests/badge.svg)](https://github.com/ankurk91/laravel-bundler/actions)
 
 Modern and fast asset building tool for Laravel framework with better defaults.
