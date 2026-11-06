@@ -1,5 +1,9 @@
 # Changelog
 
+## [3.2.0](https://github.com/ankurk91/laravel-bundler/compare/3.1.0..3.2.0)
+
+* Upgrade some packages
+
 ## [3.1.0](https://github.com/ankurk91/laravel-bundler/compare/3.0.0..3.1.0)
 
 * Disable dev server error overlay
