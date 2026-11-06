@@ -22,18 +22,18 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest, windows-latest ]
-        node-version: [ 20.x, 22.x, 24.x ]
+        node-version: [ 22, 24, 26 ]
 
     steps:
       - name: Clone the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-        uses: actions/setup-node@v4
+      - name: Setup pnpm and Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
+        uses: pnpm/setup@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          version: ^12
+          runtime: node@${{ matrix.node-version }}
+          require-lockfile: true
 
-      - run: npm install -g pnpm@^10
-      - run: pnpm install --frozen-lockfile
       - run: pnpm run demo:dev
       - run: pnpm run demo:prod

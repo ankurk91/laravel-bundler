@@ -1,3 +1,6 @@
-onlyBuiltDependencies:
-  - esbuild
-  - '@parcel/watcher'
+shamefullyHoist: true
+autoInstallPeers: false
+
+allowBuilds:
+  esbuild: true
+  '@parcel/watcher': true
